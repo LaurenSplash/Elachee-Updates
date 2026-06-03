@@ -510,6 +510,104 @@
       margin-top: 48px;
     }
 
+    /* Field-trip plan steps · 3 stacked colored cards with a giant
+       script number on one side, a white icon disc on the other,
+       and the step title + description in the middle. Mirrors the
+       Camp Elachee illustration style but built in HTML so the
+       content is field-trip specific. */
+    .ft-plan-steps {
+      list-style: none !important;
+      counter-reset: none !important;
+      padding: 0 !important;
+      margin: 12px auto 0 !important;
+      max-width: 1080px;
+      display: flex;
+      flex-direction: column;
+      gap: 26px;
+    }
+    .ft-plan-steps > li {
+      list-style: none !important;
+      list-style-type: none !important;
+    }
+    .ft-plan-steps > li::before,
+    .ft-plan-steps > li::after,
+    .ft-plan-steps > li::marker {
+      content: none !important;
+      display: none !important;
+    }
+    .ft-plan-step {
+      position: relative;
+      display: grid;
+      grid-template-columns: 180px 1fr 180px;
+      align-items: center;
+      gap: 16px;
+      border-radius: 24px;
+      overflow: hidden;
+      padding: 28px 36px;
+      color: #ffffff;
+      min-height: 188px;
+      background-image: var(--topo-lines);
+      background-blend-mode: soft-light;
+    }
+    .ft-plan-step--orange { background-color: #F4A93C; }
+    .ft-plan-step--blue   { background-color: #44A7EA; }
+    .ft-plan-step--green  { background-color: #7AB52A; }
+    /* Reverse layout: icon on the left, number on the right (alternating) */
+    .ft-plan-step--reverse .ft-plan-step__num  { order: 3; }
+    .ft-plan-step--reverse .ft-plan-step__body { order: 2; }
+    .ft-plan-step--reverse .ft-plan-step__icon { order: 1; }
+    .ft-plan-step__num {
+      font-family: "handsome-pro", "Caveat", "Brush Script MT", cursive;
+      font-size: 200px;
+      font-weight: 800;
+      line-height: 0.85;
+      color: rgba(255, 255, 255, 0.94);
+      text-align: center;
+      letter-spacing: -2px;
+      text-shadow: 0 6px 16px rgba(0, 0, 0, 0.10);
+    }
+    .ft-plan-step__icon {
+      width: 152px;
+      height: 152px;
+      border-radius: 50%;
+      background: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
+      box-shadow: 0 8px 22px rgba(0, 0, 0, 0.16);
+    }
+    .ft-plan-step__icon svg { width: 74px; height: 74px; }
+    .ft-plan-step__body { padding: 4px 14px; }
+    .ft-plan-step__body h3 {
+      color: #ffffff !important;
+      margin: 0 0 10px;
+      font-size: clamp(20px, 2.1vw, 26px);
+      font-weight: 800;
+      line-height: 1.2;
+    }
+    .ft-plan-step__body p {
+      color: rgba(255, 255, 255, 0.96);
+      margin: 0;
+      font-size: 15.5px;
+      line-height: 1.5;
+    }
+    @media (max-width: 800px) {
+      .ft-plan-step {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 26px 22px;
+        gap: 8px;
+        min-height: 0;
+      }
+      .ft-plan-step--reverse .ft-plan-step__num,
+      .ft-plan-step--reverse .ft-plan-step__body,
+      .ft-plan-step--reverse .ft-plan-step__icon { order: initial; }
+      .ft-plan-step__num { font-size: 110px; }
+      .ft-plan-step__icon { width: 96px; height: 96px; }
+      .ft-plan-step__icon svg { width: 48px; height: 48px; }
+    }
+
     /* Visible plan-step text · three readable cards under the SVG row */
     .plan-steps-text {
       list-style: none !important;
@@ -735,49 +833,57 @@
       margin-bottom: 10px;
     }
 
-    /* Benefits card grid · 3-column on desktop, white cards with icons */
+    /* Benefits card grid · 3-column on desktop, centered white cards
+       with icon tiles. Equal heights, balanced spacing. */
     .standards-benefits {
       list-style: none;
       padding: 0;
       margin: 0 auto 36px;
-      max-width: 1100px;
+      max-width: 1120px;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
+      gap: 20px;
     }
     .standards-benefits li {
       display: flex;
       flex-direction: column;
-      align-items: flex-start;
-      gap: 14px;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 16px;
       background: #ffffff;
       border: 1px solid rgba(20, 60, 80, 0.08);
       border-radius: 16px;
-      padding: 22px 22px 20px;
+      padding: 28px 22px 26px;
       font-size: 15px;
-      line-height: 1.45;
+      line-height: 1.5;
       color: var(--ce-bark) !important;
       font-weight: 600;
+      text-align: center;
       box-shadow: 0 6px 16px rgba(20, 60, 80, 0.06);
       transition: transform 0.2s ease, box-shadow 0.2s ease;
+      min-height: 178px;
     }
     .standards-benefits li:hover {
       transform: translateY(-2px);
       box-shadow: 0 10px 22px rgba(20, 60, 80, 0.10);
     }
     .standards-benefits li::before { content: none !important; }
+    .standards-benefits li > span:last-child {
+      display: block;
+      max-width: 260px;
+    }
     .standards-benefits__check {
       flex-shrink: 0;
-      width: 46px;
-      height: 46px;
-      border-radius: 12px;
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
       background: rgba(147, 204, 54, 0.16);
       color: var(--ce-green);
       display: inline-flex;
       align-items: center;
       justify-content: center;
     }
-    .standards-benefits__check svg { width: 24px; height: 24px; }
+    .standards-benefits__check svg { width: 26px; height: 26px; }
 
     @media (max-width: 900px) {
       .formula {
@@ -890,10 +996,10 @@
       position: relative;
       overflow: hidden;
       background:
-        radial-gradient(ellipse at 12% 0%, rgba(147,204,54,0.18) 0, transparent 42%),
-        radial-gradient(ellipse at 88% 18%, rgba(68,167,234,0.16) 0, transparent 45%),
-        radial-gradient(ellipse at 75% 100%, rgba(177,101,212,0.14) 0, transparent 48%),
-        url('assets/img/bg-curvy-bark.svg') center/cover no-repeat,
+        radial-gradient(ellipse at 12% 0%, rgba(147,204,54,0.20) 0, transparent 42%),
+        radial-gradient(ellipse at 88% 18%, rgba(68,167,234,0.18) 0, transparent 45%),
+        radial-gradient(ellipse at 75% 100%, rgba(177,101,212,0.16) 0, transparent 48%),
+        var(--topo-lines),
         var(--ce-bark);
       color: #fff;
     }
@@ -1444,7 +1550,13 @@
     .request-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 10px 14px;
+      gap: 14px 14px;
+      align-items: end;
+    }
+    .request-form .form-field {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
     }
     .request-form .form-field label {
       font-size: 10.5px;
@@ -1452,7 +1564,11 @@
       letter-spacing: 0.06em;
       text-transform: uppercase;
       color: #ffffff;
-      margin: 0 0 3px;
+      margin: 0 0 5px;
+      line-height: 1.25;
+      min-height: 26px;
+      display: flex;
+      align-items: flex-end;
     }
     .request-form .form-field input,
     .request-form .form-field select {
@@ -1888,13 +2004,23 @@
       stroke: #1A1A1A !important;
     }
 
+    /* FAQ section · trim oversized bottom padding so there isn't a
+       tall white gap before the dark Final CTA section. */
+    .section-camp-faq {
+      padding-bottom: 28px !important;
+    }
+
     /* Nav links · match button height so labels vertically center
-       with the Plan Your Visit / Donate pills (36px min-height). */
+       with the Plan Your Visit / Donate pills, then nudge up so the
+       text optically aligns with the button label (not the pill's
+       outer edge). */
     #header .nav-main #primary-menu > li > a {
       display: inline-flex !important;
       align-items: center !important;
       min-height: 36px !important;
       line-height: 1 !important;
+      position: relative !important;
+      top: -5px !important;
     }
 
     /* Footer social icons · smooth hover with brand green +
@@ -2487,33 +2613,54 @@
           </div>
           <div class="section-body">
 
-            <ul class="plan-steps">
-              <li>
-                <img src="assets/img/step1-icon.svg" alt="Step 1: Tell Us About Your Class. Share your grade level, group size, preferred dates, curriculum goals, and program interests." loading="lazy">
+            <!-- Field-trip plan steps · custom HTML cards (orange/blue/green
+                 with script number + white icon disc) so content is field-
+                 trip specific instead of inheriting the Camp Elachee SVGs. -->
+            <ul class="ft-plan-steps" aria-label="How planning a field trip works">
+              <li class="ft-plan-step ft-plan-step--orange">
+                <span class="ft-plan-step__num" aria-hidden="true">1</span>
+                <div class="ft-plan-step__icon" aria-hidden="true">
+                  <svg viewBox="0 0 64 64" fill="none" stroke="#F4A93C" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="14" y="14" width="36" height="42" rx="3"/>
+                    <rect x="23" y="9" width="18" height="9" rx="2" fill="#F4A93C" stroke="none"/>
+                    <line x1="22" y1="30" x2="42" y2="30"/>
+                    <line x1="22" y1="38" x2="42" y2="38"/>
+                    <line x1="22" y1="46" x2="34" y2="46"/>
+                  </svg>
+                </div>
+                <div class="ft-plan-step__body">
+                  <h3>Tell Us About Your Class</h3>
+                  <p>Share your grade level, group size, preferred dates, curriculum goals, and program interests.</p>
+                </div>
               </li>
-              <li>
-                <img src="assets/img/step2-icon.svg" alt="Step 2: Choose the Best Program Fit. Our team helps match your class with an onsite, classroom-based, seasonal, or aquatic learning experience." loading="lazy">
+              <li class="ft-plan-step ft-plan-step--blue ft-plan-step--reverse">
+                <span class="ft-plan-step__num" aria-hidden="true">2</span>
+                <div class="ft-plan-step__icon" aria-hidden="true">
+                  <svg viewBox="0 0 64 64" fill="none" stroke="#44A7EA" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M10 22 H 24 V 28 a4 4 0 1 0 8 0 V 22 H 46 V 36 a4 4 0 1 1 0 8 V 56 H 32 V 50 a4 4 0 1 0 -8 0 V 56 H 10 V 42 a4 4 0 1 1 0 -8 Z"/>
+                  </svg>
+                </div>
+                <div class="ft-plan-step__body">
+                  <h3>Choose the Best Program Fit</h3>
+                  <p>Our team helps match your class with an onsite, classroom-based, seasonal, or aquatic learning experience.</p>
+                </div>
               </li>
-              <li>
-                <img src="assets/img/step3-icon.svg" alt="Step 3: Bring Science to Life. Your students participate in hands-on science, guided exploration, and real-world discovery connected to what they are learning in class." loading="lazy">
+              <li class="ft-plan-step ft-plan-step--green">
+                <span class="ft-plan-step__num" aria-hidden="true">3</span>
+                <div class="ft-plan-step__icon" aria-hidden="true">
+                  <svg viewBox="0 0 64 64" fill="none" stroke="#7AB52A" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M14 46 C 14 54 22 58 32 58 L 36 58 C 46 58 50 52 50 46"/>
+                    <line x1="32" y1="46" x2="32" y2="26"/>
+                    <path d="M32 28 Q 22 28 22 16 Q 32 16 32 26"/>
+                    <path d="M32 28 Q 42 28 42 16 Q 32 16 32 26"/>
+                  </svg>
+                </div>
+                <div class="ft-plan-step__body">
+                  <h3>Bring Science to Life</h3>
+                  <p>Your students participate in hands-on science, guided exploration, and real-world discovery connected to what they are learning in class.</p>
+                </div>
               </li>
             </ul>
-
-            <!-- Visible plan text · not reliant on image alt for accessibility/SEO -->
-            <ol class="plan-steps-text" aria-label="How planning a field trip works">
-              <li>
-                <h3>Step 1: Tell Us About Your Class</h3>
-                <p>Share your grade level, group size, preferred dates, curriculum goals, and program interests.</p>
-              </li>
-              <li>
-                <h3>Step 2: Choose the Best Program Fit</h3>
-                <p>Our team helps match your class with an onsite, classroom-based, seasonal, or aquatic learning experience.</p>
-              </li>
-              <li>
-                <h3>Step 3: Bring Science to Life</h3>
-                <p>Your students participate in hands-on science, guided exploration, and real-world discovery connected to what they are learning in class.</p>
-              </li>
-            </ol>
 
             <div class="plan-cta-wrap">
               <a href="#book" class="ft-btn ft-btn--primary">Start Planning Your Field Trip
