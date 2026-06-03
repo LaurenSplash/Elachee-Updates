@@ -88,8 +88,8 @@
       --ce-bark-2:   rgba(71, 71, 71, 0.78);     /* bark tint · used for body copy */
 
       /* Neutral utility surfaces · backgrounds only, never accent fills */
-      --ce-cream:    #f8f6ec;
-      --ce-cream-2:  #f1efe1;
+      --ce-cream:    #ffffff;
+      --ce-cream-2:  #f3f3f3;
       --ce-parch:    #efe9d2;
 
       /* Type */
@@ -735,43 +735,49 @@
       margin-bottom: 10px;
     }
 
-    /* Benefits chip grid · 2-column on desktop, fully readable */
+    /* Benefits card grid · 3-column on desktop, white cards with icons */
     .standards-benefits {
       list-style: none;
       padding: 0;
       margin: 0 auto 36px;
-      max-width: 1000px;
+      max-width: 1100px;
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 14px 22px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
     }
     .standards-benefits li {
       display: flex;
-      align-items: center;
+      flex-direction: column;
+      align-items: flex-start;
       gap: 14px;
-      background: transparent;
-      border: 0;
-      border-radius: 0;
-      padding: 8px 0;
-      font-size: 15.5px;
-      line-height: 1.4;
+      background: #ffffff;
+      border: 1px solid rgba(20, 60, 80, 0.08);
+      border-radius: 16px;
+      padding: 22px 22px 20px;
+      font-size: 15px;
+      line-height: 1.45;
       color: var(--ce-bark) !important;
       font-weight: 600;
-      box-shadow: none;
+      box-shadow: 0 6px 16px rgba(20, 60, 80, 0.06);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .standards-benefits li:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 22px rgba(20, 60, 80, 0.10);
     }
     .standards-benefits li::before { content: none !important; }
     .standards-benefits__check {
       flex-shrink: 0;
-      width: 24px;
-      height: 24px;
-      border-radius: 50%;
-      background: var(--ce-green);
-      color: #ffffff;
+      width: 46px;
+      height: 46px;
+      border-radius: 12px;
+      background: rgba(147, 204, 54, 0.16);
+      color: var(--ce-green);
       display: inline-flex;
       align-items: center;
       justify-content: center;
     }
-    .standards-benefits__check svg { width: 13px; height: 13px; }
+    .standards-benefits__check svg { width: 24px; height: 24px; }
 
     @media (max-width: 900px) {
       .formula {
@@ -782,6 +788,9 @@
         font-size: 36px;
         padding: 4px 0;
       }
+      .standards-benefits { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 560px) {
       .standards-benefits { grid-template-columns: 1fr; }
     }
 
@@ -881,10 +890,10 @@
       position: relative;
       overflow: hidden;
       background:
-        radial-gradient(ellipse at 12% 0%, rgba(147,204,54,0.20) 0, transparent 42%),
-        radial-gradient(ellipse at 88% 18%, rgba(68,167,234,0.18) 0, transparent 45%),
-        radial-gradient(ellipse at 75% 100%, rgba(177,101,212,0.16) 0, transparent 48%),
-        var(--topo-lines),
+        radial-gradient(ellipse at 12% 0%, rgba(147,204,54,0.18) 0, transparent 42%),
+        radial-gradient(ellipse at 88% 18%, rgba(68,167,234,0.16) 0, transparent 45%),
+        radial-gradient(ellipse at 75% 100%, rgba(177,101,212,0.14) 0, transparent 48%),
+        url('assets/img/bg-curvy-bark.svg') center/cover no-repeat,
         var(--ce-bark);
       color: #fff;
     }
@@ -1063,31 +1072,35 @@
     .whatis-chips {
       list-style: none !important;
       padding: 0 !important;
-      margin: 0 auto !important;
-      max-width: 880px;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 10px;
+      margin: 8px auto 0 !important;
+      max-width: 960px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(132px, 1fr));
+      gap: 14px;
     }
     .whatis-chips > li {
       list-style: none !important;
-      display: inline-flex;
+      display: flex;
+      flex-direction: column;
       align-items: center;
-      gap: 8px;
-      background: rgba(255, 255, 255, 0.92);
+      justify-content: flex-start;
+      gap: 10px;
+      background: rgba(255, 255, 255, 0.96);
       color: var(--ce-bark);
       font-weight: 700;
-      font-size: 13.5px;
+      font-size: 14px;
       letter-spacing: 0.01em;
-      padding: 9px 16px;
-      border-radius: 999px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+      line-height: 1.25;
+      text-align: center;
+      padding: 20px 12px 16px;
+      border-radius: 18px;
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.14);
+      min-height: 118px;
     }
     .whatis-chips > li::before,
     .whatis-chips > li::after { content: none !important; display: none !important; }
     .whatis-chips > li svg {
-      width: 15px; height: 15px;
+      width: 34px; height: 34px;
       color: var(--ce-green);
       flex-shrink: 0;
     }
@@ -1096,6 +1109,9 @@
       .whatis-card__inner { padding: 40px 26px 36px; }
       .whatis-card__mark { font-size: 130px; left: 14px; }
       .whatis-card__answer { font-size: 16px; }
+      .whatis-chips { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+      .whatis-chips > li { min-height: 104px; padding: 16px 10px 14px; font-size: 13px; }
+      .whatis-chips > li svg { width: 30px; height: 30px; }
     }
 
     /* ============================================================
@@ -1343,7 +1359,7 @@
        ============================================================ */
     .cta-section {
       background: var(--ce-cream);
-      padding: 76px 0;
+      padding: 44px 0;
     }
     .cta-card {
       position: relative;
@@ -1382,21 +1398,21 @@
       z-index: 1;
       max-width: 760px;
       margin: 0 auto;
-      padding: 62px 48px 64px;
+      padding: 32px 44px 34px;
       text-align: center;
       color: #ffffff;
     }
     .cta-card h2 {
       color: #ffffff;
-      margin: 0 0 14px;
-      font-size: clamp(26px, 3.4vw, 40px);
+      margin: 0 0 8px;
+      font-size: clamp(22px, 2.4vw, 30px);
     }
     .cta-card p {
       color: rgba(255, 255, 255, 0.94);
-      font-size: 17px;
-      max-width: 600px;
-      margin: 0 auto 26px;
-      line-height: 1.5;
+      font-size: 14.5px;
+      max-width: 720px;
+      margin: 0 auto 14px;
+      line-height: 1.45;
     }
     .cta-card .btn-row {
       justify-content: center;
@@ -1413,37 +1429,39 @@
       border-color: #ffffff;
     }
     @media (max-width: 820px) {
-      .cta-section { padding: 56px 0; }
-      .cta-card__inner { padding: 44px 28px 46px; }
+      .cta-section { padding: 40px 0; }
+      .cta-card__inner { padding: 28px 24px 30px; }
       .cta-card { border-radius: 16px; }
     }
 
-    /* Request form · sits on the blue→green gradient CTA card */
+    /* Request form · sits on the blue→green gradient CTA card.
+       3-column compact grid so the whole form fits in a single
+       viewport on standard laptop screens (no scroll required). */
     .request-form {
-      margin: 26px auto 0;
+      margin: 14px auto 0;
       text-align: left;
     }
     .request-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px 16px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px 14px;
     }
     .request-form .form-field label {
-      font-size: 11px;
+      font-size: 10.5px;
       font-weight: 800;
       letter-spacing: 0.06em;
       text-transform: uppercase;
       color: #ffffff;
-      margin: 0 0 4px;
+      margin: 0 0 3px;
     }
     .request-form .form-field input,
     .request-form .form-field select {
       font: inherit;
-      font-size: 14px;
-      min-height: 40px;
-      padding: 7px 12px;
+      font-size: 13.5px;
+      min-height: 34px;
+      padding: 5px 11px;
       border: 0;
-      border-radius: 9px;
+      border-radius: 8px;
       background: rgba(255, 255, 255, 0.95);
       color: var(--ce-bark);
     }
@@ -1458,9 +1476,12 @@
       gap: 12px;
       flex-wrap: wrap;
       justify-content: center;
-      margin-top: 18px;
+      margin-top: 14px;
     }
-    @media (max-width: 600px) {
+    @media (max-width: 900px) {
+      .request-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 560px) {
       .request-grid { grid-template-columns: 1fr; }
     }
 
@@ -1851,6 +1872,58 @@
       color: #ffffff !important;
       text-decoration: underline !important;
     }
+
+    /* Utility bar hover · site.css turns links green on hover, which
+       matches the bar's green background and makes text disappear.
+       Keep the dark text color and add a white underline for feedback. */
+    #header .top-head .link-icon a:hover,
+    #header .top-head .top-link a:hover {
+      color: #1A1A1A !important;
+      text-decoration: underline !important;
+      text-decoration-color: #ffffff !important;
+      text-underline-offset: 4px !important;
+      text-decoration-thickness: 2px !important;
+    }
+    #header .top-head .link-icon a:hover svg path {
+      stroke: #1A1A1A !important;
+    }
+
+    /* Nav links · match button height so labels vertically center
+       with the Plan Your Visit / Donate pills (36px min-height). */
+    #header .nav-main #primary-menu > li > a {
+      display: inline-flex !important;
+      align-items: center !important;
+      min-height: 36px !important;
+      line-height: 1 !important;
+    }
+
+    /* Footer social icons · smooth hover with brand green +
+       gentle lift. Handles both filled and stroked SVGs (Instagram
+       uses stroke, the others use fill). */
+    #footer .socials a {
+      transition: transform 0.18s ease;
+    }
+    #footer .socials a svg path,
+    #footer .socials a svg rect,
+    #footer .socials a svg line {
+      transition: fill 0.18s ease, stroke 0.18s ease;
+    }
+    #footer .socials a:hover {
+      transform: translateY(-2px) scale(1.08);
+    }
+    #footer .socials a:hover svg path[fill="#fff"],
+    #footer .socials a:hover svg path[fill="#FFF"],
+    #footer .socials a:hover svg path[fill="white"] {
+      fill: var(--ce-green) !important;
+    }
+    #footer .socials a:hover svg[stroke="#fff"] rect,
+    #footer .socials a:hover svg[stroke="#fff"] path,
+    #footer .socials a:hover svg[stroke="#fff"] line,
+    #footer .socials a:hover svg path[stroke="#fff"],
+    #footer .socials a:hover svg rect[stroke="#fff"],
+    #footer .socials a:hover svg line[stroke="#fff"] {
+      stroke: var(--ce-green) !important;
+    }
   </style>
 </head>
 <body data-current-view="page">
@@ -2235,13 +2308,60 @@
             <h2 id="whatis-title">What Is an <strong>Elachee Field Trip?</strong></h2>
             <p class="whatis-card__answer">An Elachee field trip is a naturalist-led outdoor science experience for Pre-K&ndash;12 students. Depending on the program, students get hands-on with real habitats and ecosystems through activities connected to classroom learning goals.</p>
             <ul class="whatis-chips" aria-label="Topics students may explore">
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Forest habitats</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Creek ecosystems</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Aquatic life</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Geology</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Astronomy</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Wildlife</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Environmental stewardship</li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M12 3 L6 11 L9 11 L5 17 L19 17 L15 11 L18 11 Z"/>
+                  <line x1="12" y1="17" x2="12" y2="21"/>
+                </svg>
+                Forest habitats
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M3 8 Q 7 4 11 8 T 21 8"/>
+                  <path d="M3 14 Q 7 10 11 14 T 21 14"/>
+                  <path d="M3 20 Q 7 16 11 20 T 21 20"/>
+                </svg>
+                Creek ecosystems
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M3 12 C 7 6 14 6 17 12 C 14 18 7 18 3 12 Z"/>
+                  <path d="M17 12 L22 8 L22 16 Z"/>
+                  <circle cx="7" cy="11" r="0.9" fill="currentColor" stroke="none"/>
+                </svg>
+                Aquatic life
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M3 20 L10 7 L14 14 L17 10 L21 20 Z"/>
+                  <path d="M8 12 L10 10 L11 11"/>
+                </svg>
+                Geology
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M16 3 A 9 9 0 1 0 21 16 A 7 7 0 0 1 16 3 Z"/>
+                  <path d="M6.5 5 L7.3 6.7 L9 7.3 L7.3 7.9 L6.5 9.5 L5.7 7.9 L4 7.3 L5.7 6.7 Z"/>
+                </svg>
+                Astronomy
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="5.5" cy="11" r="1.8"/>
+                  <circle cx="10" cy="6" r="1.8"/>
+                  <circle cx="14" cy="6" r="1.8"/>
+                  <circle cx="18.5" cy="11" r="1.8"/>
+                  <path d="M7.5 17.5 C 7.5 14 9.5 13 12 13 C 14.5 13 16.5 14 16.5 17.5 C 16.5 20.5 14.5 21 12 21 C 9.5 21 7.5 20.5 7.5 17.5 Z"/>
+                </svg>
+                Wildlife
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M5 19 C 5 10 11 5 19 5 C 19 13 14 19 5 19 Z"/>
+                  <path d="M5 19 L 19 5"/>
+                </svg>
+                Environmental stewardship
+              </li>
             </ul>
           </div>
         </div>
@@ -2552,27 +2672,64 @@
         <!-- Benefits chips · 2-column · readable on dark bg -->
         <ul class="standards-benefits" role="list">
           <li>
-            <span class="standards-benefits__check" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+            <span class="standards-benefits__check" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="9" r="6"/>
+                <path d="M8.3 13.4 L7 21 L12 18 L17 21 L15.7 13.4"/>
+                <path d="M12 5.8 L13 7.8 L15.2 8.2 L13.6 9.7 L14 12 L12 10.9 L10 12 L10.4 9.7 L8.8 8.2 L11 7.8 Z"/>
+              </svg>
+            </span>
             <span>Designed to support Georgia Standards of Excellence</span>
           </li>
           <li>
-            <span class="standards-benefits__check" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+            <span class="standards-benefits__check" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="9"/>
+                <circle cx="12" cy="12" r="5.5"/>
+                <circle cx="12" cy="12" r="2"/>
+              </svg>
+            </span>
             <span>Supports science curriculum goals</span>
           </li>
           <li>
-            <span class="standards-benefits__check" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+            <span class="standards-benefits__check" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9 17 L15 17"/>
+                <path d="M10 20 L14 20"/>
+                <path d="M8.5 14 C 6.5 12.2 6.5 8.2 9.5 6.5 C 12.5 4.8 15.5 5.8 16.5 8 C 17.5 11 16 13 14 14.5 L14 17 L10 17 L10 14.5 Z"/>
+              </svg>
+            </span>
             <span>Encourages observation, questioning, and critical thinking</span>
           </li>
           <li>
-            <span class="standards-benefits__check" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+            <span class="standards-benefits__check" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="9"/>
+                <line x1="3" y1="12" x2="21" y2="12"/>
+                <path d="M12 3 C 8.5 7 8.5 17 12 21"/>
+                <path d="M12 3 C 15.5 7 15.5 17 12 21"/>
+              </svg>
+            </span>
             <span>Connects classroom concepts to real environments</span>
           </li>
           <li>
-            <span class="standards-benefits__check" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+            <span class="standards-benefits__check" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 20 L8 20 L8 15 L13 15 L13 10 L18 10 L18 5 L22 5"/>
+                <line x1="3" y1="20.5" x2="22" y2="20.5"/>
+              </svg>
+            </span>
             <span>Grade-appropriate experiences from Pre-K through 12th grade</span>
           </li>
           <li>
-            <span class="standards-benefits__check" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+            <span class="standards-benefits__check" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="2"/>
+                <ellipse cx="12" cy="12" rx="9.5" ry="3.8"/>
+                <ellipse cx="12" cy="12" rx="9.5" ry="3.8" transform="rotate(60 12 12)"/>
+                <ellipse cx="12" cy="12" rx="9.5" ry="3.8" transform="rotate(-60 12 12)"/>
+              </svg>
+            </span>
             <span>Reinforces inquiry, evidence, and scientific reasoning</span>
           </li>
         </ul>
@@ -2604,42 +2761,42 @@
             <div class="reg-dates">
               <div class="reg-date">
                 <span class="reg-date__icon" aria-hidden="true">
-                  <svg class="svg-icon" viewBox="0 0 32 32"><path d="M5 23 L7 18 L20 5 L24 9 L11 22 Z"/><line x1="19" y1="6" x2="23" y2="10"/><circle cx="8" cy="25" r="1.5"/></svg>
+                  <svg class="svg-icon" viewBox="0 0 24 24"><path d="M4 16 C 4 20 7 21 10 21 L15 21 C 18 21 19 19 19 16 L19 13"/><path d="M14 3 C 9 5 7 10 10 14 C 14 13 17 8 18 3 Z"/><path d="M13 6 L11 13"/></svg>
                 </span>
                 <h5>Hands-On Learning</h5>
                 <p>Students investigate real habitats, specimens, trails, water systems, and natural phenomena.</p>
               </div>
               <div class="reg-date">
                 <span class="reg-date__icon" aria-hidden="true">
-                  <svg class="svg-icon" viewBox="0 0 32 32"><circle cx="16" cy="16" r="11"/><line x1="5" y1="16" x2="27" y2="16"/><ellipse cx="16" cy="16" rx="6" ry="11"/></svg>
+                  <svg class="svg-icon" viewBox="0 0 24 24"><circle cx="12" cy="9" r="3"/><line x1="12" y1="2.5" x2="12" y2="4.5"/><line x1="5.5" y1="9" x2="3.5" y2="9"/><line x1="20.5" y1="9" x2="18.5" y2="9"/><line x1="7.4" y1="4.4" x2="6" y2="3"/><line x1="16.6" y1="4.4" x2="18" y2="3"/><path d="M3 18 Q 7 14 11 17 Q 15 20 21 16"/><line x1="3" y1="21" x2="21" y2="21"/></svg>
                 </span>
                 <h5>Real-World Science</h5>
                 <p>Concepts become easier to understand when students can observe them outside the classroom.</p>
               </div>
               <div class="reg-date">
                 <span class="reg-date__icon" aria-hidden="true">
-                  <svg class="svg-icon" viewBox="0 0 32 32"><circle cx="20" cy="10" r="4"/><path d="M10 28 Q 10 18, 20 18 Q 30 18, 30 28"/><line x1="4" y1="14" x2="9" y2="14"/><line x1="4" y1="20" x2="9" y2="20"/><line x1="4" y1="26" x2="9" y2="26"/></svg>
+                  <svg class="svg-icon" viewBox="0 0 24 24"><circle cx="5" cy="14.5" r="1.5"/><line x1="5" y1="16" x2="5" y2="20.5"/><circle cx="12" cy="11.5" r="1.8"/><line x1="12" y1="13.3" x2="12" y2="20.5"/><circle cx="19" cy="8.5" r="2"/><line x1="19" y1="10.5" x2="19" y2="20.5"/><line x1="3" y1="20.8" x2="21" y2="20.8"/></svg>
                 </span>
                 <h5>Grade-Level Fit</h5>
                 <p>Programs are matched to age, grade level, and curriculum goals.</p>
               </div>
               <div class="reg-date">
                 <span class="reg-date__icon" aria-hidden="true">
-                  <svg class="svg-icon" viewBox="0 0 32 32"><circle cx="16" cy="12" r="4"/><path d="M6 28 Q 6 19, 16 19 Q 26 19, 26 28"/><circle cx="8" cy="9" r="2.5"/><circle cx="24" cy="9" r="2.5"/></svg>
+                  <svg class="svg-icon" viewBox="0 0 24 24"><circle cx="7" cy="8" r="2.4"/><path d="M3 18.5 C 3 14.5 5 13.2 7 13.2 C 9 13.2 11 14.5 11 18.5"/><circle cx="17" cy="8" r="2.4"/><path d="M13 18.5 C 13 14.5 15 13.2 17 13.2 C 19 13.2 21 14.5 21 18.5"/><path d="M9.5 6 Q 12 3.2 14.5 6"/></svg>
                 </span>
                 <h5>Stronger Engagement</h5>
                 <p>Outdoor learning gives students a reason to ask questions, collaborate, and notice details.</p>
               </div>
               <div class="reg-date">
                 <span class="reg-date__icon" aria-hidden="true">
-                  <svg class="svg-icon" viewBox="0 0 32 32"><rect x="5" y="8" width="22" height="20" rx="2"/><line x1="10" y1="4" x2="10" y2="12"/><line x1="22" y1="4" x2="22" y2="12"/><line x1="5" y1="14" x2="27" y2="14"/><rect x="9" y="18" width="4" height="3"/><rect x="15" y="18" width="4" height="3"/><rect x="21" y="18" width="4" height="3"/></svg>
+                  <svg class="svg-icon" viewBox="0 0 24 24"><circle cx="5" cy="5.5" r="2.4"/><rect x="9.6" y="14.6" width="5" height="5" rx="0.6"/><path d="M18 4 L21.2 9.4 L14.8 9.4 Z"/><line x1="6.7" y1="7.4" x2="10.4" y2="14"/><line x1="14.7" y1="14.4" x2="17.6" y2="9.5"/><line x1="7.4" y1="5.5" x2="15.6" y2="6"/></svg>
                 </span>
                 <h5>Flexible Formats</h5>
                 <p>Choose onsite programs, classroom outreach, seasonal studies, or aquatic learning.</p>
               </div>
               <div class="reg-date">
                 <span class="reg-date__icon" aria-hidden="true">
-                  <svg class="svg-icon" viewBox="0 0 32 32"><path d="M27 16a11 11 0 0 1-1.2 5 11 11 0 0 1-10 6 11 11 0 0 1-5-1.2L4 28l2.5-7.5A11 11 0 0 1 5 16a11 11 0 0 1 6-9.8A11 11 0 0 1 16 5h.7a11 11 0 0 1 10.3 10.3z"/><line x1="12" y1="16" x2="20" y2="16"/><line x1="16" y1="12" x2="16" y2="20"/></svg>
+                  <svg class="svg-icon" viewBox="0 0 24 24"><rect x="5" y="5" width="14" height="17" rx="1.6"/><rect x="9" y="3" width="6" height="3" rx="0.6"/><path d="M7.8 11 L9.4 12.6 L12 10"/><line x1="13.5" y1="11" x2="17" y2="11"/><path d="M7.8 16 L9.4 17.6 L12 15"/><line x1="13.5" y1="16" x2="17" y2="16"/></svg>
                 </span>
                 <h5>Planning Support</h5>
                 <p>Elachee helps clarify program fit, availability, logistics, and next steps.</p>
