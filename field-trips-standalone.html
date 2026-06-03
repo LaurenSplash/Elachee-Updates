@@ -1,0 +1,3429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+  <title>Field Trips at Elachee | Outdoor Science Programs in Gainesville, GA</title>
+  <meta name="description" content="Plan a hands-on science field trip at Elachee Nature Science Center in Gainesville, GA. Explore GSE-supportive programs for Pre-K–12, onsite visits, classroom programs, and Lake Lanier aquatic learning. Request availability today.">
+  <meta property="og:title" content="Field Trips at Elachee | Outdoor Science Programs in Gainesville, GA">
+  <meta property="og:description" content="Hands-on science field trips for Pre-K–12 in Gainesville, GA. Onsite, classroom, seasonal, and Lake Lanier aquatic programs designed to support Georgia Standards of Excellence.">
+  <meta property="og:type" content="website">
+
+  <!-- ============================================================
+       STRUCTURED DATA · EducationalOrganization + BreadcrumbList.
+       FAQPage markup remains inline on the visible FAQ items below.
+       NOTE: confirm this is compatible with any sitewide schema
+       (avoid declaring two primary Organization entities site-wide).
+       ============================================================ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "name": "Elachee Nature Science Center",
+    "url": "https://elachee.org/",
+    "description": "Nature science center in Gainesville, Georgia, offering hands-on outdoor science field trips for Pre-K through 12th grade inside the 1,440-acre Chicopee Woods Nature Preserve.",
+    "telephone": "+1-770-535-1976",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "2125 Elachee Drive",
+      "addressLocality": "Gainesville",
+      "addressRegion": "GA",
+      "postalCode": "30504",
+      "addressCountry": "US"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://elachee.org/" },
+      { "@type": "ListItem", "position": 2, "name": "For Schools", "item": "https://elachee.org/for-schools.html" },
+      { "@type": "ListItem", "position": 3, "name": "Field Trips", "item": "https://elachee.org/field-trips.html" }
+    ]
+  }
+  </script>
+
+  <link rel="stylesheet" href="https://use.typekit.net/fgp5hov.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap">
+  <link rel="stylesheet" href="assets/css/site.css">
+  <link rel="stylesheet" href="assets/css/camp-elachee.css">
+
+  <style>
+    /* ============================================================
+       FIELD TRIPS · ELACHEE NATURE SCIENCE CENTER
+       Standalone landing page — embedded CSS + JS only.
+       Visual system matches the Camp Elachee page.
+       ============================================================ */
+
+    :root {
+      /* ============ Elachee BRAND palette · the only 6 brand hues ============
+         Green:  #93CC36   PMS 367C
+         Bark:   #474747   PMS 446C
+         Blue:   #44A7EA   PMS 299C
+         Purple: #B165D4   PMS 7441C
+         Red:    #F04E4E   Warm Red C
+         Yellow: #FFB644   PMS 1365C
+         Anything else below is either a transparent tint of a brand
+         color or a neutral utility (white / off-white / cream). */
+      --ce-green:    #93CC36;
+      --ce-bark:     #474747;
+      --ce-blue:     #44A7EA;
+      --ce-purple:   #B165D4;
+      --ce-red:      #F04E4E;
+      --ce-yellow:   #FFB644;
+      --ce-orange:   #FFB644;       /* alias of Yellow for orange treatments */
+
+      /* Derived shade aliases · point at brand swatches so any older
+         rule that still asks for "green-d" or "orange-d" still
+         resolves to a brand color and never drifts off-palette. */
+      --ce-green-d:  var(--ce-green);
+      --ce-green-x:  var(--ce-green);
+      --ce-orange-d: var(--ce-yellow);
+      --ce-orange-l: rgba(255, 182, 68, 0.22);   /* yellow tint */
+      --ce-peach:    rgba(255, 182, 68, 0.16);   /* yellow tint */
+      --ce-blue-l:   rgba(68, 167, 234, 0.20);   /* blue tint */
+      --ce-bark-2:   rgba(71, 71, 71, 0.78);     /* bark tint · used for body copy */
+
+      /* Neutral utility surfaces · backgrounds only, never accent fills */
+      --ce-cream:    #f8f6ec;
+      --ce-cream-2:  #f1efe1;
+      --ce-parch:    #efe9d2;
+
+      /* Type */
+      --ff-base: "Outfit", "Helvetica Neue", Arial, sans-serif;
+
+      /* Shape */
+      --r-sm: 10px;
+      --r-md: 16px;
+      --r-lg: 22px;
+      --r-xl: 28px;
+
+      /* Shadow */
+      --sh-card: 0 10px 28px rgba(40, 60, 10, 0.10), 0 2px 6px rgba(40, 60, 10, 0.06);
+      --sh-lift: 0 18px 40px -10px rgba(20, 30, 10, 0.30), 0 6px 14px -4px rgba(20, 30, 10, 0.20);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+
+    body {
+      margin: 0;
+      font-family: var(--ff-base);
+      font-size: 16px;
+      line-height: 1.55;
+      color: var(--ce-bark);
+      background: var(--ce-cream);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    img { max-width: 100%; display: block; }
+
+    a {
+      color: var(--ce-green-x);
+      text-decoration: none;
+    }
+    a:hover { text-decoration: underline; }
+
+    button { font: inherit; cursor: pointer; }
+
+    /* Focus ring */
+    :focus-visible {
+      outline: 3px solid var(--ce-blue);
+      outline-offset: 3px;
+      border-radius: 4px;
+    }
+
+    /* ============================================================
+       LAYOUT PRIMITIVES
+       (site.css owns .container; we leave it untouched.)
+       ============================================================ */
+    .section {
+      position: relative;
+      padding: 84px 0;
+    }
+    .section--tight  { padding: 56px 0; }
+    .section--cream  { background: var(--ce-cream); }
+    .section--cream2 { background: var(--ce-cream-2); }
+    .section--bark   { background: var(--ce-bark); color: #fff; }
+    .section--green  { background: var(--ce-green); color: #fff; }
+    .section--parch  { background: var(--ce-parch); }
+
+    .section--topo {
+      background-image:
+        radial-gradient(ellipse at 10% 10%, rgba(147,204,54,0.08) 0, transparent 40%),
+        radial-gradient(ellipse at 90% 80%, rgba(68,167,234,0.08) 0, transparent 40%),
+        var(--topo-lines),
+        var(--ce-cream);
+    }
+
+    /* Topographic line texture (inline SVG, repeatable) */
+    :root {
+      --topo-lines: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='600' height='600'><g fill='none' stroke='%23bfb98a' stroke-width='0.8' opacity='0.18'><path d='M-50 480 C 100 420 220 540 360 470 S 620 380 720 460'/><path d='M-50 420 C 120 360 240 480 380 410 S 620 320 720 400'/><path d='M-50 360 C 140 300 260 420 400 350 S 620 260 720 340'/><path d='M-50 300 C 160 240 280 360 420 290 S 620 200 720 280'/><path d='M-50 240 C 180 180 300 300 440 230 S 620 140 720 220'/><path d='M-50 180 C 200 120 320 240 460 170 S 620 80 720 160'/><path d='M-50 120 C 220 60 340 180 480 110 S 620 20 720 100'/></g></svg>");
+    }
+
+    .eyebrow {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--ce-green-x);
+      background: rgba(147, 204, 54, 0.16);
+      padding: 6px 14px;
+      border-radius: 999px;
+      margin: 0 0 16px;
+    }
+    .section--bark .eyebrow,
+    .section--green .eyebrow {
+      color: #fff;
+      background: rgba(255, 255, 255, 0.18);
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: var(--ff-base);
+      font-weight: 800;
+      letter-spacing: -0.01em;
+      color: var(--ce-bark);
+      margin: 0 0 16px;
+      line-height: 1.15;
+    }
+    .section--bark h1, .section--bark h2, .section--bark h3, .section--bark h4, .section--bark h5, .section--bark h6,
+    .section--green h1, .section--green h2, .section--green h3, .section--green h4, .section--green h5, .section--green h6 {
+      color: #fff;
+    }
+
+    h1 { font-size: clamp(32px, 5vw, 56px); letter-spacing: -0.02em; }
+    h2 { font-size: clamp(28px, 4vw, 42px); letter-spacing: -0.02em; }
+    h3 { font-size: clamp(20px, 2.4vw, 26px); }
+    h4 { font-size: 20px; }
+
+    p { margin: 0 0 12px; }
+    .lede { font-size: 18px; color: var(--ce-bark-2); line-height: 1.6; max-width: 720px; }
+    .section--bark .lede, .section--green .lede { color: rgba(255,255,255,0.92); }
+
+    .section-head {
+      max-width: 820px;
+      margin: 0 auto 48px;
+      text-align: center;
+    }
+    .section-head h2 strong { color: var(--ce-green-x); font-weight: 900; }
+    .section--bark .section-head h2 strong { color: var(--ce-green); }
+
+    /* ============================================================
+       BUTTONS · scoped to .main so they don't fight site.css's
+       .btn / .btn-1 / .btn-7 / .btn-donate rules used by the
+       header and footer.
+       ============================================================ */
+    .main .ft-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      min-height: 50px;
+      padding: 13px 26px;
+      border-radius: 999px;
+      font-weight: 800;
+      font-size: 15px;
+      letter-spacing: 0.02em;
+      line-height: 1.1;
+      border: 0;
+      cursor: pointer;
+      text-decoration: none !important;
+      transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease, color 180ms ease;
+      white-space: nowrap;
+    }
+    .main .ft-btn:hover { transform: translateY(-2px); }
+
+    .main .ft-btn--primary {
+      background: var(--ce-green);
+      color: #fff;
+      box-shadow: 0 6px 14px rgba(122, 176, 43, 0.35);
+    }
+    .main .ft-btn--primary:hover { background: var(--ce-green-d); box-shadow: 0 10px 20px rgba(122, 176, 43, 0.45); }
+
+    .main .ft-btn--secondary {
+      background: var(--ce-orange);
+      color: #fff;
+      box-shadow: 0 6px 14px rgba(247, 168, 47, 0.35);
+    }
+    .main .ft-btn--secondary:hover { background: var(--ce-orange-d); box-shadow: 0 10px 20px rgba(247, 168, 47, 0.45); }
+
+    .main .ft-btn--ghost {
+      background: transparent;
+      color: var(--ce-bark);
+      border: 2px solid var(--ce-bark);
+    }
+    .main .section--bark .ft-btn--ghost, .main .section--green .ft-btn--ghost {
+      color: #fff;
+      border-color: rgba(255,255,255,0.65);
+    }
+    .main .ft-btn--ghost:hover { background: var(--ce-bark); color: #fff; }
+    .main .section--bark .ft-btn--ghost:hover { background: #fff; color: var(--ce-bark); }
+
+    .main .ft-btn--white {
+      background: #fff;
+      color: var(--ce-bark);
+      box-shadow: 0 6px 14px rgba(0,0,0,0.18);
+    }
+    .main .ft-btn--white:hover { background: var(--ce-cream); }
+
+    .main .btn-row {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .main .arrow-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 800;
+      color: var(--ce-green-x);
+      text-decoration: none;
+      letter-spacing: 0.02em;
+    }
+    .main .arrow-link svg { transition: transform 200ms ease; }
+    .main .arrow-link:hover svg { transform: translateX(4px); }
+    .main .arrow-link:hover { text-decoration: none; }
+
+    /* Header + footer styling come from external assets/css/site.css.
+       We don't override any header/footer/nav/logo/btn-1/btn-7 rules. */
+
+    /* ============================================================
+       HERO + TRUST STRIP
+       The hero now uses the .section-camp-hero / .camp-hero /
+       .hero-polaroids / .hero-badge class hooks from
+       camp-elachee.css for full visual parity with the Camp page.
+       The .trust-strip stays for the quick proof-point row that
+       sits between hero and Problem section.
+       ============================================================ */
+
+    /* Extra bottom padding so the CTA buttons + urgency line clear
+       the wave divider at the bottom of the hero. */
+    #field-trips.section-camp-hero {
+      padding-bottom: 220px !important;
+    }
+    #field-trips .camp-hero {
+      padding-bottom: 40px;
+    }
+    @media (max-width: 900px) {
+      #field-trips.section-camp-hero {
+        padding-bottom: 180px !important;
+      }
+    }
+    /* Trust strip · 5 rounded pill chips on white, evenly spaced.
+       Aggressive list-marker resets so site.css can't sneak in
+       bullets next to the green check icons. */
+    .trust-strip {
+      background: #ffffff;
+      padding: 28px 0;
+      position: relative;
+    }
+    .trust-strip ul {
+      list-style: none !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      counter-reset: none !important;
+    }
+    .trust-strip ul li {
+      list-style: none !important;
+      list-style-type: none !important;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 18px 10px 14px;
+      background: rgba(147, 204, 54, 0.10);
+      border: 1px solid rgba(147, 204, 54, 0.30);
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 13.5px;
+      color: var(--ce-bark);
+      letter-spacing: 0.01em;
+      white-space: nowrap;
+    }
+    .trust-strip ul li::before,
+    .trust-strip ul li::after,
+    .trust-strip ul li::marker {
+      content: none !important;
+      display: none !important;
+      counter-increment: none !important;
+    }
+    .trust-strip ul li svg {
+      width: 18px;
+      height: 18px;
+      color: #ffffff;
+      background: var(--ce-green);
+      border-radius: 50%;
+      padding: 3px;
+      flex-shrink: 0;
+      box-sizing: border-box;
+    }
+    @media (max-width: 720px) {
+      .trust-strip { padding: 20px 0; }
+      .trust-strip ul { gap: 8px; }
+      .trust-strip ul li { font-size: 12.5px; padding: 8px 14px 8px 10px; }
+    }
+
+    /* PROBLEM SECTION · uses the shared .section-camp-problem
+       + .camp-problem__grid + .box-1 styles from
+       camp-elachee.css for full visual parity with the Camp
+       page. No custom problem CSS lives here. */
+
+    /* ============================================================
+       GUIDE / AUTHORITY SECTION
+       Uses the shared .section-camp-guide + .guide-split +
+       .guide-collage + .camp-stats-grid + .stat-tile styles from
+       camp-elachee.css for visual parity with the Camp page.
+       Compaction overrides below keep the section in one fold.
+       ============================================================ */
+    .section-camp-guide {
+      padding-top: 56px !important;
+      padding-bottom: 56px !important;
+    }
+    .section-camp-guide .section-head {
+      margin-bottom: 32px !important;
+    }
+    .section-camp-guide .section-head h2 {
+      font-size: clamp(24px, 3vw, 34px);
+      margin: 0 auto 6px;
+      max-width: 760px;
+    }
+    .section-camp-guide .guide-split {
+      margin: 0 auto 28px !important;
+      gap: 36px !important;
+      align-items: center;
+    }
+    .section-camp-guide .guide-split__copy p {
+      font-size: 15.5px !important;
+      line-height: 1.55 !important;
+      margin: 0 0 12px !important;
+      color: var(--ce-bark-2) !important;
+    }
+    .section-camp-guide .camp-stats-grid {
+      margin: 28px auto 0 !important;
+    }
+    .section-camp-guide .stat-tile {
+      padding: 22px 16px 18px !important;
+    }
+    .section-camp-guide .stat-tile__num {
+      font-size: 34px !important;
+    }
+    .section-camp-guide .stat-tile__label {
+      font-size: 12.5px !important;
+      letter-spacing: 0.10em !important;
+    }
+
+    /* ============================================================
+       PLAN STEPS · uses Camp Elachee's exact pattern:
+       <ul class="plan-steps"><li><img src="step1-icon.svg"></li>...
+       Each step is a complete SVG illustration that already contains
+       the colored panel + script number + topographic pattern +
+       white circular icon disc. We only need:
+         1. White section background (Camp's EDIT 19)
+         2. List-marker reset (Camp's EDIT 2)
+         3. Centering rules (Camp's EDIT 29)
+       ============================================================ */
+
+    /* Plan section · plain white background */
+    .section-camp-plan {
+      background: #ffffff !important;
+      background-image: none !important;
+    }
+    .section-camp-plan::before,
+    .section-camp-plan::after {
+      content: none !important;
+      display: none !important;
+      background: none !important;
+    }
+
+    /* Suppress stray <li> list-item markers (Camp's EDIT 2) */
+    .plan-steps,
+    .section-camp-plan,
+    .section-camp-plan .section-body {
+      counter-reset: none !important;
+    }
+    .plan-steps {
+      list-style: none !important;
+      padding-left: 0 !important;
+    }
+    .plan-steps > li {
+      list-style: none !important;
+      list-style-type: none !important;
+    }
+    .plan-steps > li::marker {
+      content: "" !important;
+      color: transparent !important;
+      font-size: 0 !important;
+    }
+    .plan-steps > li::before,
+    .plan-steps > li::after {
+      content: none !important;
+      display: none !important;
+      counter-increment: none !important;
+    }
+
+    /* Center the SVG step illustrations (Camp's EDIT 29) */
+    .section-camp-plan .plan-steps {
+      margin: 0 auto !important;
+      max-width: 1000px;
+      text-align: center !important;
+      display: flex !important;
+      flex-direction: column;
+      align-items: center;
+      gap: 24px;
+    }
+    .section-camp-plan .plan-steps > li {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+    .section-camp-plan .plan-steps > li > img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .plan-cta-wrap {
+      text-align: center;
+      margin-top: 48px;
+    }
+
+    /* Visible plan-step text · three readable cards under the SVG row */
+    .plan-steps-text {
+      list-style: none !important;
+      counter-reset: none !important;
+      padding: 0 !important;
+      margin: 36px auto 0 !important;
+      max-width: 1000px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+    .plan-steps-text > li {
+      list-style: none !important;
+      background: var(--ce-cream);
+      border: 1px solid var(--ce-cream-2);
+      border-radius: var(--r-md);
+      padding: 22px 22px 20px;
+      border-top: 5px solid var(--ce-green);
+    }
+    .plan-steps-text > li::before,
+    .plan-steps-text > li::after,
+    .plan-steps-text > li::marker {
+      content: none !important;
+      display: none !important;
+    }
+    .plan-steps-text h3 {
+      font-size: 17px;
+      margin: 0 0 8px;
+    }
+    .plan-steps-text p {
+      font-size: 14.5px;
+      color: var(--ce-bark-2);
+      line-height: 1.5;
+      margin: 0;
+    }
+    @media (max-width: 800px) {
+      .plan-steps-text { grid-template-columns: 1fr; gap: 14px; }
+    }
+
+    /* ============================================================
+       PROGRAM OPTIONS
+       ============================================================ */
+    .program-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 26px;
+    }
+    .program-card {
+      background: #fff;
+      border-radius: var(--r-xl);
+      padding: 30px 32px 28px;
+      box-shadow: var(--sh-card);
+      position: relative;
+      overflow: hidden;
+      border-top: 6px solid var(--tone, var(--ce-green));
+      display: flex;
+      flex-direction: column;
+    }
+    .program-card[data-tone="green"]  { --tone: var(--ce-green); --tone-soft: rgba(147,204,54,0.16); }
+    .program-card[data-tone="orange"] { --tone: var(--ce-orange); --tone-soft: rgba(255,182,68,0.20); }
+    .program-card[data-tone="purple"] { --tone: var(--ce-purple); --tone-soft: rgba(177,101,212,0.16); }
+    .program-card[data-tone="blue"]   { --tone: var(--ce-blue); --tone-soft: rgba(68,167,234,0.16); }
+    .program-card__icon {
+      width: 60px; height: 60px;
+      border-radius: 18px;
+      background: var(--tone-soft);
+      color: var(--tone);
+      display: inline-flex; align-items: center; justify-content: center;
+      margin-bottom: 16px;
+    }
+    .program-card__icon svg { width: 30px; height: 30px; }
+    .program-card h3 {
+      font-size: 22px;
+      margin: 0 0 10px;
+    }
+    .program-card p.body {
+      color: var(--ce-bark-2);
+      font-size: 15.5px;
+      line-height: 1.55;
+      margin: 0 0 14px;
+    }
+    .program-card__best {
+      background: rgba(0,0,0,0.04);
+      border-left: 3px solid var(--tone);
+      padding: 10px 14px;
+      border-radius: 6px;
+      margin: 0 0 18px;
+      font-size: 13.5px;
+      color: var(--ce-bark);
+    }
+    .program-card__best strong {
+      display: block;
+      font-size: 11.5px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--ce-bark-2);
+      margin-bottom: 2px;
+    }
+    .program-card .arrow-link {
+      margin-top: auto;
+      color: var(--tone);
+    }
+
+    /* Practical detail rows inside each program card */
+    .program-card__meta {
+      list-style: none !important;
+      padding: 0 !important;
+      margin: 0 0 16px !important;
+      display: grid;
+      gap: 6px;
+    }
+    .program-card__meta > li {
+      list-style: none !important;
+      font-size: 13.5px;
+      line-height: 1.45;
+      color: var(--ce-bark-2);
+      display: flex;
+      gap: 8px;
+    }
+    .program-card__meta > li::before,
+    .program-card__meta > li::after {
+      content: none !important;
+      display: none !important;
+    }
+    .program-card__meta > li strong {
+      color: var(--ce-bark);
+      font-weight: 800;
+      flex: 0 0 auto;
+      min-width: 92px;
+    }
+
+    @media (max-width: 800px) {
+      .program-grid { grid-template-columns: 1fr; }
+    }
+
+    /* ============================================================
+       STANDARDS ALIGNMENT · redesigned as a "Standards + Nature
+       = Experience" formula with bold contrast and a fully
+       readable benefits grid underneath.
+       ============================================================ */
+    /* Cream/parchment background to match Camp's lighter section palette
+       (Camp uses dark backgrounds only for the final CTA). */
+    .section--standards {
+      background:
+        radial-gradient(circle at 8% 12%, rgba(147,204,54,0.10) 0, transparent 40%),
+        radial-gradient(circle at 92% 88%, rgba(68,167,234,0.10) 0, transparent 40%),
+        var(--ce-cream);
+      color: var(--ce-bark) !important;
+    }
+    .section--standards .section-head h2 { color: var(--ce-bark) !important; }
+    .section--standards .section-head h2 strong { color: var(--ce-green) !important; font-weight: 900; }
+    .section--standards .section-head h6,
+    .section--standards .section-head p,
+    .section--standards .lede { color: var(--ce-bark-2) !important; }
+
+    /* Formula row · three tiles connected by + and = symbols */
+    .formula {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr auto 1fr;
+      gap: 20px;
+      align-items: center;
+      max-width: 1000px;
+      margin: 0 auto 44px;
+    }
+    .formula__op {
+      font-family: "Outfit", "Helvetica Neue", Arial, sans-serif;
+      font-size: 56px;
+      font-weight: 300;
+      color: var(--ce-green);
+      line-height: 1;
+      text-align: center;
+      user-select: none;
+    }
+    .formula-card {
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 32px 26px 28px;
+      text-align: center;
+      box-shadow: 0 14px 30px -10px rgba(40, 60, 10, 0.18),
+                  0 4px 10px rgba(40, 60, 10, 0.08);
+      position: relative;
+      transition: transform 240ms ease;
+    }
+    .formula-card:hover { transform: translateY(-4px); }
+    .formula-card__icon {
+      width: 78px;
+      height: 78px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 16px;
+      color: #ffffff;
+      box-shadow: 0 0 0 6px rgba(255,255,255,0.55);
+    }
+    .formula-card__icon svg { width: 38px; height: 38px; }
+    .formula-card[data-tone="orange"] .formula-card__icon { background: var(--ce-orange); }
+    .formula-card[data-tone="green"]  .formula-card__icon { background: var(--ce-green); }
+    .formula-card[data-tone="purple"] .formula-card__icon { background: var(--ce-purple); }
+    .formula-card h3 {
+      color: var(--ce-bark);
+      font-size: 22px;
+      font-weight: 800;
+      margin: 0 0 8px;
+      letter-spacing: -0.01em;
+    }
+    .formula-card p {
+      color: var(--ce-bark-2);
+      font-size: 14.5px;
+      line-height: 1.5;
+      margin: 0;
+    }
+    .formula-card__tag {
+      display: inline-block;
+      font-size: 10.5px;
+      font-weight: 800;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--ce-bark-2);
+      background: var(--ce-cream-2);
+      padding: 3px 10px;
+      border-radius: 999px;
+      margin-bottom: 10px;
+    }
+
+    /* Benefits chip grid · 2-column on desktop, fully readable */
+    .standards-benefits {
+      list-style: none;
+      padding: 0;
+      margin: 0 auto 36px;
+      max-width: 1000px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px 22px;
+    }
+    .standards-benefits li {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      background: transparent;
+      border: 0;
+      border-radius: 0;
+      padding: 8px 0;
+      font-size: 15.5px;
+      line-height: 1.4;
+      color: var(--ce-bark) !important;
+      font-weight: 600;
+      box-shadow: none;
+    }
+    .standards-benefits li::before { content: none !important; }
+    .standards-benefits__check {
+      flex-shrink: 0;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: var(--ce-green);
+      color: #ffffff;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .standards-benefits__check svg { width: 13px; height: 13px; }
+
+    @media (max-width: 900px) {
+      .formula {
+        grid-template-columns: 1fr;
+        gap: 14px;
+      }
+      .formula__op {
+        font-size: 36px;
+        padding: 4px 0;
+      }
+      .standards-benefits { grid-template-columns: 1fr; }
+    }
+
+    /* BENEFITS · uses the shared .section-camp-registration +
+       .reg-dates + .reg-date styles from camp-elachee.css for
+       visual parity with the Camp page. Background image set to
+       the "Pattern Fades to Green" PNG from /assets/backgrounds/,
+       positioned at the bottom so the headline area stays clean
+       white. Heading color forced to bark since the white-on-white
+       was unreadable on this light background. */
+    .section-camp-registration {
+      background-color: #ffffff !important;
+      background-image: url("assets/backgrounds/Pattern%20Fades%20to%20Green.png") !important;
+      background-position: center bottom !important;
+      background-repeat: no-repeat !important;
+      background-size: 100% 65% !important;
+    }
+    .section-camp-registration::before,
+    .section-camp-registration::after {
+      content: none !important;
+      display: none !important;
+      background: none !important;
+    }
+    /* Force headline + subhead text to readable bark color */
+    .section-camp-registration .section-head h2,
+    .section-camp-registration .section-head h2 strong {
+      color: var(--ce-bark) !important;
+    }
+    .section-camp-registration .section-head h6,
+    .section-camp-registration .section-head p {
+      color: var(--ce-bark-2) !important;
+    }
+
+    /* ============================================================
+       TESTIMONIALS · base .testimonial-card / .testimonial-card__*
+       styling lives in assets/css/camp-elachee.css (shared with the
+       Camp Elachee page). We only add the Camp page's EDIT 21
+       carousel override so the cards become a single horizontal,
+       scroll-snapping row that matches Camp visually.
+       ============================================================ */
+    .section-camp-testimonials .testimonials-grid {
+      display: flex !important;
+      grid-template-columns: none !important;
+      flex-wrap: nowrap !important;
+      overflow-x: auto;
+      overflow-y: visible;
+      scroll-snap-type: x mandatory;
+      scroll-padding-left: 16px;
+      gap: 24px;
+      padding: 14px 16px 28px;
+      margin: 0 -16px;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: thin;
+      scrollbar-color: rgba(0,0,0,0.18) transparent;
+    }
+    .section-camp-testimonials .testimonials-grid::-webkit-scrollbar {
+      height: 8px;
+    }
+    .section-camp-testimonials .testimonials-grid::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    .section-camp-testimonials .testimonials-grid::-webkit-scrollbar-thumb {
+      background: rgba(0,0,0,0.18);
+      border-radius: 4px;
+    }
+    .section-camp-testimonials .testimonials-grid::-webkit-scrollbar-thumb:hover {
+      background: rgba(0,0,0,0.32);
+    }
+    .section-camp-testimonials .testimonial-card {
+      flex: 0 0 auto;
+      width: clamp(280px, 32%, 400px);
+      scroll-snap-align: start;
+    }
+    .testimonial-review-flag {
+      max-width: 720px;
+      margin: 0 auto 8px;
+      text-align: center;
+      font-size: 12.5px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      color: #8a3d00;
+      background: var(--ce-orange-l);
+      border: 1px dashed var(--ce-yellow);
+      border-radius: 8px;
+      padding: 8px 14px;
+    }
+
+    /* ============================================================
+       LOGISTICS · "Details at a Glance"
+       Dark bark section with topographic texture + brand-color
+       glows for contrast against the surrounding cream sections.
+       Cards stay light for readability but carry a brand-colored
+       side accent + tinted icon tile so the grid reads as lively
+       rather than a flat white list.
+       ============================================================ */
+    .section--logistics {
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(ellipse at 12% 0%, rgba(147,204,54,0.20) 0, transparent 42%),
+        radial-gradient(ellipse at 88% 18%, rgba(68,167,234,0.18) 0, transparent 45%),
+        radial-gradient(ellipse at 75% 100%, rgba(177,101,212,0.16) 0, transparent 48%),
+        var(--topo-lines),
+        var(--ce-bark);
+      color: #fff;
+    }
+    .section--logistics .section-head h2,
+    .section--logistics .section-head h2 strong { color: #fff !important; }
+    .section--logistics .section-head h2 strong { color: var(--ce-green) !important; }
+    .section--logistics .lede { color: rgba(255,255,255,0.82) !important; }
+    .section--logistics .eyebrow {
+      color: #fff;
+      background: rgba(255,255,255,0.16);
+    }
+
+    .logistics-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px 22px;
+      position: relative;
+      z-index: 1;
+    }
+    .logistics-card {
+      --tone: var(--ce-green);
+      --tone-soft: rgba(147,204,54,0.16);
+      background: #fff;
+      border-radius: var(--r-lg);
+      padding: 24px 24px 24px 26px;
+      box-shadow: 0 16px 34px -12px rgba(0,0,0,0.45), 0 4px 10px rgba(0,0,0,0.20);
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      position: relative;
+      overflow: hidden;
+      border-left: 5px solid var(--tone);
+      transition: transform 220ms cubic-bezier(.34,1.56,.64,1), box-shadow 220ms ease;
+    }
+    /* Soft corner wash of the card's tone for extra interest */
+    .logistics-card::after {
+      content: "";
+      position: absolute;
+      top: -40px; right: -40px;
+      width: 120px; height: 120px;
+      border-radius: 50%;
+      background: var(--tone-soft);
+      pointer-events: none;
+    }
+    .logistics-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 24px 48px -14px rgba(0,0,0,0.55), 0 8px 16px rgba(0,0,0,0.25);
+    }
+    /* Per-card tone cycling through the 6 brand hues */
+    .logistics-card[data-tone="green"]  { --tone: var(--ce-green);  --tone-soft: rgba(147,204,54,0.16); }
+    .logistics-card[data-tone="blue"]   { --tone: var(--ce-blue);   --tone-soft: rgba(68,167,234,0.16); }
+    .logistics-card[data-tone="purple"] { --tone: var(--ce-purple); --tone-soft: rgba(177,101,212,0.16); }
+    .logistics-card[data-tone="yellow"] { --tone: var(--ce-yellow); --tone-soft: rgba(255,182,68,0.20); }
+    .logistics-card[data-tone="red"]    { --tone: var(--ce-red);    --tone-soft: rgba(240,78,78,0.14); }
+
+    .logistics-card__icon {
+      flex-shrink: 0;
+      width: 50px; height: 50px;
+      border-radius: 15px;
+      background: var(--tone-soft);
+      color: var(--tone);
+      display: inline-flex; align-items: center; justify-content: center;
+      position: relative;
+      z-index: 1;
+    }
+    .logistics-card__body { position: relative; z-index: 1; }
+    .logistics-card h4 {
+      margin: 0 0 5px;
+      font-size: 13px;
+      letter-spacing: 0.10em;
+      text-transform: uppercase;
+      color: var(--tone);
+      font-weight: 800;
+    }
+    .logistics-card p {
+      margin: 0;
+      font-size: 14.5px;
+      color: var(--ce-bark);
+      line-height: 1.5;
+    }
+    /* "To confirm" pill for placeholder cards */
+    .logistics-card__pill {
+      display: inline-block;
+      margin-top: 10px;
+      font-size: 10.5px;
+      font-weight: 800;
+      letter-spacing: 0.10em;
+      text-transform: uppercase;
+      color: var(--ce-bark-2);
+      background: var(--ce-cream-2);
+      border: 1px dashed #cdc6a8;
+      border-radius: 999px;
+      padding: 3px 10px;
+    }
+    .logistics-cta-wrap { text-align: center; margin-top: 44px; position: relative; z-index: 1; }
+    @media (max-width: 700px) {
+      .logistics-grid { grid-template-columns: 1fr; }
+    }
+
+    /* ============================================================
+       DIRECT-ANSWER · "What Is an Elachee Field Trip?"
+       A bold green→blue gradient answer card (same gradient family
+       as the CTA card) so the GEO/AI definition block reads as a
+       confident, high-contrast statement instead of plain text on
+       cream. Topic chips pull the science subjects out for quick
+       scanning.
+       ============================================================ */
+    .section--whatis {
+      background: var(--ce-cream);
+      padding: 64px 0;
+    }
+    .whatis-card {
+      position: relative;
+      max-width: 1080px;
+      margin: 0 auto;
+      border-radius: 26px;
+      overflow: hidden;
+      background: linear-gradient(135deg, #93CC36 0%, #44A7EA 100%);
+      box-shadow:
+        0 18px 40px -12px rgba(20, 60, 80, 0.40),
+        0 6px 16px rgba(20, 60, 80, 0.18);
+      color: #fff;
+    }
+    /* Topographic texture + soft white highlight over the gradient */
+    .whatis-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at 85% 12%, rgba(255,255,255,0.22) 0, transparent 42%),
+        var(--topo-lines);
+      opacity: 0.9;
+      mix-blend-mode: soft-light;
+      pointer-events: none;
+    }
+    /* Oversized decorative quote/leaf glyph in the corner */
+    .whatis-card__mark {
+      position: absolute;
+      top: -18px;
+      left: 26px;
+      font-size: 180px;
+      line-height: 1;
+      font-weight: 900;
+      color: rgba(255, 255, 255, 0.16);
+      user-select: none;
+      pointer-events: none;
+    }
+    .whatis-card__inner {
+      position: relative;
+      z-index: 1;
+      padding: 52px 56px 48px;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 8px;
+      text-align: center;
+      align-items: center;
+    }
+    .whatis-card .eyebrow {
+      color: #ffffff;
+      background: rgba(255, 255, 255, 0.22);
+      margin: 0 auto 14px;
+    }
+    .whatis-card h2 {
+      color: #ffffff !important;
+      font-size: clamp(28px, 3.6vw, 40px);
+      margin: 0 0 14px;
+    }
+    .whatis-card h2 strong { color: #ffffff !important; font-weight: 900; }
+    .whatis-card__answer {
+      color: rgba(255, 255, 255, 0.96);
+      font-size: 18px;
+      line-height: 1.62;
+      max-width: 760px;
+      margin: 0 auto 26px;
+    }
+    .whatis-chips {
+      list-style: none !important;
+      padding: 0 !important;
+      margin: 0 auto !important;
+      max-width: 880px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+    .whatis-chips > li {
+      list-style: none !important;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.92);
+      color: var(--ce-bark);
+      font-weight: 700;
+      font-size: 13.5px;
+      letter-spacing: 0.01em;
+      padding: 9px 16px;
+      border-radius: 999px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+    }
+    .whatis-chips > li::before,
+    .whatis-chips > li::after { content: none !important; display: none !important; }
+    .whatis-chips > li svg {
+      width: 15px; height: 15px;
+      color: var(--ce-green);
+      flex-shrink: 0;
+    }
+    @media (max-width: 720px) {
+      .section--whatis { padding: 48px 0; }
+      .whatis-card__inner { padding: 40px 26px 36px; }
+      .whatis-card__mark { font-size: 130px; left: 14px; }
+      .whatis-card__answer { font-size: 16px; }
+    }
+
+    /* ============================================================
+       LEAD MAGNET · compact single-viewport layout
+       Guide mockup + form in one wide white card, tighter spacing
+       so the whole section fits on screen without scrolling.
+       ============================================================ */
+    .section-lead {
+      padding-top: 56px !important;
+      padding-bottom: 56px !important;
+    }
+    .section-lead .section-head {
+      margin-bottom: 28px !important;
+    }
+    .section-lead .section-head h2 {
+      font-size: clamp(24px, 3vw, 32px);
+      margin-bottom: 8px;
+    }
+    .section-lead .section-head .lede {
+      font-size: 15.5px;
+      max-width: 640px;
+      margin: 0 auto;
+    }
+
+    .lead-card {
+      background: #ffffff;
+      border-radius: 22px;
+      box-shadow: 0 18px 40px -12px rgba(20, 30, 10, 0.18),
+                  0 6px 14px -4px rgba(20, 30, 10, 0.10);
+      overflow: hidden;
+      max-width: 1080px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 0.85fr 1fr;
+    }
+
+    /* Guide preview side · soft cream panel that reads as a book/document */
+    .lead-card__preview {
+      position: relative;
+      background:
+        radial-gradient(ellipse at 50% 0%, rgba(147,204,54,0.16) 0, transparent 55%),
+        var(--ce-cream);
+      padding: 32px 32px 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .lead-card__preview::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 6px;
+      background: var(--ce-green);
+    }
+    .lead-card__badge {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      background: var(--ce-yellow);
+      color: #ffffff;
+      font-weight: 900;
+      font-size: 10.5px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      padding: 6px 12px;
+      border-radius: 999px;
+      box-shadow: 0 6px 14px rgba(247, 168, 47, 0.40);
+      transform: rotate(4deg);
+    }
+    .lead-card__preview .preview-eyebrow {
+      font-size: 10.5px;
+      font-weight: 800;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--ce-green);
+      margin: 0;
+    }
+    .lead-card__preview h3 {
+      margin: 0;
+      font-size: 22px;
+      line-height: 1.15;
+      color: var(--ce-bark);
+      font-weight: 800;
+    }
+    .lead-card__preview .preview-sub {
+      font-size: 13px;
+      color: var(--ce-bark-2);
+      margin: 0;
+      line-height: 1.45;
+    }
+    /* Aggressive list reset so the host site.css can't sneak bullets back in */
+    .lead-card__preview ul {
+      list-style: none !important;
+      padding: 0 !important;
+      margin: 8px 0 0 !important;
+      display: grid;
+      gap: 8px;
+    }
+    .lead-card__preview ul li,
+    .lead-card__preview ul li::before,
+    .lead-card__preview ul li::after {
+      list-style: none !important;
+    }
+    .lead-card__preview ul li::before,
+    .lead-card__preview ul li::after {
+      content: none !important;
+      display: none !important;
+    }
+    .lead-card__preview ul li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 13.5px;
+      color: var(--ce-bark);
+      font-weight: 600;
+      padding-left: 0 !important;
+    }
+    .preview-check {
+      flex-shrink: 0;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: var(--ce-green);
+      color: #ffffff;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .preview-check svg { width: 11px; height: 11px; }
+
+    /* Form side · ultra-compact 2-col grid · 3 rows · fits in viewport */
+    .lead-card__form {
+      padding: 22px 24px 20px;
+      display: flex;
+      flex-direction: column;
+    }
+    .lead-card__form-title {
+      font-size: 15px;
+      font-weight: 800;
+      color: var(--ce-bark);
+      margin: 0 0 10px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .lead-card__form-title::before {
+      content: "";
+      display: inline-block;
+      width: 5px;
+      height: 18px;
+      background: var(--ce-yellow);
+      border-radius: 3px;
+    }
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px 10px;
+      margin-bottom: 10px;
+    }
+    .form-field {
+      display: flex;
+      flex-direction: column;
+    }
+    .form-field--full { grid-column: 1 / -1; }
+    .form-field label {
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--ce-bark-2);
+      margin: 0 0 3px;
+    }
+    .form-field input,
+    .form-field select {
+      font: inherit;
+      font-size: 13.5px;
+      min-height: 34px;
+      padding: 5px 10px;
+      border: 1.5px solid #d8d4c1;
+      border-radius: 7px;
+      background: #ffffff;
+      color: var(--ce-bark);
+      transition: border-color 180ms ease, box-shadow 180ms ease;
+    }
+    .form-field input:focus,
+    .form-field select:focus {
+      border-color: var(--ce-green);
+      outline: 0;
+      box-shadow: 0 0 0 3px rgba(147,204,54,0.20);
+    }
+    .lead-card__form .ft-btn {
+      width: 100%;
+      min-height: 40px !important;
+      padding: 8px 18px !important;
+      font-size: 14px !important;
+      margin-top: 2px;
+    }
+    .lead-card__small {
+      font-size: 11px;
+      color: var(--ce-bark-2);
+      margin: 6px 0 0;
+      text-align: center;
+    }
+
+    /* Shrink the preview side proportionally so the card stays the
+       same overall height as the form. */
+    .lead-card__preview { padding: 24px 26px 22px; }
+    .lead-card__preview h3 { font-size: 20px; }
+    .lead-card__preview .preview-sub { font-size: 12.5px; }
+    .lead-card__preview ul li { font-size: 13px; }
+    .preview-check { width: 18px; height: 18px; }
+    .preview-check svg { width: 10px; height: 10px; }
+
+    /* Tighter section padding so the whole section fits a desktop fold. */
+    .section-lead {
+      padding-top: 44px !important;
+      padding-bottom: 44px !important;
+    }
+    .section-lead .section-head {
+      margin-bottom: 22px !important;
+    }
+    .section-lead .section-head h2 {
+      font-size: clamp(22px, 2.6vw, 28px);
+      margin-bottom: 6px;
+    }
+    .section-lead .section-head .lede {
+      font-size: 14.5px;
+      max-width: 600px;
+    }
+
+    @media (max-width: 900px) {
+      .lead-card { grid-template-columns: 1fr; }
+      .lead-card__preview { padding: 22px 22px 18px; }
+      .lead-card__form { padding: 22px 22px 18px; }
+    }
+    @media (max-width: 520px) {
+      .form-grid { grid-template-columns: 1fr; }
+    }
+
+    /* ============================================================
+       CTA SECTION · matches the CTA-Section.svg template:
+       a rounded card with a diagonal Blue→Green gradient and an
+       elevated multi-stack drop shadow, sitting inside a cream
+       section instead of being a full-bleed band.
+       ============================================================ */
+    .cta-section {
+      background: var(--ce-cream);
+      padding: 76px 0;
+    }
+    .cta-card {
+      position: relative;
+      max-width: 1123px;
+      margin: 0 auto;
+      border-radius: 20px;
+      overflow: hidden;
+      /* Diagonal Blue→Green gradient · matches paint0_linear in the
+         CTA-Section.svg (#44A7EA at 22% from bottom-right, #93CC36
+         at 82% from top-left). */
+      background: linear-gradient(315deg,
+        #44A7EA 22%,
+        #93CC36 82%);
+      /* Quadruple soft drop-shadow stack · matches filter0_dddd in
+         the SVG template for the same elevated feel. */
+      box-shadow:
+        0 12px 27px rgba(0, 0, 0, 0.13),
+        0 49px 49px rgba(0, 0, 0, 0.11),
+        0 111px 67px rgba(0, 0, 0, 0.07),
+        0 197px 79px rgba(0, 0, 0, 0.02);
+    }
+    .cta-card::before {
+      /* Subtle white-to-transparent highlight overlay matching
+         the paint1_linear white gradient in the SVG template. */
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg,
+        rgba(255, 255, 255, 0.14) 0%,
+        rgba(255, 255, 255, 0.04) 40%,
+        transparent 70%);
+      pointer-events: none;
+    }
+    .cta-card__inner {
+      position: relative;
+      z-index: 1;
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 62px 48px 64px;
+      text-align: center;
+      color: #ffffff;
+    }
+    .cta-card h2 {
+      color: #ffffff;
+      margin: 0 0 14px;
+      font-size: clamp(26px, 3.4vw, 40px);
+    }
+    .cta-card p {
+      color: rgba(255, 255, 255, 0.94);
+      font-size: 17px;
+      max-width: 600px;
+      margin: 0 auto 26px;
+      line-height: 1.5;
+    }
+    .cta-card .btn-row {
+      justify-content: center;
+    }
+    /* Ghost button override on the gradient · white border + white text */
+    .main .cta-card .ft-btn--ghost {
+      color: #ffffff;
+      border-color: rgba(255, 255, 255, 0.65);
+      background: transparent;
+    }
+    .main .cta-card .ft-btn--ghost:hover {
+      background: #ffffff;
+      color: var(--ce-bark);
+      border-color: #ffffff;
+    }
+    @media (max-width: 820px) {
+      .cta-section { padding: 56px 0; }
+      .cta-card__inner { padding: 44px 28px 46px; }
+      .cta-card { border-radius: 16px; }
+    }
+
+    /* Request form · sits on the blue→green gradient CTA card */
+    .request-form {
+      margin: 26px auto 0;
+      text-align: left;
+    }
+    .request-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px 16px;
+    }
+    .request-form .form-field label {
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #ffffff;
+      margin: 0 0 4px;
+    }
+    .request-form .form-field input,
+    .request-form .form-field select {
+      font: inherit;
+      font-size: 14px;
+      min-height: 40px;
+      padding: 7px 12px;
+      border: 0;
+      border-radius: 9px;
+      background: rgba(255, 255, 255, 0.95);
+      color: var(--ce-bark);
+    }
+    .request-form .form-field input:focus,
+    .request-form .form-field select:focus {
+      outline: 0;
+      box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.6);
+    }
+    .request-form .form-field--full { grid-column: 1 / -1; }
+    .request-submit {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 18px;
+    }
+    @media (max-width: 600px) {
+      .request-grid { grid-template-columns: 1fr; }
+    }
+
+    /* ============================================================
+       FAQ · base .accord-item / .faqs-content / .faqs-sidebar
+       styling lives in assets/css/camp-elachee.css (shared with
+       Camp Elachee). We bring in the EDIT 28 sidebar+content
+       override so the two-column filterable layout matches Camp.
+       ============================================================ */
+    .faqs-layout {
+      display: grid;
+      grid-template-columns: 260px minmax(0, 1fr);
+      gap: 40px;
+      max-width: 1100px;
+      margin: 0 auto;
+      align-items: start;
+    }
+    .faqs-sidebar {
+      position: sticky;
+      top: 90px;
+      align-self: start;
+    }
+    .faqs-sidebar__heading {
+      font-family: "Outfit", "Helvetica Neue", Arial, sans-serif;
+      font-weight: 700;
+      font-size: 12px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--ce-bark-2);
+      margin: 0 0 12px;
+      padding-left: 4px;
+    }
+    .faqs-sidebar__list {
+      list-style: none !important;
+      padding: 0 !important;
+      margin: 0 !important;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .faqs-sidebar__list > li { list-style: none !important; }
+    .faqs-sidebar__list > li::before,
+    .faqs-sidebar__list > li::after { content: none !important; display: none !important; }
+    .faqs-sidebar__btn {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      width: 100%;
+      text-align: left;
+      padding: 11px 14px;
+      border-radius: 10px;
+      background: transparent;
+      border: 1px solid transparent;
+      color: var(--ce-bark);
+      font-family: "Outfit", "Helvetica Neue", Arial, sans-serif;
+      font-weight: 600;
+      font-size: 14.5px;
+      line-height: 1.3;
+      cursor: pointer;
+      transition: background 160ms ease, color 160ms ease, border-color 160ms ease;
+    }
+    .faqs-sidebar__btn:hover {
+      background: rgba(147, 204, 54, 0.10);
+      border-color: rgba(147, 204, 54, 0.25);
+    }
+    .faqs-sidebar__btn:focus-visible {
+      outline: 2px solid var(--ce-green-d);
+      outline-offset: 2px;
+    }
+    .faqs-sidebar__btn.is-active {
+      background: var(--ce-green);
+      color: #ffffff;
+      border-color: var(--ce-green-d);
+    }
+    .faqs-sidebar__count {
+      flex: 0 0 auto;
+      font-size: 12px;
+      font-weight: 700;
+      background: rgba(0, 0, 0, 0.06);
+      color: var(--ce-bark-2);
+      padding: 2px 9px;
+      border-radius: 999px;
+      min-width: 28px;
+      text-align: center;
+    }
+    .faqs-sidebar__btn.is-active .faqs-sidebar__count {
+      background: rgba(255, 255, 255, 0.22);
+      color: #ffffff;
+    }
+    .faqs-content .accord-item {
+      transition: opacity 160ms ease;
+    }
+    .faqs-content .accord-item[hidden] {
+      display: none !important;
+    }
+    @media (max-width: 900px) {
+      .faqs-layout {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+      .faqs-sidebar {
+        position: static;
+      }
+      .faqs-sidebar__list {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        padding: 4px 2px 12px !important;
+        margin: 0 -4px !important;
+        scrollbar-width: thin;
+      }
+      .faqs-sidebar__list > li { flex: 0 0 auto; }
+      .faqs-sidebar__btn { white-space: nowrap; }
+      .faqs-sidebar__heading { padding-left: 0; }
+    }
+
+    /* ============================================================
+       FOOTER
+       ============================================================ */
+    .footer {
+      background: var(--ce-bark);
+      color: rgba(255,255,255,0.86);
+    }
+    .footer-top {
+      padding: 64px 0 36px;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr repeat(3, 1fr);
+      gap: 40px;
+    }
+    .footer h6 {
+      color: #fff;
+      font-size: 12px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin: 0 0 16px;
+    }
+    .footer ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 8px;
+    }
+    .footer a {
+      color: rgba(255,255,255,0.78);
+      text-decoration: none;
+      font-size: 14.5px;
+    }
+    .footer a:hover { color: #fff; text-decoration: underline; }
+    .footer__about p {
+      font-size: 14.5px;
+      color: rgba(255,255,255,0.78);
+      margin: 0 0 18px;
+      max-width: 320px;
+    }
+    .footer__social {
+      display: flex;
+      gap: 8px;
+    }
+    .footer__social a {
+      width: 38px; height: 38px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255,255,255,0.10);
+    }
+    .footer__social a:hover { background: var(--ce-green); }
+    .footer__social svg { width: 16px; height: 16px; color: #fff; }
+
+    .newsletter {
+      margin-top: 20px;
+    }
+    .newsletter h6 { margin-bottom: 10px; }
+    .newsletter__form {
+      display: flex;
+      gap: 8px;
+    }
+    .newsletter__form input {
+      flex: 1 1 auto;
+      min-width: 0;
+      font: inherit;
+      min-height: 44px;
+      padding: 10px 14px;
+      border-radius: 999px;
+      border: 0;
+      background: rgba(255,255,255,0.10);
+      color: #fff;
+      font-size: 14px;
+    }
+    .newsletter__form input::placeholder { color: rgba(255,255,255,0.55); }
+    .newsletter__form input:focus { outline: 0; box-shadow: 0 0 0 3px rgba(147,204,54,0.4); }
+    .newsletter__form button {
+      min-height: 44px;
+      padding: 10px 18px;
+      border-radius: 999px;
+      border: 0;
+      background: var(--ce-green);
+      color: #fff;
+      font-weight: 800;
+      font-size: 13.5px;
+    }
+    .newsletter__form button:hover { background: var(--ce-green-d); }
+
+    .footer-btm {
+      border-top: 1px solid rgba(255,255,255,0.10);
+      padding: 22px 0 22px;
+      font-size: 13px;
+      color: rgba(255,255,255,0.65);
+    }
+    .footer-btm__inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    .footer-btm a { color: rgba(255,255,255,0.78); margin-left: 18px; font-size: 13px; }
+    .footer-btm__credit { margin-left: auto; font-size: 13px; }
+    .footer-btm__credit a { margin-left: 4px; }
+
+    @media (max-width: 900px) {
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 560px) {
+      .footer-grid { grid-template-columns: 1fr; }
+      .footer-btm__inner { flex-direction: column; align-items: flex-start; gap: 8px; }
+      .footer-btm__credit { margin-left: 0; }
+    }
+
+    /* ============================================================
+       STICKY MOBILE CTA
+       ============================================================ */
+    .mobile-cta-bar {
+      display: none;
+      position: fixed;
+      left: 12px;
+      right: 12px;
+      bottom: 12px;
+      z-index: 60;
+      padding: 10px;
+      background: #fff;
+      border-radius: 14px;
+      box-shadow: 0 18px 40px -8px rgba(0,0,0,0.30), 0 6px 14px rgba(0,0,0,0.18);
+      gap: 8px;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 220ms ease, transform 220ms ease;
+      pointer-events: none;
+    }
+    .mobile-cta-bar.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+    .mobile-cta-bar .ft-btn {
+      flex: 1 1 0;
+      min-height: 46px;
+      padding: 10px 12px;
+      font-size: 13.5px;
+    }
+    @media (max-width: 720px) {
+      .mobile-cta-bar { display: flex; }
+      body { padding-bottom: 80px; }
+    }
+
+    /* ============================================================
+       UTILITY · soft section dividers (subtle wave)
+       ============================================================ */
+    .wave-divider {
+      display: block;
+      width: 100%;
+      height: 64px;
+      margin-bottom: -1px;
+    }
+
+    /* Hide visually but keep accessible to AT */
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    /* ============================================================
+       Final CTA polaroid stack · the .hero-polaroids styles in
+       camp-elachee.css are sized for the hero context only and
+       collapse to slivers when reused here. Re-establish the
+       container dimensions and the two polaroid positions inline.
+       ============================================================ */
+    .section--bark .hero-polaroids {
+      position: relative !important;
+      width: 100% !important;
+      max-width: 480px !important;
+      aspect-ratio: 1 / 1 !important;
+      margin: 0 auto !important;
+    }
+    .section--bark .hero-polaroids .polaroid {
+      position: absolute !important;
+      width: 64% !important;
+      margin: 0 !important;
+      padding: 12px 12px 36px !important;
+      background: #ffffff !important;
+      border-radius: 4px !important;
+      box-shadow:
+        0 18px 36px -10px rgba(0, 0, 0, 0.50),
+        0 6px 14px -4px rgba(0, 0, 0, 0.30) !important;
+      transition: transform 280ms cubic-bezier(.34,1.56,.64,1);
+    }
+    .section--bark .hero-polaroids .polaroid--left {
+      top: 0 !important;
+      left: 0 !important;
+      transform: rotate(-5deg) !important;
+      z-index: 1 !important;
+    }
+    .section--bark .hero-polaroids .polaroid--right {
+      bottom: 0 !important;
+      right: 0 !important;
+      transform: rotate(4deg) !important;
+      z-index: 2 !important;
+    }
+    .section--bark .hero-polaroids .polaroid--left:hover  { transform: rotate(-2deg) scale(1.03) !important; }
+    .section--bark .hero-polaroids .polaroid--right:hover { transform: rotate(1.5deg) scale(1.03) !important; }
+    .section--bark .hero-polaroids .polaroid img {
+      width: 100% !important;
+      aspect-ratio: 1 / 1 !important;
+      object-fit: cover !important;
+      display: block !important;
+      border-radius: 0 !important;
+    }
+
+    /* ============================================================
+       Newsletter signup · keep .ftr-bg1 element for structural
+       height (so the blue pill stays contained) but hide the dark
+       forest <img> visually and paint the wrapper white.
+       ============================================================ */
+    #footer .footer-top { background: #ffffff !important; }
+    #footer .newsletter-signup { background: transparent !important; }
+    #footer .ftr-bg1 { background: #ffffff !important; }
+    #footer .ftr-bg1 img {
+      opacity: 0 !important;
+      visibility: hidden !important;
+    }
+
+    /* ============================================================
+       Footer cleanup — same as Camp page · remove the two divider
+       lines and put "Website by Splash Omnimedia" credit right-aligned.
+       ============================================================ */
+    #footer .footer-nap,
+    #footer .footer-nap > .footer-nap__col,
+    #footer .wrap-btm {
+      border-top: 0 !important;
+      border-bottom: 0 !important;
+    }
+    #footer .footer-nap::before,
+    #footer .footer-nap::after,
+    #footer .wrap-btm::before,
+    #footer .wrap-btm::after {
+      content: none !important;
+      display: none !important;
+      border: 0 !important;
+    }
+    #footer .foot-link {
+      display: flex !important;
+      flex-wrap: wrap !important;
+      align-items: center !important;
+      gap: 16px !important;
+    }
+    #footer .foot-link .foot-credit {
+      margin-left: auto !important;
+      font-size: 13px !important;
+      color: rgba(255, 255, 255, 0.75) !important;
+      white-space: nowrap;
+    }
+    #footer .foot-link .foot-credit a {
+      color: inherit !important;
+      text-decoration: none !important;
+    }
+    #footer .foot-link .foot-credit a:hover {
+      color: #ffffff !important;
+      text-decoration: underline !important;
+    }
+  </style>
+</head>
+<body data-current-view="page">
+
+  <a href="#main" class="skip-to-content">Skip to content</a>
+  <div class="reading-progress" aria-hidden="true"><span></span></div>
+
+  <div id="page">
+
+    <!-- HEADER (shared partial · identical to Camp Elachee page) -->
+    <header id="header">
+  <div class="container">
+
+    <!-- Utility bar: contact-friction reducers + small Members link.
+         Donate is promoted to a primary CTA on the row below. -->
+    <div class="top-head">
+      <div class="link-icon">
+        <a href="index.html"><svg width="15" height="15" viewBox="0 0 15 15" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path d="M7.5 3.5V7.5L10.17 8.83M14.17 7.5C14.17 11.18 11.18 14.17 7.5 14.17C3.82 14.17 0.83 11.18 0.83 7.5C0.83 3.82 3.82 0.83 7.5 0.83C11.18 0.83 14.17 3.82 14.17 7.5Z" stroke="#1E1E1E" stroke-width="1.33" stroke-linecap="round" stroke-linejoin="round"/></svg> <span>Hours &amp; Directions</span></a>
+        <a href="index.html"><svg width="15" height="15" viewBox="0 0 15 15" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path d="M10.17 0.83V3.5M4.83 0.83V3.5M1.5 6.17H13.5M2.83 2.17H12.17C12.9 2.17 13.5 2.76 13.5 3.5V12.83C13.5 13.57 12.9 14.17 12.17 14.17H2.83C2.1 14.17 1.5 13.57 1.5 12.83V3.5C1.5 2.76 2.1 2.17 2.83 2.17Z" stroke="#1E1E1E" stroke-width="1.33" stroke-linecap="round" stroke-linejoin="round"/></svg> <span>Calendar of Events</span></a>
+        <a class="util-phone" href="tel:7705351976"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/></svg> <span>770-535-1976</span></a>
+      </div>
+      <div class="top-link">
+        <ul>
+          <li><a href="index.html">Memberships</a></li>
+          <li><a href="index.html">Volunteer</a></li>
+          <li><a href="index.html">Resources</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="bottom-head">
+      <div id="logo">
+        <a href="index.html" aria-label="Elachee Nature Science Center home">
+          <img src="assets/img/logo-elachee-header.png" alt="Elachee Nature Science Center">
+        </a>
+      </div>
+
+      <div class="nav-main">
+        <div class="nav-wrap">
+
+          <!-- Mobile drawer: primary CTAs first, then nav sections -->
+          <div class="mobile-cta-block" aria-hidden="true">
+            <a href="index.html" class="btn btn-1 btn-block">Plan Your Visit</a>
+            <a href="index.html" class="btn btn-7 btn-block">Become a Member</a>
+            <a href="index.html" class="btn btn-donate btn-block">Donate</a>
+          </div>
+
+          <ul id="primary-menu" role="menubar" aria-label="Primary">
+            <li class="mobile-only"><a href="index.html">Home</a></li>
+
+            <!-- ## VISIT -->
+            <li class="menu-item-has-children" role="none">
+              <a href="index.html" role="menuitem" aria-haspopup="true" aria-expanded="false">Visit</a>
+              <div class="megamenu" role="menu" aria-label="Visit">
+                <div class="megamenu__group">
+                  <h6 class="megamenu__heading">Plan Your Visit</h6>
+                  <ul>
+                    <li><a href="index.html">Hours &amp; Admission</a></li>
+                    <li><a href="index.html">Directions &amp; Parking</a></li>
+                    <li><a href="index.html">What to Bring</a></li>
+                    <li><a href="index.html">Group Visits</a></li>
+                  </ul>
+                </div>
+                <div class="megamenu__group">
+                  <h6 class="megamenu__heading">On Campus</h6>
+                  <ul>
+                    <li><a href="index.html">Indoor Exhibits &amp; Animals</a></li>
+                    <li><a href="index.html">Hiking Trails &amp; Trail Map</a></li>
+                    <li><a href="index.html">Chicopee Woods Preserve</a></li>
+                    <li><a href="index.html">Adult Programs</a></li>
+                  </ul>
+                </div>
+                <div class="megamenu__feature" data-feature="visit">
+                  <div class="megamenu__feature-img"><img src="assets/img/photo-trail-adults.jpg" alt="Family on the trail at Elachee"></div>
+                  <h6 class="megamenu__feature-eyebrow">First time?</h6>
+                  <p class="megamenu__feature-title">Start with the Plan Your Visit guide.</p>
+                  <a href="index.html" class="megamenu__feature-link">Plan your visit →</a>
+                </div>
+              </div>
+            </li>
+
+            <!-- ## CAMPS & PROGRAMS -->
+            <li class="menu-item-has-children" role="none">
+              <a href="index.html" role="menuitem" aria-haspopup="true" aria-expanded="false">Camps &amp; Programs</a>
+              <div class="megamenu" role="menu" aria-label="Camps and Programs">
+                <div class="megamenu__group">
+                  <h6 class="megamenu__heading">Year-Round School</h6>
+                  <ul>
+                    <li><a href="index.html"><strong>Nature Academy</strong> — Pre-K to 1st</a></li>
+                    <li><a href="index.html"><strong>Homeschool Program</strong> — Monthly</a></li>
+                  </ul>
+                </div>
+                <div class="megamenu__group">
+                  <h6 class="megamenu__heading">Camps &amp; Drop-In</h6>
+                  <ul>
+                    <li><a href="camp-elachee.html"><strong>Camp Elachee</strong> — Summer K–8</a></li>
+                    <li><a href="index.html"><strong>Sprouts</strong> — Ages 3–5</a></li>
+                    <li><a href="index.html"><strong>Scouts Program</strong> — Badge work</a></li>
+                  </ul>
+                </div>
+                <div class="megamenu__feature" data-feature="programs">
+                  <div class="megamenu__feature-img"><img src="assets/img/photo-family-museum.jpg" alt="Camp Elachee summer activity"></div>
+                  <h6 class="megamenu__feature-eyebrow">Registration open</h6>
+                  <p class="megamenu__feature-title">Camp Elachee 2026 weeks are filling fast.</p>
+                  <a href="camp-elachee.html" class="megamenu__feature-link">View weekly themes →</a>
+                </div>
+              </div>
+            </li>
+
+            <!-- ## FIELD TRIPS (current page) -->
+            <li class="menu-item-has-children current-menu-ancestor" role="none">
+              <a href="field-trips.html" role="menuitem" aria-haspopup="true" aria-expanded="false" aria-current="page">Field Trips</a>
+              <div class="megamenu" role="menu" aria-label="Field Trips">
+                <div class="megamenu__group">
+                  <h6 class="megamenu__heading">For Teachers</h6>
+                  <ul>
+                    <li class="current-menu-item"><a href="field-trips.html" aria-current="page">On-Site Field Trips</a></li>
+                    <li><a href="elachee-in-your-classroom.html">Elachee in Your Classroom</a></li>
+                    <li><a href="lake-lanier-aquatic-learning.html">Lake Lanier Aquatic Learning Center</a></li>
+                    <li><a href="floating-classroom.html">Floating Classroom</a></li>
+                  </ul>
+                </div>
+                <div class="megamenu__group">
+                  <h6 class="megamenu__heading">Resources</h6>
+                  <ul>
+                    <li><a href="curriculum-standards.html">Curriculum &amp; Standards</a></li>
+                    <li><a href="field-trips.html#book">Pricing &amp; Requests</a></li>
+                    <li><a href="title-i-financial-aid.html">Title I &amp; Financial Aid</a></li>
+                    <li><a href="field-trips.html#planning-guide">Field Trip Planning Guide</a></li>
+                  </ul>
+                </div>
+                <div class="megamenu__feature" data-feature="schools">
+                  <div class="megamenu__feature-img"><img src="assets/img/photo-field-trip.jpg" alt="Students on a field trip at Elachee"></div>
+                  <h6 class="megamenu__feature-eyebrow">For Pre-K&ndash;12</h6>
+                  <p class="megamenu__feature-title">Designed to support Georgia Standards of Excellence, Pre-K&nbsp;through&nbsp;12.</p>
+                  <a href="field-trips.html#book" class="megamenu__feature-link">Request a field trip →</a>
+                </div>
+              </div>
+            </li>
+
+            <!-- ## EVENTS & RENTALS -->
+            <li class="menu-item-has-children" role="none">
+              <a href="index.html" role="menuitem" aria-haspopup="true" aria-expanded="false">Events &amp; Rentals</a>
+              <div class="megamenu" role="menu" aria-label="Events &amp; Rentals">
+                <div class="megamenu__group">
+                  <h6 class="megamenu__heading">Signature Events</h6>
+                  <ul>
+                    <li><a href="index.html">Calendar of Events</a></li>
+                    <li><a href="index.html">Wildlife Festival (Sept)</a></li>
+                    <li><a href="index.html">Camp Elachee for Adults (Oct)</a></li>
+                    <li><a href="index.html">Trillium Trek (April)</a></li>
+                  </ul>
+                </div>
+                <div class="megamenu__group">
+                  <h6 class="megamenu__heading">Private Rentals</h6>
+                  <ul>
+                    <li><a href="index.html">Birthday Parties</a></li>
+                    <li><a href="index.html">Corporate Retreats</a></li>
+                    <li><a href="index.html">Wedding &amp; Private Events</a></li>
+                    <li><a href="index.html">Adventure Add-Ons</a></li>
+                  </ul>
+                </div>
+                <div class="megamenu__feature" data-feature="events">
+                  <div class="megamenu__feature-img"><img src="assets/img/photo-visitor-center.jpg" alt="Special event at Elachee"></div>
+                  <h6 class="megamenu__feature-eyebrow">What's coming up?</h6>
+                  <p class="megamenu__feature-title">See what's on the calendar this month.</p>
+                  <a href="index.html" class="megamenu__feature-link">View all events →</a>
+                </div>
+              </div>
+            </li>
+
+            <!-- ## CORPORATE WELLNESS -->
+            <li class="menu-item-has-children" role="none">
+              <a href="index.html" role="menuitem" aria-haspopup="true" aria-expanded="false">Corporate Wellness</a>
+              <div class="megamenu" role="menu" aria-label="Corporate Wellness">
+                <div class="megamenu__group">
+                  <h6 class="megamenu__heading">Wellness Partnerships</h6>
+                  <ul>
+                    <li><a href="index.html"><strong>Corporate Wellness Membership</strong> — Year-round trail &amp; preserve access</a></li>
+                    <li><a href="index.html"><strong>Team Building &amp; Retreats</strong> — Half-day or full-day</a></li>
+                    <li><a href="index.html">Wellness Challenges</a></li>
+                    <li><a href="index.html">Group Volunteer Days</a></li>
+                  </ul>
+                </div>
+                <div class="megamenu__group">
+                  <h6 class="megamenu__heading">Sponsorship</h6>
+                  <ul>
+                    <li><a href="index.html"><strong>Annual Sponsorships</strong> — Year-long visibility</a></li>
+                    <li><a href="index.html">Event Sponsorships</a></li>
+                    <li><a href="index.html">In-Kind Partnerships</a></li>
+                    <li><a href="index.html">Become a Member</a></li>
+                  </ul>
+                </div>
+                <div class="megamenu__feature" data-feature="support">
+                  <div class="megamenu__feature-img"><img src="assets/img/photo-camp-kids.jpg" alt="Team retreat at Elachee"></div>
+                  <h6 class="megamenu__feature-eyebrow">Corporate wellness</h6>
+                  <p class="megamenu__feature-title">A 1,440-acre forest is one of the best wellness benefits you can offer.</p>
+                  <a href="index.html" class="megamenu__feature-link">Compare partnerships →</a>
+                </div>
+              </div>
+            </li>
+
+            <!-- ## ABOUT -->
+            <li class="menu-item-has-children" role="none">
+              <a href="index.html" role="menuitem" aria-haspopup="true" aria-expanded="false">About</a>
+              <div class="megamenu" role="menu" aria-label="About">
+                <div class="megamenu__group">
+                  <h6 class="megamenu__heading">Our Story</h6>
+                  <ul>
+                    <li><a href="index.html">Mission &amp; Vision</a></li>
+                    <li><a href="index.html">40 Years of Impact</a></li>
+                    <li><a href="index.html">Conservation &amp; Stewardship</a></li>
+                    <li><a href="index.html">Team &amp; Educators</a></li>
+                  </ul>
+                </div>
+                <div class="megamenu__group">
+                  <h6 class="megamenu__heading">Read &amp; Connect</h6>
+                  <ul>
+                    <li><a href="blog-list.html">Blog</a></li>
+                    <li><a href="index.html">Press &amp; News</a></li>
+                    <li><a href="index.html">FAQs</a></li>
+                    <li><a href="index.html">Contact Us</a></li>
+                  </ul>
+                </div>
+                <div class="megamenu__feature" data-feature="about">
+                  <div class="megamenu__feature-img"><img src="assets/img/photo-family-hike.jpg" alt="Latest blog story preview"></div>
+                  <h6 class="megamenu__feature-eyebrow">Latest from the blog</h6>
+                  <p class="megamenu__feature-title">Places to take kids for fun and learning.</p>
+                  <a href="places-to-take-kids-for-fun-and-learning.html" class="megamenu__feature-link">Read the story →</a>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Desktop CTAs — Plan Your Visit (primary) + Donate (secondary, brand-distinct yellow) -->
+        <div class="header-cta">
+          <a href="index.html" class="btn btn-1 header-cta__primary">Plan Your Visit</a>
+          <a href="index.html" class="btn btn-donate header-cta__donate">Donate</a>
+        </div>
+
+        <div class="nav-btn">
+          <a href="#"><span></span><span></span><span></span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+    <main id="main" class="main">
+    <!-- ============================================================
+         HERO · mirrors the Camp Elachee hero exactly. Uses the
+         .section-camp-hero / .camp-hero / .hero-polaroids / .hero-
+         badge class hooks from camp-elachee.css so the photo
+         background + topo overlay + script h1 + green wave bottom
+         all inherit from the same stylesheet as Camp.
+         ============================================================ -->
+    <section id="field-trips" class="section section-camp-hero" aria-label="Field Trips hero">
+      <div class="camp-hero__bg-photo" aria-hidden="true">
+        <img src="assets/img/hero-bg-creek.jpg" alt="">
+      </div>
+      <div class="camp-hero__bg-topo" aria-hidden="true"></div>
+
+      <div class="container">
+        <div class="camp-hero">
+          <div class="camp-hero__body">
+            <p class="camp-hero__eyebrow">
+              Field Trips for Pre-K through 12th Grade
+              <span>Hands-on outdoor science · Gainesville, GA</span>
+            </p>
+            <h1>
+              <span>Bring Science</span>
+              <span>to Life Outside</span>
+              <span>the Classroom</span>
+            </h1>
+            <p class="camp-hero__lede">Give your students a hands-on science field trip in Gainesville, Georgia, inside the 1,440-acre Chicopee Woods Nature Preserve. Elachee helps Pre-K&ndash;12 students connect classroom concepts to real forests, streams, habitats, wildlife, and aquatic systems through guided outdoor education.</p>
+            <div class="btn-holder">
+              <a href="#book" class="btn btn-1">Request a Field Trip</a>
+              <a href="#planning-guide" class="btn btn-7">Download the Teacher Planning Guide</a>
+            </div>
+            <p class="camp-hero__urgency">Spring and fall dates fill quickly. Start your request early so we can help match your class with the right program.</p>
+          </div>
+
+          <div class="hero-polaroids">
+            <figure class="polaroid polaroid--left">
+              <img src="assets/img/photo-trail-adults.jpg" alt="Students and an Elachee naturalist exploring the trails at Chicopee Woods." loading="eager">
+            </figure>
+            <figure class="polaroid polaroid--right">
+              <img src="assets/img/camp/camp-boy-creek-net.jpg" alt="A student investigating aquatic life with a dip net at Chicopee Creek." loading="eager">
+            </figure>
+
+            <!-- Age range stamp (rounded-rectangle vintage badge) -->
+            <div class="hero-badge hero-badge--age" aria-hidden="true">
+              <span class="hero-badge__label">Pre-K</span>
+              <span class="hero-badge__divider"><span>Through</span></span>
+              <span class="hero-badge__value">12th Grade</span>
+              <span class="hero-badge__illo" aria-hidden="true">
+                <svg viewBox="0 0 240 60" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+                  <path d="M22 60 L10 60 L17 48 L12 48 L19 35 L13 35 L20 22 L14 22 L22 8 L30 22 L24 22 L31 35 L25 35 L32 48 L27 48 L34 60 Z"/>
+                  <rect x="20.5" y="58" width="3" height="3"/>
+                  <path d="M52 60 L42 60 L48 50 L44 50 L50 38 L46 38 L52 24 L58 38 L54 38 L60 50 L56 50 L62 60 Z"/>
+                  <path d="M86 60 L72 60 L80 46 L74 46 L82 30 L76 30 L86 12 L96 30 L90 30 L98 46 L92 46 L100 60 Z"/>
+                  <rect x="84.5" y="58" width="3" height="3"/>
+                  <path d="M118 60 L108 60 L114 50 L110 50 L116 38 L112 38 L118 26 L124 38 L120 38 L126 50 L122 50 L128 60 Z"/>
+                  <path d="M150 60 L138 60 L145 48 L140 48 L147 35 L141 35 L148 22 L142 22 L150 8 L158 22 L152 22 L159 35 L153 35 L160 48 L155 48 L162 60 Z"/>
+                  <rect x="148.5" y="58" width="3" height="3"/>
+                  <path d="M186 60 L174 60 L181 48 L176 48 L183 36 L178 36 L186 20 L194 36 L189 36 L196 48 L191 48 L198 60 Z"/>
+                  <rect x="184.5" y="58" width="3" height="3"/>
+                  <path d="M218 60 L208 60 L214 50 L210 50 L216 38 L212 38 L218 26 L224 38 L220 38 L226 50 L222 50 L228 60 Z"/>
+                </svg>
+              </span>
+            </div>
+
+            <!-- Stat stamp (circular vintage badge) · 1,440 acres -->
+            <div class="hero-badge hero-badge--stat" aria-hidden="true">
+              <span class="hero-badge__illo" aria-hidden="true">
+                <svg viewBox="0 0 240 60" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+                  <path d="M14 60 L4 60 L9 50 L5 50 L11 40 L7 40 L12 30 L7 30 L14 16 L21 30 L16 30 L21 40 L17 40 L23 50 L19 50 L24 60 Z"/>
+                  <path d="M36 60 L26 60 L32 50 L28 50 L34 38 L30 38 L36 22 L42 38 L38 38 L44 50 L40 50 L46 60 Z"/>
+                  <path d="M60 60 L48 60 L55 48 L50 48 L57 36 L52 36 L60 20 L66 8 L72 20 L80 36 L75 36 L82 48 L77 48 L84 60 Z"/>
+                  <path d="M90 60 L80 60 L86 50 L82 50 L88 38 L84 38 L90 26 L96 38 L92 38 L98 50 L94 50 L100 60 Z"/>
+                  <path d="M120 60 L106 60 L114 48 L108 48 L116 32 L110 32 L120 14 L130 32 L124 32 L132 48 L126 48 L134 60 Z"/>
+                  <path d="M148 60 L138 60 L144 50 L140 50 L146 38 L142 38 L148 24 L154 38 L150 38 L156 50 L152 50 L158 60 Z"/>
+                  <path d="M178 60 L164 60 L172 48 L166 48 L174 32 L168 32 L178 14 L188 32 L182 32 L190 48 L184 48 L192 60 Z"/>
+                  <path d="M208 60 L196 60 L203 48 L198 48 L205 36 L200 36 L208 20 L216 36 L211 36 L218 48 L213 48 L220 60 Z"/>
+                  <path d="M232 60 L222 60 L228 50 L224 50 L230 38 L226 38 L232 26 L238 38 L234 38 L240 50 L236 50 L240 60 Z"/>
+                </svg>
+              </span>
+              <span class="hero-badge__label"><span>Over</span></span>
+              <span class="hero-badge__num">1,440</span>
+              <span class="hero-badge__caption">Acres of Learning</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero wave bottom (same SVG path as Camp page) -->
+      <svg class="camp-hero__wave" viewBox="0 0 1920 361" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M352 154.559C169.812 225.172 77.1369 247.752 -32 214.999L-48 361.625H1921.75L1936.93 154.559C1966.41 119.586 2007.69 56.3002 1936.93 82.9467C1848.47 116.255 1848.47 124.027 1649.78 30.2088C1451.09 -63.6092 1321.71 92.9392 1265.6 124.027C1220.72 148.897 1107.33 202.231 1040 214.999C972.67 226.657 828 228.206 707.157 185.092C536 124.027 430.776 124.027 352 154.559Z"/>
+      </svg>
+    </section>
+
+    <!-- Trust strip -->
+    <section class="trust-strip" aria-label="Quick proof points">
+      <div class="container">
+        <ul>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            Pre-K through 12th Grade
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            Designed to Support Georgia Standards
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            Hands-On Outdoor Learning
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            Onsite + Classroom Options
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            Chicopee Woods Nature Preserve
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         DIRECT-ANSWER · "What Is an Elachee Field Trip?"
+         Short, AI/GEO-friendly definition block, presented as a
+         bold green→blue gradient answer card with topic chips.
+         ============================================================ -->
+    <section class="section section--whatis" aria-labelledby="whatis-title">
+      <div class="container">
+        <div class="whatis-card">
+          <span class="whatis-card__mark" aria-hidden="true">&ldquo;</span>
+          <div class="whatis-card__inner">
+            <span class="eyebrow">Quick Answer</span>
+            <h2 id="whatis-title">What Is an <strong>Elachee Field Trip?</strong></h2>
+            <p class="whatis-card__answer">An Elachee field trip is a naturalist-led outdoor science experience for Pre-K&ndash;12 students. Depending on the program, students get hands-on with real habitats and ecosystems through activities connected to classroom learning goals.</p>
+            <ul class="whatis-chips" aria-label="Topics students may explore">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Forest habitats</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Creek ecosystems</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Aquatic life</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Geology</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Astronomy</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Wildlife</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Environmental stewardship</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="problem" class="section section-camp-problem" aria-labelledby="problem-title">
+      <div class="container">
+        <div class="section-block">
+          <div class="section-head">
+            <span class="eyebrow">The Teacher Reality</span>
+            <h2 id="problem-title">Planning a meaningful field trip shouldn't feel like <strong>one more lesson plan to write</strong></h2>
+            <h6>Teachers already have enough to manage: standards, testing schedules, transportation, permission slips, budgets, and keeping students engaged. A field trip should support your curriculum, not add confusion to your plate.</h6>
+          </div>
+          <div class="section-body">
+            <div class="camp-problem__grid">
+              <div class="box-1">
+                <span class="box-1__icon" aria-hidden="true">
+                  <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="5" width="22" height="22" rx="3"/><polyline points="11,16 14,19 21,12"/></svg>
+                </span>
+                <h5>Hard to Justify the Day Away</h5>
+                <p>You need more than "a fun day outside." You need a trip that connects clearly to learning goals and classroom standards.</p>
+              </div>
+              <div class="box-1">
+                <span class="box-1__icon" aria-hidden="true">
+                  <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="16" cy="16" r="13"/><polyline points="16,7 16,16 22,19"/></svg>
+                </span>
+                <h5>Hard to Coordinate the Logistics</h5>
+                <p>Transportation, timing, chaperones, weather, and student needs can make planning feel overwhelming before the day even arrives.</p>
+              </div>
+              <div class="box-1">
+                <span class="box-1__icon" aria-hidden="true">
+                  <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="14" cy="14" r="9"/><line x1="21" y1="21" x2="28" y2="28"/><line x1="14" y1="10" x2="14" y2="18"/><line x1="10" y1="14" x2="18" y2="14"/></svg>
+                </span>
+                <h5>Hard to Know Which Program Fits</h5>
+                <p>With different grade levels, topics, and seasonal options, it's tough to figure out which experience is right for your students.</p>
+              </div>
+            </div>
+            <p class="lede" style="max-width: 760px; margin: 28px auto 0; text-align: center;">Elachee helps you turn the field trip from one more thing to coordinate into a learning experience that supports your standards, your students, and your school calendar.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         GUIDE / AUTHORITY · Reuses Camp Elachee
+         .section-camp-guide + .guide-split + .guide-collage +
+         .camp-stats-grid + .stat-tile markup for visual parity
+         with the Camp page's "Why Elachee" section.
+         ============================================================ -->
+    <section class="section section-camp-guide" aria-labelledby="guide-title">
+      <div class="container">
+        <div class="section-block">
+          <div class="section-head">
+            <span class="eyebrow">Your Outdoor Education Partner</span>
+            <h2 id="guide-title">Elachee makes outdoor science <strong>simple, standards-minded, and hands-on.</strong></h2>
+          </div>
+          <div class="section-body">
+
+            <div class="guide-split">
+              <div class="guide-split__copy">
+                <p>We know teachers have to think about more than whether a field trip sounds fun. You need standards alignment, clear logistics, age-appropriate instruction, safety-minded planning, and a program your administrators can support.</p>
+                <p>Elachee field trips are built to reinforce what you're already teaching &mdash; with guided labs, hikes, and hands-on science set inside the 1,440-acre Chicopee Woods Nature Preserve. Pre-K through 12th-grade programs are designed to support Georgia Standards of Excellence, and we offer onsite, in-classroom, seasonal, and Lake Lanier aquatic options so you can pick the format that fits your class, calendar, and curriculum goals.</p>
+                <!-- PROOF PLACEHOLDERS · confirm with client before launch -->
+                <!-- [Confirm accreditation language] -->
+                <!-- [Add number of students served annually if available] -->
+                <!-- [Add number of school partners or districts served if available] -->
+                <!-- [Add approved educator testimonial if available] -->
+              </div>
+              <div class="guide-collage">
+                <figure class="guide-collage__photo guide-collage__photo--1">
+                  <img src="assets/img/photo-field-trip.jpg" alt="Students on a field trip with an Elachee naturalist." loading="lazy">
+                </figure>
+                <figure class="guide-collage__photo guide-collage__photo--2">
+                  <img src="assets/img/camp/camp-girls-leaf-curiosity.jpg" alt="Two students examining a leaf together on an outdoor science program." loading="lazy">
+                </figure>
+                <figure class="guide-collage__photo guide-collage__photo--3">
+                  <img src="assets/img/camp/camp-girl-crayfish-creek.jpg" alt="A student holding a small crayfish at Chicopee Creek." loading="lazy">
+                </figure>
+              </div>
+            </div>
+
+            <div class="camp-stats-grid">
+              <div class="stat-tile" data-tone="green">
+                <span class="stat-tile__num">Pre-K&ndash;12</span>
+                <span class="stat-tile__label">Grades Served</span>
+              </div>
+              <div class="stat-tile" data-tone="blue">
+                <span class="stat-tile__num">1,440</span>
+                <span class="stat-tile__label">Acres of Outdoor Classroom</span>
+              </div>
+              <div class="stat-tile" data-tone="orange">
+                <span class="stat-tile__num">GSE</span>
+                <span class="stat-tile__label">Designed for GSE Support</span>
+              </div>
+              <div class="stat-tile" data-tone="purple">
+                <span class="stat-tile__num">4</span>
+                <span class="stat-tile__label">Program Formats to Choose From</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         HOW IT WORKS · Uses Camp Elachee's exact pattern: the
+         entire card visual (colored panel + script number +
+         topographic pattern + white icon disc) is baked into
+         each step SVG illustration. Field-trip-specific SVGs can
+         be swapped in later; for now these reference Camp's
+         step files at assets/img/. Alt text carries the field-
+         trip intent for screen readers and SEO.
+         ============================================================ -->
+    <section class="section section-camp-plan" aria-labelledby="plan-title">
+      <div class="container">
+        <div class="section-block">
+          <div class="section-head">
+            <span class="eyebrow">How It Works</span>
+            <h2 id="plan-title">Here's How It Works, <strong>Step by Step</strong></h2>
+            <h6>From the moment you reach out to the moment your students step onto the trail &mdash; here's exactly what to expect.</h6>
+          </div>
+          <div class="section-body">
+
+            <ul class="plan-steps">
+              <li>
+                <img src="assets/img/step1-icon.svg" alt="Step 1: Tell Us About Your Class. Share your grade level, group size, preferred dates, curriculum goals, and program interests." loading="lazy">
+              </li>
+              <li>
+                <img src="assets/img/step2-icon.svg" alt="Step 2: Choose the Best Program Fit. Our team helps match your class with an onsite, classroom-based, seasonal, or aquatic learning experience." loading="lazy">
+              </li>
+              <li>
+                <img src="assets/img/step3-icon.svg" alt="Step 3: Bring Science to Life. Your students participate in hands-on science, guided exploration, and real-world discovery connected to what they are learning in class." loading="lazy">
+              </li>
+            </ul>
+
+            <!-- Visible plan text · not reliant on image alt for accessibility/SEO -->
+            <ol class="plan-steps-text" aria-label="How planning a field trip works">
+              <li>
+                <h3>Step 1: Tell Us About Your Class</h3>
+                <p>Share your grade level, group size, preferred dates, curriculum goals, and program interests.</p>
+              </li>
+              <li>
+                <h3>Step 2: Choose the Best Program Fit</h3>
+                <p>Our team helps match your class with an onsite, classroom-based, seasonal, or aquatic learning experience.</p>
+              </li>
+              <li>
+                <h3>Step 3: Bring Science to Life</h3>
+                <p>Your students participate in hands-on science, guided exploration, and real-world discovery connected to what they are learning in class.</p>
+              </li>
+            </ol>
+
+            <div class="plan-cta-wrap">
+              <a href="#book" class="ft-btn ft-btn--primary">Start Planning Your Field Trip
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         PROGRAM OPTIONS
+         ============================================================ -->
+    <section id="programs" class="section section--cream" aria-labelledby="programs-title">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Choose Your Experience</span>
+          <h2 id="programs-title">Choose the field trip experience <strong>that fits your class.</strong></h2>
+          <p class="lede" style="margin: 0 auto;">Four flexible formats designed around how, when, and where your students learn best.</p>
+        </div>
+
+        <div class="program-grid">
+          <article class="program-card" data-tone="green">
+            <span class="program-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 28 L10 18 L14 22 L20 12 L28 28 Z"/><circle cx="22" cy="8" r="2"/><path d="M4 28 H28"/></svg>
+            </span>
+            <h3>Onsite Field Trips</h3>
+            <p class="body">Bring your class to Elachee for an immersive outdoor learning experience on our campus and trails. Students explore natural systems through guided hikes, labs, and hands-on science activities.</p>
+            <ul class="program-card__meta">
+              <li><strong>Best for</strong> A full outdoor learning day connected to the Chicopee Woods Nature Preserve</li>
+              <li><strong>Grades</strong> Pre-K through 12th grade</li>
+              <li><strong>Format</strong> Elachee campus and trails</li>
+              <li><strong>Curriculum fit</strong> Ecology, habitats, geology, wildlife, forest systems, and hands-on science</li>
+            </ul>
+            <a href="#book" class="arrow-link">Request an Onsite Field Trip
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </article>
+
+          <article class="program-card" data-tone="orange">
+            <span class="program-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="6" width="24" height="18" rx="2"/><line x1="4" y1="12" x2="28" y2="12"/><line x1="10" y1="24" x2="10" y2="28"/><line x1="22" y1="24" x2="22" y2="28"/><line x1="6" y1="28" x2="26" y2="28"/></svg>
+            </span>
+            <h3>Elachee in Your Classroom</h3>
+            <p class="body">Can't travel to Elachee? We can bring environmental education to your school with engaging, hands-on instruction designed to support classroom learning.</p>
+            <ul class="program-card__meta">
+              <li><strong>Best for</strong> Schools with transportation limitations or tight schedules</li>
+              <li><strong>Grades</strong> Pre-K through 12th grade</li>
+              <li><strong>Format</strong> Traveling classroom program</li>
+              <li><strong>Service area</strong> [Confirm travel radius with Elachee]</li>
+            </ul>
+            <a href="#book" class="arrow-link">Ask About Classroom Programs
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </article>
+
+          <article class="program-card" data-tone="purple">
+            <span class="program-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="16" cy="16" r="3"/><path d="M16 2 L16 6"/><path d="M16 26 L16 30"/><path d="M2 16 L6 16"/><path d="M26 16 L30 16"/><path d="M6 6 L9 9"/><path d="M23 23 L26 26"/><path d="M6 26 L9 23"/><path d="M23 9 L26 6"/></svg>
+            </span>
+            <h3>Seasonal Science Programs</h3>
+            <p class="body">Some programs are offered during specific times of year, giving students a deeper look at science topics connected to real-world timing and natural cycles.</p>
+            <ul class="program-card__meta">
+              <li><strong>Best for</strong> Teachers planning around specific units, seasons, or science standards</li>
+              <li><strong>Grades</strong> Pre-K through 12th grade</li>
+              <li><strong>Availability</strong> Varies by program and season</li>
+              <li><strong>Focus areas</strong> [Confirm seasonal offerings, e.g. astronomy/Starlab, with Elachee]</li>
+            </ul>
+            <a href="#book" class="arrow-link">Check Seasonal Program Availability
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </article>
+
+          <article class="program-card" data-tone="blue">
+            <span class="program-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 22 Q 8 18, 14 22 T 26 22 T 30 22"/><path d="M2 26 Q 8 22, 14 26 T 26 26 T 30 26"/><path d="M16 4 L20 12 L12 12 Z"/><line x1="16" y1="12" x2="16" y2="18"/></svg>
+            </span>
+            <h3>Lake Lanier Aquatic Learning</h3>
+            <p class="body">Students explore aquatic ecosystems through specialized Lake Lanier programs that connect watershed science, water quality, and environmental stewardship.</p>
+            <ul class="program-card__meta">
+              <li><strong>Best for</strong> Classes studying water systems, ecology, watersheds, or environmental impact</li>
+              <li><strong>Grades</strong> [Confirm grade range with Elachee]</li>
+              <li><strong>Format</strong> Lake Lanier aquatic study [Confirm Floating Classroom availability]</li>
+              <li><strong>Curriculum fit</strong> Water quality, watersheds, aquatic ecosystems, environmental stewardship</li>
+            </ul>
+            <a href="#book" class="arrow-link">Ask About Aquatic Programs
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </article>
+        </div>
+
+        <div style="text-align: center; margin-top: 48px;">
+          <a href="#book" class="ft-btn ft-btn--primary">Request a Field Trip</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         STANDARDS ALIGNMENT · "Standards + Nature = Experience"
+         formula treatment, with high-contrast benefit chips below.
+         ============================================================ -->
+    <section class="section section--standards" aria-labelledby="standards-title">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Built for the Classroom</span>
+          <h2 id="standards-title">Built to support classroom standards, <strong>not compete with them.</strong></h2>
+          <p class="lede" style="margin: 0 auto;">Elachee field trips are designed to support Georgia Standards of Excellence by giving students a real-world context for science concepts they are already learning in the classroom. Students do not just hear about ecosystems, geology, astronomy, or aquatic science &mdash; they observe and investigate them firsthand.</p>
+        </div>
+
+        <!-- The "Elachee equation" · Standards + Nature = Experience -->
+        <div class="formula" role="group" aria-label="Standards plus Nature equals Experience">
+          <div class="formula-card" data-tone="orange">
+            <span class="formula-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M6 27V7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v20l-9-5z"/>
+                <line x1="11" y1="12" x2="19" y2="12"/>
+                <line x1="11" y1="16" x2="19" y2="16"/>
+              </svg>
+            </span>
+            <span class="formula-card__tag">Part 1</span>
+            <h3>Standards</h3>
+            <p>Designed to support Georgia Standards of Excellence and your grade-level learning goals.</p>
+          </div>
+
+          <span class="formula__op" aria-hidden="true">+</span>
+
+          <div class="formula-card" data-tone="green">
+            <span class="formula-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 4C10 9 9 16 13 22"/>
+                <path d="M16 4C22 9 23 16 19 22"/>
+                <path d="M13 22 H 19"/>
+                <path d="M16 22 L 16 28"/>
+              </svg>
+            </span>
+            <span class="formula-card__tag">Part 2</span>
+            <h3>Nature</h3>
+            <p>A living outdoor classroom across 1,440 acres of preserved Georgia wilderness.</p>
+          </div>
+
+          <span class="formula__op" aria-hidden="true">=</span>
+
+          <div class="formula-card" data-tone="purple">
+            <span class="formula-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 4L19 11L26 12L21 17L22 24L16 21L10 24L11 17L6 12L13 11Z" fill="currentColor" stroke="currentColor"/>
+              </svg>
+            </span>
+            <span class="formula-card__tag">The result</span>
+            <h3>Experience</h3>
+            <p>Hands-on investigation that turns abstract concepts into observable, memorable science.</p>
+          </div>
+        </div>
+
+        <!-- Benefits chips · 2-column · readable on dark bg -->
+        <ul class="standards-benefits" role="list">
+          <li>
+            <span class="standards-benefits__check" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+            <span>Designed to support Georgia Standards of Excellence</span>
+          </li>
+          <li>
+            <span class="standards-benefits__check" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+            <span>Supports science curriculum goals</span>
+          </li>
+          <li>
+            <span class="standards-benefits__check" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+            <span>Encourages observation, questioning, and critical thinking</span>
+          </li>
+          <li>
+            <span class="standards-benefits__check" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+            <span>Connects classroom concepts to real environments</span>
+          </li>
+          <li>
+            <span class="standards-benefits__check" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+            <span>Grade-appropriate experiences from Pre-K through 12th grade</span>
+          </li>
+          <li>
+            <span class="standards-benefits__check" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+            <span>Reinforces inquiry, evidence, and scientific reasoning</span>
+          </li>
+        </ul>
+
+        <div style="text-align: center;">
+          <a href="#book" class="ft-btn ft-btn--secondary">Ask About Standards Alignment</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         BENEFITS · Reuses the Camp Elachee
+         .section-camp-registration + .reg-dates + .reg-date card
+         markup so this section inherits the same visual treatment
+         (white bg + topographic lines + circular colored icons +
+         centered card layout) as the Camp page's "Register for
+         2026" section.
+         ============================================================ -->
+    <section class="section section-camp-registration" aria-labelledby="benefits-title">
+      <div class="container">
+        <div class="section-block">
+          <div class="section-head">
+            <span class="eyebrow">Educator Benefits</span>
+            <h2 id="benefits-title">Built for the classroom. <strong>Why Teachers Come Back Year After Year.</strong></h2>
+            <h6>Six things educators tell us they value most about an Elachee field trip &mdash; the reasons they keep planning a return visit.</h6>
+          </div>
+          <div class="section-body">
+
+            <div class="reg-dates">
+              <div class="reg-date">
+                <span class="reg-date__icon" aria-hidden="true">
+                  <svg class="svg-icon" viewBox="0 0 32 32"><path d="M5 23 L7 18 L20 5 L24 9 L11 22 Z"/><line x1="19" y1="6" x2="23" y2="10"/><circle cx="8" cy="25" r="1.5"/></svg>
+                </span>
+                <h5>Hands-On Learning</h5>
+                <p>Students investigate real habitats, specimens, trails, water systems, and natural phenomena.</p>
+              </div>
+              <div class="reg-date">
+                <span class="reg-date__icon" aria-hidden="true">
+                  <svg class="svg-icon" viewBox="0 0 32 32"><circle cx="16" cy="16" r="11"/><line x1="5" y1="16" x2="27" y2="16"/><ellipse cx="16" cy="16" rx="6" ry="11"/></svg>
+                </span>
+                <h5>Real-World Science</h5>
+                <p>Concepts become easier to understand when students can observe them outside the classroom.</p>
+              </div>
+              <div class="reg-date">
+                <span class="reg-date__icon" aria-hidden="true">
+                  <svg class="svg-icon" viewBox="0 0 32 32"><circle cx="20" cy="10" r="4"/><path d="M10 28 Q 10 18, 20 18 Q 30 18, 30 28"/><line x1="4" y1="14" x2="9" y2="14"/><line x1="4" y1="20" x2="9" y2="20"/><line x1="4" y1="26" x2="9" y2="26"/></svg>
+                </span>
+                <h5>Grade-Level Fit</h5>
+                <p>Programs are matched to age, grade level, and curriculum goals.</p>
+              </div>
+              <div class="reg-date">
+                <span class="reg-date__icon" aria-hidden="true">
+                  <svg class="svg-icon" viewBox="0 0 32 32"><circle cx="16" cy="12" r="4"/><path d="M6 28 Q 6 19, 16 19 Q 26 19, 26 28"/><circle cx="8" cy="9" r="2.5"/><circle cx="24" cy="9" r="2.5"/></svg>
+                </span>
+                <h5>Stronger Engagement</h5>
+                <p>Outdoor learning gives students a reason to ask questions, collaborate, and notice details.</p>
+              </div>
+              <div class="reg-date">
+                <span class="reg-date__icon" aria-hidden="true">
+                  <svg class="svg-icon" viewBox="0 0 32 32"><rect x="5" y="8" width="22" height="20" rx="2"/><line x1="10" y1="4" x2="10" y2="12"/><line x1="22" y1="4" x2="22" y2="12"/><line x1="5" y1="14" x2="27" y2="14"/><rect x="9" y="18" width="4" height="3"/><rect x="15" y="18" width="4" height="3"/><rect x="21" y="18" width="4" height="3"/></svg>
+                </span>
+                <h5>Flexible Formats</h5>
+                <p>Choose onsite programs, classroom outreach, seasonal studies, or aquatic learning.</p>
+              </div>
+              <div class="reg-date">
+                <span class="reg-date__icon" aria-hidden="true">
+                  <svg class="svg-icon" viewBox="0 0 32 32"><path d="M27 16a11 11 0 0 1-1.2 5 11 11 0 0 1-10 6 11 11 0 0 1-5-1.2L4 28l2.5-7.5A11 11 0 0 1 5 16a11 11 0 0 1 6-9.8A11 11 0 0 1 16 5h.7a11 11 0 0 1 10.3 10.3z"/><line x1="12" y1="16" x2="20" y2="16"/><line x1="16" y1="12" x2="16" y2="20"/></svg>
+                </span>
+                <h5>Planning Support</h5>
+                <p>Elachee helps clarify program fit, availability, logistics, and next steps.</p>
+              </div>
+            </div>
+
+            <div class="btn-holder">
+              <a href="#book" class="btn btn-1">Request a Field Trip</a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         TESTIMONIALS · Reuses Camp Elachee .testimonial-card markup
+         and styling (from camp-elachee.css) for visual parity.
+         ============================================================ -->
+    <!-- NOTE: Replace placeholder testimonials with approved real educator quotes before launch. -->
+    <section class="section section-camp-testimonials" aria-labelledby="testimonials-title">
+      <div class="container">
+        <div class="section-block">
+          <div class="section-head">
+            <span class="eyebrow">What Educators Say</span>
+            <h2 id="testimonials-title">Don't Take <strong>Our Word</strong> for It</h2>
+            <h6>Hear from the teachers, administrators, and group leaders who've brought their students to Elachee.</h6>
+          </div>
+          <!-- INTERNAL NOTE · Placeholder testimonials for review only — replace with approved quotes before launch. -->
+          <p class="testimonial-review-flag" role="note">Placeholder testimonials for review only &mdash; replace with approved quotes before launch.</p>
+          <div class="section-body">
+            <div class="testimonials-grid">
+
+              <figure class="testimonial-card">
+                <div class="testimonial-card__bubble">
+                  <div class="testimonial-card__stars" aria-label="Rating placeholder">★★★★★</div>
+                  <blockquote><p>[Insert approved teacher testimonial]</p></blockquote>
+                </div>
+                <figcaption>
+                  <span class="testimonial-card__avatar" aria-hidden="true">T</span>
+                  <span class="testimonial-card__name">[Teacher name &amp; title]</span>
+                  <span class="testimonial-card__role">[School / district]</span>
+                </figcaption>
+              </figure>
+
+              <figure class="testimonial-card">
+                <div class="testimonial-card__bubble">
+                  <div class="testimonial-card__stars" aria-label="Rating placeholder">★★★★★</div>
+                  <blockquote><p>[Insert approved administrator testimonial]</p></blockquote>
+                </div>
+                <figcaption>
+                  <span class="testimonial-card__avatar" aria-hidden="true">A</span>
+                  <span class="testimonial-card__name">[Administrator name &amp; title]</span>
+                  <span class="testimonial-card__role">[School / district]</span>
+                </figcaption>
+              </figure>
+
+              <figure class="testimonial-card">
+                <div class="testimonial-card__bubble">
+                  <div class="testimonial-card__stars" aria-label="Rating placeholder">★★★★★</div>
+                  <blockquote><p>[Insert approved homeschool / group leader testimonial]</p></blockquote>
+                </div>
+                <figcaption>
+                  <span class="testimonial-card__avatar" aria-hidden="true">G</span>
+                  <span class="testimonial-card__name">[Group leader name &amp; title]</span>
+                  <span class="testimonial-card__role">[Group / organization]</span>
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         LOGISTICS
+         ============================================================ -->
+    <section class="section section--logistics" aria-labelledby="logistics-title">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Field Trip Details at a Glance</span>
+          <h2 id="logistics-title">Everything you need to know <strong>before you request.</strong></h2>
+          <p class="lede" style="margin: 0 auto;">A quick decision-support reference for teachers and administrators. Items marked for confirmation will be finalized with your Elachee contact.</p>
+        </div>
+
+        <div class="logistics-grid">
+          <div class="logistics-card" data-tone="green">
+            <span class="logistics-card__icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 7a4 4 0 1 1-8 0 4 4 0 0 1 8 0z"/><path d="M4 22a8 8 0 0 1 16 0"/></svg>
+            </span>
+            <div class="logistics-card__body">
+              <h4>Grade Levels</h4>
+              <p>Pre-K through 12th grade, with programs tailored to each developmental level.</p>
+            </div>
+          </div>
+          <div class="logistics-card" data-tone="blue">
+            <span class="logistics-card__icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </span>
+            <div class="logistics-card__body">
+              <h4>Location</h4>
+              <p>Elachee Nature Science Center, Gainesville, GA, inside the 1,440-acre Chicopee Woods Nature Preserve.</p>
+            </div>
+          </div>
+          <div class="logistics-card" data-tone="purple">
+            <span class="logistics-card__icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </span>
+            <div class="logistics-card__body">
+              <h4>Program Formats</h4>
+              <p>Onsite, classroom outreach, seasonal, and Lake Lanier aquatic learning options.</p>
+            </div>
+          </div>
+          <div class="logistics-card" data-tone="yellow">
+            <span class="logistics-card__icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            </span>
+            <div class="logistics-card__body">
+              <h4>Typical Timing</h4>
+              <p>Program length varies by experience.</p>
+              <span class="logistics-card__pill">To confirm with Elachee</span>
+            </div>
+          </div>
+          <div class="logistics-card" data-tone="red">
+            <span class="logistics-card__icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </span>
+            <div class="logistics-card__body">
+              <h4>Group Size &amp; Capacity</h4>
+              <p>Varies by program and format.</p>
+              <span class="logistics-card__pill">To confirm with Elachee</span>
+            </div>
+          </div>
+          <div class="logistics-card" data-tone="green">
+            <span class="logistics-card__icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            </span>
+            <div class="logistics-card__body">
+              <h4>Chaperones</h4>
+              <p>Chaperone ratios depend on grade level and group size.</p>
+              <span class="logistics-card__pill">To confirm with Elachee</span>
+            </div>
+          </div>
+          <div class="logistics-card" data-tone="blue">
+            <span class="logistics-card__icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+            </span>
+            <div class="logistics-card__body">
+              <h4>Lunch</h4>
+              <p>Lunch and picnic options for visiting groups.</p>
+              <span class="logistics-card__pill">To confirm with Elachee</span>
+            </div>
+          </div>
+          <div class="logistics-card" data-tone="purple">
+            <span class="logistics-card__icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>
+            </span>
+            <div class="logistics-card__body">
+              <h4>Weather</h4>
+              <p>Outdoor programs may be adjusted based on conditions. Elachee will communicate any weather-related changes with your group.</p>
+            </div>
+          </div>
+          <div class="logistics-card" data-tone="yellow">
+            <span class="logistics-card__icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 L4 7 v6 c0 5 3.5 8 8 9 c4.5 -1 8 -4 8 -9 V7 Z"/><polyline points="9 12 11 14 15 10"/></svg>
+            </span>
+            <div class="logistics-card__body">
+              <h4>What to Wear</h4>
+              <p>Closed-toe shoes and weather-appropriate clothing are recommended for trails and hands-on activities.</p>
+            </div>
+          </div>
+          <div class="logistics-card" data-tone="green">
+            <span class="logistics-card__icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            </span>
+            <div class="logistics-card__body">
+              <h4>Pricing</h4>
+              <p>Pricing varies by program type, group size, and format. Submit a request and Elachee will confirm current pricing for your group.</p>
+            </div>
+          </div>
+          <div class="logistics-card" data-tone="red">
+            <span class="logistics-card__icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 L14.5 8.5 L21.5 9.3 L16.3 14 L17.7 21 L12 17.5 L6.3 21 L7.7 14 L2.5 9.3 L9.5 8.5 Z"/></svg>
+            </span>
+            <div class="logistics-card__body">
+              <h4>Booking Timeline</h4>
+              <p>Spring and fall dates fill quickly &mdash; early inquiry is recommended to match your group with preferred dates.</p>
+            </div>
+          </div>
+          <div class="logistics-card" data-tone="blue">
+            <span class="logistics-card__icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            </span>
+            <div class="logistics-card__body">
+              <h4>Accessibility</h4>
+              <p>Contact Elachee about specific student or group needs and we'll work with you to plan accordingly.</p>
+            </div>
+          </div>
+          <div class="logistics-card" data-tone="purple">
+            <span class="logistics-card__icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>
+            </span>
+            <div class="logistics-card__body">
+              <h4>Title I &amp; Financial Support</h4>
+              <p>Some assistance may be available for eligible schools or specific programs. Contact Elachee for current availability and requirements.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="logistics-cta-wrap">
+          <a href="#book" class="ft-btn ft-btn--primary">Request a Field Trip</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         LEAD MAGNET / PLANNING GUIDE
+         ============================================================ -->
+    <section id="planning-guide" class="section section--cream section-lead" aria-labelledby="planning-title">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Need Help Getting Approval?</span>
+          <h2 id="planning-title">Need help getting your field trip <strong>approved?</strong></h2>
+          <p class="lede">The Teacher Planning Guide gives you a simple way to compare program options, explain the learning value to administrators, and prepare for a smooth field trip day.</p>
+        </div>
+
+        <div class="lead-card">
+          <!-- Guide preview side -->
+          <aside class="lead-card__preview" aria-label="Field Trip Planning Guide preview">
+            <span class="lead-card__badge">Free Guide</span>
+            <p class="preview-eyebrow">Elachee · 2026</p>
+            <h3>The Field Trip<br>Planning Guide</h3>
+            <p class="preview-sub">A teacher- and administrator-friendly toolkit for planning, justifying, and running a great Elachee field trip.</p>
+            <ul>
+              <li><span class="preview-check" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Program options &amp; pricing</li>
+              <li><span class="preview-check" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Standards alignment overview</li>
+              <li><span class="preview-check" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Planning checklist</li>
+              <li><span class="preview-check" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Talking points for administrators</li>
+            </ul>
+          </aside>
+
+          <!-- Form side -->
+          <form class="lead-card__form" onsubmit="event.preventDefault(); this.querySelector('.ft-btn').textContent='Sent! Check your email.';" aria-labelledby="lead-form-title" novalidate>
+            <h3 id="lead-form-title" class="lead-card__form-title">Get the guide in your inbox</h3>
+            <div class="form-grid">
+              <div class="form-field">
+                <label for="firstName">First Name</label>
+                <input id="firstName" name="firstName" type="text" autocomplete="given-name" required>
+              </div>
+              <div class="form-field">
+                <label for="lastName">Last Name</label>
+                <input id="lastName" name="lastName" type="text" autocomplete="family-name" required>
+              </div>
+              <div class="form-field">
+                <label for="school">School / Organization</label>
+                <input id="school" name="school" type="text" autocomplete="organization">
+              </div>
+              <div class="form-field">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" autocomplete="email" required>
+              </div>
+              <div class="form-field">
+                <label for="grade">Grade Level</label>
+                <select id="grade" name="grade">
+                  <option value="">Select…</option>
+                  <option>Pre-K</option>
+                  <option>K–2</option>
+                  <option>3–5</option>
+                  <option>6–8</option>
+                  <option>9–12</option>
+                  <option>Mixed Grades</option>
+                </select>
+              </div>
+              <div class="form-field">
+                <label for="interest">Interested in</label>
+                <select id="interest" name="interest">
+                  <option value="">Select…</option>
+                  <option>Onsite Field Trip</option>
+                  <option>Classroom Program</option>
+                  <option>Aquatic Program</option>
+                  <option>Not Sure Yet</option>
+                </select>
+              </div>
+            </div>
+            <button type="submit" class="ft-btn ft-btn--primary">
+              Get the Planning Guide
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            </button>
+            <p class="lead-card__small">After you request the guide, you'll receive planning information by email. You can also request a field trip whenever you're ready.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         CTA BAND
+         ============================================================ -->
+    <section id="book" class="cta-section" aria-labelledby="ctaband-title">
+      <div class="container">
+        <div class="cta-card">
+          <div class="cta-card__inner" style="max-width: 920px;">
+            <h2 id="ctaband-title">Request a Field Trip</h2>
+            <p>Tell us about your class and we'll help you find the right Elachee field trip experience. After you submit your request, an Elachee team member will follow up to confirm availability, recommend the best program fit, and answer logistics questions.</p>
+
+            <form class="request-form" onsubmit="event.preventDefault(); var b=this.querySelector('button[type=submit]'); b.textContent='Request sent — we\u2019ll be in touch soon.';" aria-label="Field trip request form" novalidate>
+              <div class="request-grid">
+                <div class="form-field">
+                  <label for="req-name">Name</label>
+                  <input id="req-name" name="name" type="text" autocomplete="name" required>
+                </div>
+                <div class="form-field">
+                  <label for="req-org">School / Organization</label>
+                  <input id="req-org" name="organization" type="text" autocomplete="organization" required>
+                </div>
+                <div class="form-field">
+                  <label for="req-email">Email</label>
+                  <input id="req-email" name="email" type="email" autocomplete="email" required>
+                </div>
+                <div class="form-field">
+                  <label for="req-phone">Phone</label>
+                  <input id="req-phone" name="phone" type="tel" autocomplete="tel">
+                </div>
+                <div class="form-field">
+                  <label for="req-grade">Grade Level</label>
+                  <select id="req-grade" name="grade">
+                    <option value="">Select…</option>
+                    <option>Pre-K</option>
+                    <option>K–2</option>
+                    <option>3–5</option>
+                    <option>6–8</option>
+                    <option>9–12</option>
+                    <option>Mixed Grades</option>
+                  </select>
+                </div>
+                <div class="form-field">
+                  <label for="req-count">Estimated Number of Students</label>
+                  <input id="req-count" name="studentCount" type="number" min="1" inputmode="numeric">
+                </div>
+                <div class="form-field">
+                  <label for="req-date">Preferred Date or Season</label>
+                  <input id="req-date" name="preferredDate" type="text" placeholder="e.g. Fall 2026 or Oct 14">
+                </div>
+                <div class="form-field">
+                  <label for="req-interest">Program Interest</label>
+                  <select id="req-interest" name="programInterest">
+                    <option value="">Select…</option>
+                    <option>Onsite Field Trip</option>
+                    <option>Elachee in Your Classroom</option>
+                    <option>Seasonal Science Program</option>
+                    <option>Lake Lanier Aquatic Learning</option>
+                    <option>Not Sure Yet</option>
+                  </select>
+                </div>
+                <div class="form-field">
+                  <label for="req-title1">Are You a Title I School?</label>
+                  <select id="req-title1" name="titleOne">
+                    <option value="">Select…</option>
+                    <option>Yes</option>
+                    <option>No</option>
+                    <option>Not Sure</option>
+                  </select>
+                </div>
+                <div class="form-field form-field--full">
+                  <label for="req-notes">Notes or Questions</label>
+                  <input id="req-notes" name="notes" type="text" placeholder="Curriculum goals, accessibility needs, timing, etc.">
+                </div>
+              </div>
+              <div class="request-submit">
+                <button type="submit" class="ft-btn ft-btn--white">Request a Field Trip
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </button>
+                <a href="#planning-guide" class="ft-btn ft-btn--ghost">Get the Planning Guide</a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         FAQ · Reuses Camp Elachee .section-camp-faq + .faqs-layout
+         + .faqs-sidebar + .accord-item markup for visual parity.
+         FAQPage schema preserved inline on each item.
+         ============================================================ -->
+    <section id="faq" class="section section-camp-faq" aria-labelledby="faq-title">
+      <div class="container">
+        <div class="section-block">
+          <div class="section-head">
+            <span class="eyebrow">Frequently Asked Questions</span>
+            <h2 id="faq-title">Everything Else <strong>You're Wondering</strong></h2>
+            <h6>Answers to the questions teachers and administrators ask most.</h6>
+          </div>
+          <div class="section-body">
+            <div class="faqs-layout" itemscope itemtype="https://schema.org/FAQPage">
+
+              <aside class="faqs-sidebar" aria-label="FAQ categories">
+                <h6 class="faqs-sidebar__heading">Browse by topic</h6>
+                <ul class="faqs-sidebar__list" role="list">
+                  <li><button type="button" class="faqs-sidebar__btn is-active" data-faq-filter="all" aria-pressed="true">All Questions <span class="faqs-sidebar__count">14</span></button></li>
+                  <li><button type="button" class="faqs-sidebar__btn" data-faq-filter="programs" aria-pressed="false">Programs &amp; Grade Levels <span class="faqs-sidebar__count">3</span></button></li>
+                  <li><button type="button" class="faqs-sidebar__btn" data-faq-filter="standards" aria-pressed="false">Standards &amp; Curriculum <span class="faqs-sidebar__count">1</span></button></li>
+                  <li><button type="button" class="faqs-sidebar__btn" data-faq-filter="schedule" aria-pressed="false">Scheduling &amp; Weather <span class="faqs-sidebar__count">4</span></button></li>
+                  <li><button type="button" class="faqs-sidebar__btn" data-faq-filter="logistics" aria-pressed="false">Day-Of Logistics <span class="faqs-sidebar__count">3</span></button></li>
+                  <li><button type="button" class="faqs-sidebar__btn" data-faq-filter="booking" aria-pressed="false">Requests &amp; Pricing <span class="faqs-sidebar__count">3</span></button></li>
+                </ul>
+              </aside>
+
+              <div class="faqs-content">
+
+                <details class="accord-item" data-faq-category="programs" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                  <summary itemprop="name">What grade levels can attend an Elachee field trip?</summary>
+                  <div class="accord-body" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div class="wrap"><p itemprop="text">Elachee offers field trip experiences for Pre-K through 12th grade, with programs designed to fit different developmental levels, curriculum goals, and science topics.</p></div></div>
+                </details>
+
+                <details class="accord-item" data-faq-category="standards" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                  <summary itemprop="name">Are programs designed to support Georgia Standards of Excellence?</summary>
+                  <div class="accord-body" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div class="wrap"><p itemprop="text">Yes. Elachee field trips are designed to support science learning and the Georgia Standards of Excellence by giving students real-world context for concepts they are studying in class.</p></div></div>
+                </details>
+
+                <details class="accord-item" data-faq-category="programs" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                  <summary itemprop="name">Can Elachee come to our school?</summary>
+                  <div class="accord-body" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div class="wrap"><p itemprop="text">Yes. Elachee in Your Classroom brings hands-on environmental education to schools within a 60-mile radius.</p></div></div>
+                </details>
+
+                <details class="accord-item" data-faq-category="programs" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                  <summary itemprop="name">What if we're not sure which program is right for our grade level?</summary>
+                  <div class="accord-body" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div class="wrap"><p itemprop="text">Start by submitting an inquiry. Elachee can help match your grade level, learning goals, timing, and logistics with the best available option.</p></div></div>
+                </details>
+
+                <details class="accord-item" data-faq-category="schedule" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                  <summary itemprop="name">Are field trips available year-round?</summary>
+                  <div class="accord-body" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div class="wrap"><p itemprop="text">Many programs are available year-round, while some seasonal offerings are limited to specific months. Spring and fall are often high-demand seasons, so early planning is recommended.</p></div></div>
+                </details>
+
+                <details class="accord-item" data-faq-category="schedule" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                  <summary itemprop="name">What happens if weather affects our field trip?</summary>
+                  <div class="accord-body" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div class="wrap"><p itemprop="text">Because many programs include outdoor components, weather may affect timing or activities. Elachee will communicate with your group about weather-related adjustments.</p></div></div>
+                </details>
+
+                <details class="accord-item" data-faq-category="booking" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                  <summary itemprop="name">How do we request a field trip?</summary>
+                  <div class="accord-body" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div class="wrap"><p itemprop="text">Use the "Request a Field Trip" button to submit your school, grade level, group size, preferred dates, and program interests. An Elachee team member will follow up to confirm availability and recommend the best program fit.</p></div></div>
+                </details>
+
+                <details class="accord-item" data-faq-category="booking" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                  <summary itemprop="name">How much does an Elachee field trip cost?</summary>
+                  <div class="accord-body" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div class="wrap"><p itemprop="text">Pricing varies by program type, group size, and format. Submit a field trip request and Elachee will help confirm the best option and current pricing for your group.</p></div></div>
+                </details>
+
+                <details class="accord-item" data-faq-category="schedule" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                  <summary itemprop="name">How long is a typical field trip?</summary>
+                  <div class="accord-body" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div class="wrap"><p itemprop="text">Program length varies by experience. Some programs are designed for shorter classroom-style visits, while onsite and aquatic programs may require more time. Contact Elachee for current program timing.</p></div></div>
+                </details>
+
+                <details class="accord-item" data-faq-category="schedule" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                  <summary itemprop="name">How far in advance should we request a field trip?</summary>
+                  <div class="accord-body" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div class="wrap"><p itemprop="text">Spring and fall are high-demand seasons, so early requests are recommended. The sooner you reach out, the easier it is to match your group with preferred dates.</p></div></div>
+                </details>
+
+                <details class="accord-item" data-faq-category="logistics" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                  <summary itemprop="name">What should students wear?</summary>
+                  <div class="accord-body" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div class="wrap"><p itemprop="text">Students should wear weather-appropriate clothing and closed-toe shoes suitable for trails, outdoor exploration, and hands-on learning.</p></div></div>
+                </details>
+
+                <details class="accord-item" data-faq-category="logistics" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                  <summary itemprop="name">Can we bring lunch?</summary>
+                  <div class="accord-body" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div class="wrap"><p itemprop="text">[Confirm lunch/picnic policy with Elachee before launch.]</p></div></div>
+                </details>
+
+                <details class="accord-item" data-faq-category="logistics" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                  <summary itemprop="name">How many chaperones do we need?</summary>
+                  <div class="accord-body" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div class="wrap"><p itemprop="text">[Confirm chaperone policy with Elachee before launch.]</p></div></div>
+                </details>
+
+                <details class="accord-item" data-faq-category="booking" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                  <summary itemprop="name">Are programs available for Title I schools?</summary>
+                  <div class="accord-body" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div class="wrap"><p itemprop="text">Some assistance may be available for eligible schools or specific programs. Contact Elachee for current availability and requirements.</p></div></div>
+                </details>
+
+              </div>
+            </div>
+
+            <p class="faq-footnote">Still have a question? <a href="#book" class="btn btn-4">Send Us a Message</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         FINAL CTA
+         ============================================================ -->
+    <section class="section section--bark" aria-labelledby="final-cta-title">
+      <div class="container">
+        <div style="display: grid; grid-template-columns: 1.1fr 1fr; gap: 56px; align-items: center;" class="final-cta-grid">
+          <div>
+            <span class="eyebrow">Let's Make It Happen</span>
+            <h2 id="final-cta-title">Let's plan a field trip <strong>that brings science to life.</strong></h2>
+            <p class="lede">From forest trails to aquatic ecosystems, Elachee helps students connect classroom science to the living world around them.</p>
+            <div class="btn-row" style="margin-top: 24px;">
+              <a href="#book" class="ft-btn ft-btn--primary">Request a Field Trip
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+              <a href="#planning-guide" class="ft-btn ft-btn--ghost">Get the Planning Guide</a>
+            </div>
+          </div>
+          <div class="hero-polaroids" style="max-width: 480px; margin: 0 auto;" aria-hidden="true">
+            <figure class="polaroid polaroid--left">
+              <img src="assets/img/photo-family-hike.jpg" alt="Children learning on the trails at Chicopee Woods Nature Preserve." loading="lazy">
+            </figure>
+            <figure class="polaroid polaroid--right">
+              <img src="assets/img/camp/camp-girl-crayfish-creek.jpg" alt="A student examining a small creature found during an Elachee field trip." loading="lazy">
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+    </main>
+
+    <!-- FOOTER (shared partial · identical to Camp Elachee page) -->
+    <footer id="footer">
+  <div class="footer-top">
+    <div class="ftr-bg1"><img src="assets/img/bg-footer-top.jpg" alt=""></div>
+    <div class="newsletter-signup">
+      <div class="container">
+        <h3>Keep Wonder in Your Inbox</h3>
+        <div class="wrap-form">
+          <p>Stay in the loop with stories that inspire, events that engage, and updates from the forest. Sign up and never miss an opportunity to explore with Elachee.</p>
+          <div class="form-box">
+            <div class="form-field">
+              <label for="nl-name">First &amp; Last Name *</label>
+              <input id="nl-name" type="text" autocomplete="name" required>
+            </div>
+            <div class="form-field">
+              <label for="nl-email">Email *</label>
+              <input id="nl-email" type="email" autocomplete="email" required>
+            </div>
+            <p class="form-error" role="alert"></p>
+            <p class="form-success" role="status"></p>
+            <div class="frm_submit">
+              <button type="button" class="frm_button_submit">Subscribe</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-btm">
+    <div class="ftr-bg2"><img src="assets/img/bg-footer-bottom.png" alt=""></div>
+    <div class="container">
+
+      <div class="footer-sitemap">
+
+        <!-- Brand block: logo + mission + Donate CTA -->
+        <div class="footer-sitemap__brand">
+          <a href="index.html" aria-label="Elachee Nature Science Center home">
+            <img src="assets/img/logo-elachee-footer.png" alt="Elachee Nature Science Center" class="footer-logo">
+          </a>
+          <p class="footer-sitemap__tagline">A 1,440-acre nature preserve and environmental education nonprofit in Gainesville, Georgia. Promoting environmental understanding through education and conservation since 1981.</p>
+          <a href="index.html" class="btn btn-donate footer-donate-cta">Donate</a>
+          <div class="socials" aria-label="Follow Elachee">
+            <a href="index.html" aria-label="Elachee on Facebook"><svg width="20" height="20" viewBox="0 0 24 24" fill="#fff" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"/></svg></a>
+            <a href="index.html" aria-label="Elachee on Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+            <a href="index.html" aria-label="Elachee on X"><svg width="20" height="20" viewBox="0 0 24 24" fill="#fff" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path d="M18.244 2H21l-6.52 7.45L22 22h-6.5l-5.1-6.66L4.5 22H2l7.04-8.05L2 2h6.66l4.6 6.06L18.244 2z"/></svg></a>
+            <a href="index.html" aria-label="Elachee on LinkedIn"><svg width="20" height="20" viewBox="0 0 24 24" fill="#fff" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14zM8.5 18V10h-2v8h2zm-1-9.2a1.2 1.2 0 1 0 0-2.4 1.2 1.2 0 0 0 0 2.4zM18 18v-4.8c0-1.9-1.04-2.8-2.43-2.8-1.12 0-1.62.62-1.9 1.05V10h-2v8h2v-4.5c0-.97.18-1.91 1.39-1.91 1.18 0 1.2.97 1.2 1.97V18H18z"/></svg></a>
+          </div>
+        </div>
+
+        <!-- Visit column -->
+        <nav class="footer-sitemap__col" aria-label="Visit">
+          <h6 class="footer-sitemap__heading">Visit</h6>
+          <ul>
+            <li><a href="index.html">Plan Your Visit</a></li>
+            <li><a href="index.html">Hours &amp; Admission</a></li>
+            <li><a href="index.html">Directions &amp; Parking</a></li>
+            <li><a href="index.html">Indoor Exhibits</a></li>
+            <li><a href="index.html">Hiking Trails</a></li>
+            <li><a href="index.html">Trail Map</a></li>
+            <li><a href="index.html">Calendar of Events</a></li>
+          </ul>
+        </nav>
+
+        <!-- Programs column -->
+        <nav class="footer-sitemap__col" aria-label="Programs">
+          <h6 class="footer-sitemap__heading">Programs</h6>
+          <ul>
+            <li><a href="camp-elachee.html">Camp Elachee</a></li>
+            <li><a href="index.html">Nature Academy</a></li>
+            <li><a href="index.html">Sprouts</a></li>
+            <li><a href="index.html">Homeschool Program</a></li>
+            <li><a href="index.html">Scouts Program</a></li>
+            <li><a href="index.html">Adult Programs</a></li>
+          </ul>
+        </nav>
+
+        <!-- For Schools column -->
+        <nav class="footer-sitemap__col" aria-label="For Schools">
+          <h6 class="footer-sitemap__heading">For Schools</h6>
+          <ul>
+            <li><a href="field-trips.html">Request a Field Trip</a></li>
+            <li><a href="elachee-in-your-classroom.html">Explore Elachee in Your Classroom</a></li>
+            <li><a href="lake-lanier-aquatic-learning.html">View Lake Lanier Aquatic Learning</a></li>
+            <li><a href="floating-classroom.html">Floating Classroom</a></li>
+            <li><a href="curriculum-standards.html">Review Curriculum &amp; Standards</a></li>
+            <li><a href="title-i-financial-aid.html">Ask About Title I Support</a></li>
+          </ul>
+        </nav>
+
+        <!-- Events & Rentals column -->
+        <nav class="footer-sitemap__col" aria-label="Events and Rentals">
+          <h6 class="footer-sitemap__heading">Events &amp; Rentals</h6>
+          <ul>
+            <li><a href="index.html">Wildlife Festival</a></li>
+            <li><a href="index.html">Camp Elachee for Adults</a></li>
+            <li><a href="index.html">Trillium Trek</a></li>
+            <li><a href="index.html">Birthday Parties</a></li>
+            <li><a href="index.html">Corporate Retreats</a></li>
+            <li><a href="index.html">Wedding &amp; Private Events</a></li>
+          </ul>
+        </nav>
+
+        <!-- Support Us column -->
+        <nav class="footer-sitemap__col" aria-label="Support Us">
+          <h6 class="footer-sitemap__heading">Support Us</h6>
+          <ul>
+            <li><a href="index.html">Become a Member</a></li>
+            <li><a href="index.html">Donate</a></li>
+            <li><a href="index.html">Volunteer</a></li>
+            <li><a href="index.html">Annual Sponsorships</a></li>
+            <li><a href="index.html">Corporate Wellness</a></li>
+            <li><a href="index.html">Planned Giving</a></li>
+          </ul>
+        </nav>
+
+        <!-- About column -->
+        <nav class="footer-sitemap__col" aria-label="About">
+          <h6 class="footer-sitemap__heading">About</h6>
+          <ul>
+            <li><a href="index.html">Our Story</a></li>
+            <li><a href="index.html">Mission &amp; Vision</a></li>
+            <li><a href="index.html">Team &amp; Educators</a></li>
+            <li><a href="index.html">Press &amp; News</a></li>
+            <li><a href="blog-list.html">Blog</a></li>
+            <li><a href="index.html">FAQs</a></li>
+            <li><a href="index.html">Contact Us</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- NAP block: address, phone, hours — kept consistent for local SEO -->
+      <div class="footer-nap">
+        <div class="footer-nap__col">
+          <h6 class="footer-sitemap__heading">Visit Us</h6>
+          <address>
+            <a href="index.html">2125 Elachee Drive<br>Gainesville, GA 30504</a>
+          </address>
+          <a class="footer-nap__phone" href="tel:7705351976"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/></svg> 770-535-1976</a>
+        </div>
+        <div class="footer-nap__col">
+          <h6 class="footer-sitemap__heading">Hours</h6>
+          <p>
+            <strong>Visitor Center</strong><br>
+            Tue–Thu: 12pm – 3pm<br>
+            Fri: 12pm – 5pm<br>
+            Sat: 10am – 5pm<br>
+            Sun &amp; Mon: Closed
+          </p>
+        </div>
+        <div class="footer-nap__col">
+          <h6 class="footer-sitemap__heading">Trails</h6>
+          <p>
+            <strong>Chicopee Woods Preserve</strong><br>
+            Open daily, 7am – sunset<br>
+            12+ miles · Pedestrian-only<br>
+            Parking pass required
+          </p>
+        </div>
+      </div>
+
+      <!-- Legal row -->
+      <div class="wrap-btm">
+        <div class="copyright">© 2026 Elachee Nature Science Center. All rights reserved. <span>501(c)(3) nonprofit · EIN 58-1466486</span></div>
+        <div class="foot-link">
+          <a href="index.html">Privacy Policy</a>
+          <a href="index.html">Terms</a>
+          <a href="index.html">Accessibility</a>
+          <a href="index.html">Sitemap</a>
+          <span class="foot-credit">Website by <a href="https://splashomnimedia.com" target="_blank" rel="noopener">Splash Omnimedia</a></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  </div><!-- /#page -->
+
+  <!-- ============================================================
+       STICKY MOBILE CTA BAR
+       ============================================================ -->
+  <div class="mobile-cta-bar" id="mobileCtaBar" role="region" aria-label="Quick actions">
+    <a href="#book" class="ft-btn ft-btn--primary">Request a Field Trip</a>
+    <a href="#planning-guide" class="ft-btn ft-btn--secondary">Get the Guide</a>
+  </div>
+
+  <script>
+    // ============================================================
+    // FAQ category filter · same wiring as the Camp Elachee page.
+    // Clicking a sidebar button filters the .accord-item rows by
+    // their data-faq-category. The "All Questions" button shows
+    // everything. Hidden items also get closed so re-showing them
+    // starts collapsed. The <details>/<summary> accordion behavior
+    // itself is handled natively by the browser.
+    // ============================================================
+    (function () {
+      var buttons = document.querySelectorAll('.faqs-sidebar__btn');
+      var items   = document.querySelectorAll('.faqs-content .accord-item');
+      if (!buttons.length || !items.length) return;
+
+      function applyFilter(filter) {
+        items.forEach(function (item) {
+          var cat = item.getAttribute('data-faq-category');
+          var show = (filter === 'all') || (cat === filter);
+          if (show) {
+            item.hidden = false;
+          } else {
+            item.hidden = true;
+            item.open = false;
+          }
+        });
+      }
+
+      buttons.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var filter = btn.getAttribute('data-faq-filter') || 'all';
+          buttons.forEach(function (b) {
+            var active = (b === btn);
+            b.classList.toggle('is-active', active);
+            b.setAttribute('aria-pressed', active ? 'true' : 'false');
+          });
+          applyFilter(filter);
+        });
+      });
+    })();
+
+    // ============================================================
+    // Mobile nav toggle · uses site.css drawer behavior via .nav-btn
+    // Toggle a class on <body> and on the .nav-main wrapper.
+    // ============================================================
+    (function () {
+      var trigger = document.querySelector('.nav-btn a');
+      if (!trigger) return;
+      trigger.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.body.classList.toggle('nav-open');
+        var navMain = document.querySelector('.nav-main');
+        if (navMain) navMain.classList.toggle('is-open');
+        var expanded = document.body.classList.contains('nav-open');
+        trigger.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+      });
+    })();
+
+    // ============================================================
+    // Sticky mobile CTA bar · appears after scrolling past hero
+    // ============================================================
+    (function () {
+      var bar = document.getElementById('mobileCtaBar');
+      if (!bar) return;
+      var hero = document.querySelector('.section-camp-hero');
+      var triggerY = hero ? hero.offsetTop + hero.offsetHeight - 80 : 600;
+
+      function update() {
+        if (window.scrollY > triggerY) {
+          bar.classList.add('is-visible');
+        } else {
+          bar.classList.remove('is-visible');
+        }
+      }
+      window.addEventListener('scroll', update, { passive: true });
+      window.addEventListener('resize', function () {
+        triggerY = hero ? hero.offsetTop + hero.offsetHeight - 80 : 600;
+        update();
+      });
+      update();
+    })();
+  </script>
+</body>
+</html>
