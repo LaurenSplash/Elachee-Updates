@@ -13658,6 +13658,26 @@ body[data-current-view="article"] .article-mobile-bar { display: block; }
     .na-infocta__btn:focus-visible{outline:3px solid #ffffff;outline-offset:3px;}
     @media (max-width:600px){.na-infocta__card{padding:44px 22px;border-radius:20px;}}
   </style>
+  <style>
+    /* Batch edits #1-5 */
+    /* 1. Primary CTA on the green Transformation section -> white fill so it's visible */
+    .section-camp-transformation .btn-1{background:#ffffff !important;color:#2f5d28 !important;border:2px solid #ffffff !important;box-shadow:0 10px 22px rgba(0,0,0,.16) !important;}
+    .section-camp-transformation .btn-1:hover,.section-camp-transformation .btn-1:focus{background:#eef6e0 !important;color:#2f5d28 !important;border-color:#ffffff !important;}
+    /* 3. "How to Join" features: 3 across + one uniform green check (fixes mismatched leftover icons) */
+    .section-camp-plan .plan-features{grid-template-columns:repeat(3,1fr) !important;max-width:760px !important;}
+    .section-camp-plan .plan-features > li::before{background-color:#eaf3de !important;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23639922' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'><polyline points='20 6 9 17 4 12'/></svg>") !important;background-repeat:no-repeat !important;background-position:center !important;background-size:22px 22px !important;}
+    @media (max-width:760px){.section-camp-plan .plan-features{grid-template-columns:repeat(2,1fr) !important;}}
+    @media (max-width:520px){.section-camp-plan .plan-features{grid-template-columns:1fr !important;}}
+    /* 4. Checklist: single clean white check (kills the green-ringed dot) */
+    .section-camp-day .day-story__creek-list > li::before{content:"\2713" !important;position:absolute !important;left:0 !important;top:1px !important;width:auto !important;height:auto !important;background:none !important;box-shadow:none !important;border-radius:0 !important;color:#ffffff !important;font-weight:800 !important;font-size:15px !important;display:inline-block !important;}
+    /* 5. Close-CTA supporting line */
+    .section-camp-day .day-story__close-sub{color:var(--ce-bark-2,#5a5a5a);font-size:16px;line-height:1.55;max-width:540px;margin:0 auto 18px;}
+  </style>
+  <style>
+    /* Bolder hero eyebrow */
+    .section-camp-hero .camp-hero__eyebrow{font-size:16px !important;font-weight:900 !important;letter-spacing:.16em !important;}
+    .section-camp-hero .camp-hero__eyebrow span{font-weight:700 !important;color:rgba(255,255,255,0.92) !important;font-size:14px !important;}
+  </style>
 </head>
 <body data-current-view="page">
 
@@ -13935,7 +13955,7 @@ body[data-current-view="article"] .article-mobile-bar { display: block; }
                 <span>Classroom Has</span>
                 <span>No Walls</span>
               </h1>
-              <p class="camp-hero__lede">Elachee Nature Academy is a Cognia-accredited, nature-based preschool, kindergarten, and early-elementary school in Gainesville, GA. For ages 3 through 2nd grade, the forest is the classroom — every day is hands-on, outdoors, and built to grow curious, confident, kindergarten-ready kids.</p>
+              <p class="camp-hero__lede">Some kids spend the day at a desk. Yours could spend it knee-deep in a creek. At Elachee Nature Academy, children ages 3 through 2nd grade learn to read, count, and wonder — outdoors, every day — and come home curious, confident, and ready for what's next.</p>
               <div class="btn-holder">
                 <a href="https://elachee.org/resources/contact-us/" class="btn btn-1">Schedule a Tour</a>
                 <a href="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=lkUNysp6VUuL8dxYR2-gT9CZ7wYo5GJDsyLKz6jQ9b5URUlXVzA5MkRUWFlVUDVGNjVCTTdNWkFUMS4u" class="btn btn-7">Join the Waitlist</a>
@@ -14313,7 +14333,8 @@ body[data-current-view="article"] .article-mobile-bar { display: block; }
             </aside>
 
             <div class="day-story__close">
-              <h3>Want to see it in person?</h3>
+              <h3>Imagine Your Child Here.</h3>
+              <p class="day-story__close-sub">Walk the trails, meet the teachers, and watch a morning of real discovery unfold — then picture your child in the middle of it. Tours run year-round, and they're the best first step.</p>
               <div class="btn-holder">
                 <a href="https://elachee.org/resources/contact-us/" class="btn btn-1">Schedule a Tour</a>
               </div>
@@ -14382,15 +14403,14 @@ body[data-current-view="article"] .article-mobile-bar { display: block; }
               <div class="info-grid">
 
                 <div class="info-card">
-                  <h5><svg class="svg-icon" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="11"/><polyline points="16,9 16,16 21,19"/></svg> Hours &amp; Schedule</h5>
+                  <h5><svg class="svg-icon" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 4 L 5 8 L 5 16 Q 5 24, 16 28 Q 27 24, 27 16 L 27 8 Z"/><polyline points="11,16 15,20 21,13"/></svg> Before Enrolling</h5>
                   <dl>
-                    <dt>Half-day program</dt><dd>8:15 AM – 12:15 PM</dd>
-                    <dt>Full-day program</dt><dd>8:15 AM – 3:15 PM</dd>
-                    <dt>School year</dt><dd>August through May (10 months)</dd>
-                    <dt>Preschool days</dt><dd>2, 3, or 5 mornings a week</dd>
-                    <dt>Pre-K through 2nd</dt><dd>5 days a week, daily attendance</dd>
-                    <dt>Commitment</dt><dd>Enrollment is for the full school year</dd>
+                    <dt>Bathroom skills</dt><dd>Independent toileting required (Preschool &amp; Pre-K)</dd>
+                    <dt>Diapers/pull-ups</dt><dd>Not permitted — underwear only</dd>
+                    <dt>Transferring in</dt><dd>Good academic &amp; behavioral standing</dd>
+                    <dt>K–2nd grade</dt><dd>Daily attendance required</dd>
                   </dl>
+                  <p class="info-card__note"><strong>Why?</strong> State licensing standards mean our classrooms aren't set up for diapers. We're glad to share our readiness checklist.</p>
                 </div>
 
                 <div class="info-card">
@@ -14405,14 +14425,15 @@ body[data-current-view="article"] .article-mobile-bar { display: block; }
                 </div>
 
                 <div class="info-card">
-                  <h5><svg class="svg-icon" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 4 L 5 8 L 5 16 Q 5 24, 16 28 Q 27 24, 27 16 L 27 8 Z"/><polyline points="11,16 15,20 21,13"/></svg> Before Enrolling</h5>
+                  <h5><svg class="svg-icon" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="11"/><polyline points="16,9 16,16 21,19"/></svg> Hours &amp; Schedule</h5>
                   <dl>
-                    <dt>Bathroom skills</dt><dd>Independent toileting required (Preschool &amp; Pre-K)</dd>
-                    <dt>Diapers/pull-ups</dt><dd>Not permitted — underwear only</dd>
-                    <dt>Transferring in</dt><dd>Good academic &amp; behavioral standing</dd>
-                    <dt>K–2nd grade</dt><dd>Daily attendance required</dd>
+                    <dt>Half-day program</dt><dd>8:15 AM – 12:15 PM</dd>
+                    <dt>Full-day program</dt><dd>8:15 AM – 3:15 PM</dd>
+                    <dt>School year</dt><dd>August through May (10 months)</dd>
+                    <dt>Preschool days</dt><dd>2, 3, or 5 mornings a week</dd>
+                    <dt>Pre-K through 2nd</dt><dd>5 days a week, daily attendance</dd>
+                    <dt>Commitment</dt><dd>Enrollment is for the full school year</dd>
                   </dl>
-                  <p class="info-card__note"><strong>Why?</strong> State licensing standards mean our classrooms aren't set up for diapers. We're glad to share our readiness checklist.</p>
                 </div>
 
                 <div class="info-card">
