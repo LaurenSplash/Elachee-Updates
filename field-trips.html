@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11769,6 +11768,33 @@ body[data-current-view="article"] .article-mobile-bar { display: block; }
       stroke: var(--ce-green) !important;
     }
   </style>
+  <style>
+    /* === Review remediation: WCAG-compliant button contrast + visible focus === */
+    .btn-1{background:#93CC36!important;color:#2e2e2e!important;border-color:#93CC36!important;}
+    .btn-1:hover,.btn-1:focus,.btn-1:active{background:#3A6B35!important;color:#ffffff!important;border-color:#3A6B35!important;}
+    .btn-7{background:#ffffff!important;color:#2f5d28!important;border-color:#2f5d28!important;}
+    .btn-7:hover,.btn-7:focus,.btn-7:active{background:#2f5d28!important;color:#ffffff!important;border-color:#2f5d28!important;}
+    .btn-4{background:#ffffff!important;color:#2f5d28!important;border-color:#2f5d28!important;}
+    .btn-4:hover,.btn-4:focus,.btn-4:active{background:#2f5d28!important;color:#ffffff!important;border-color:#2f5d28!important;}
+    .btn:focus-visible,.btn-1:focus-visible,.btn-4:focus-visible,.btn-7:focus-visible,a.btn:focus-visible,.btn-donate:focus-visible{outline:3px solid #1f5c1f!important;outline-offset:3px!important;}
+  </style>
+  <style>
+    /* Card layout + contrast fixes (review screenshots) */
+    .section-camp-plan .plan-steps--text .plan-step{display:block!important;}
+    .director-card__role{color:#2f5d28!important;}
+  </style>
+  <style>
+    /* reg-howto-end redesign: white card on green, legible, branded */
+    .section-camp-registration .reg-howto-end{
+      background:#ffffff !important;border:none !important;border-radius:18px !important;
+      box-shadow:0 12px 30px rgba(20,50,10,.20) !important;color:#2e2e2e !important;
+      max-width:700px !important;margin:48px auto 0 !important;padding:20px 28px !important;
+      gap:16px !important;backdrop-filter:none !important;align-items:center !important;}
+    .section-camp-registration .reg-howto-end__text{color:#2e2e2e !important;font-weight:600 !important;font-size:16px !important;}
+    .section-camp-registration .reg-howto-end__text strong{color:#1c3a1c !important;font-weight:800 !important;}
+    .section-camp-registration .reg-howto-end a{color:#2f5d28 !important;font-weight:800 !important;text-decoration:underline !important;text-decoration-thickness:2px !important;text-underline-offset:3px !important;}
+    .section-camp-registration .reg-howto-end__icon{background:#93CC36 !important;color:#ffffff !important;width:42px !important;height:42px !important;flex:0 0 42px !important;box-shadow:0 4px 10px rgba(58,107,53,.35) !important;}
+  </style>
 </head>
 <body data-current-view="page">
 
@@ -11785,22 +11811,22 @@ body[data-current-view="article"] .article-mobile-bar { display: block; }
          Donate is promoted to a primary CTA on the row below. -->
     <div class="top-head">
       <div class="link-icon">
-        <a href="index.html"><svg width="15" height="15" viewBox="0 0 15 15" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path d="M7.5 3.5V7.5L10.17 8.83M14.17 7.5C14.17 11.18 11.18 14.17 7.5 14.17C3.82 14.17 0.83 11.18 0.83 7.5C0.83 3.82 3.82 0.83 7.5 0.83C11.18 0.83 14.17 3.82 14.17 7.5Z" stroke="#1E1E1E" stroke-width="1.33" stroke-linecap="round" stroke-linejoin="round"/></svg> <span>Hours &amp; Directions</span></a>
-        <a href="index.html"><svg width="15" height="15" viewBox="0 0 15 15" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path d="M10.17 0.83V3.5M4.83 0.83V3.5M1.5 6.17H13.5M2.83 2.17H12.17C12.9 2.17 13.5 2.76 13.5 3.5V12.83C13.5 13.57 12.9 14.17 12.17 14.17H2.83C2.1 14.17 1.5 13.57 1.5 12.83V3.5C1.5 2.76 2.1 2.17 2.83 2.17Z" stroke="#1E1E1E" stroke-width="1.33" stroke-linecap="round" stroke-linejoin="round"/></svg> <span>Calendar of Events</span></a>
+        <a href="https://elachee.org/"><svg width="15" height="15" viewBox="0 0 15 15" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path d="M7.5 3.5V7.5L10.17 8.83M14.17 7.5C14.17 11.18 11.18 14.17 7.5 14.17C3.82 14.17 0.83 11.18 0.83 7.5C0.83 3.82 3.82 0.83 7.5 0.83C11.18 0.83 14.17 3.82 14.17 7.5Z" stroke="#1E1E1E" stroke-width="1.33" stroke-linecap="round" stroke-linejoin="round"/></svg> <span>Hours &amp; Directions</span></a>
+        <a href="https://elachee.org/"><svg width="15" height="15" viewBox="0 0 15 15" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path d="M10.17 0.83V3.5M4.83 0.83V3.5M1.5 6.17H13.5M2.83 2.17H12.17C12.9 2.17 13.5 2.76 13.5 3.5V12.83C13.5 13.57 12.9 14.17 12.17 14.17H2.83C2.1 14.17 1.5 13.57 1.5 12.83V3.5C1.5 2.76 2.1 2.17 2.83 2.17Z" stroke="#1E1E1E" stroke-width="1.33" stroke-linecap="round" stroke-linejoin="round"/></svg> <span>Calendar of Events</span></a>
         <a class="util-phone" href="tel:7705351976"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/></svg> <span>770-535-1976</span></a>
       </div>
       <div class="top-link">
         <ul>
-          <li><a href="index.html">Memberships</a></li>
-          <li><a href="index.html">Volunteer</a></li>
-          <li><a href="index.html">Resources</a></li>
+          <li><a href="https://elachee.org/">Memberships</a></li>
+          <li><a href="https://elachee.org/volunteer/">Volunteer</a></li>
+          <li><a href="https://elachee.org/">Resources</a></li>
         </ul>
       </div>
     </div>
 
     <div class="bottom-head">
       <div id="logo">
-        <a href="index.html" aria-label="Elachee Nature Science Center home">
+        <a href="https://elachee.org/" aria-label="Elachee Nature Science Center home">
           <img src="media/png-df9a7d8bb1.png" alt="Elachee Nature Science Center">
         </a>
       </div>
@@ -11810,62 +11836,62 @@ body[data-current-view="article"] .article-mobile-bar { display: block; }
 
           <!-- Mobile drawer: primary CTAs first, then nav sections -->
           <div class="mobile-cta-block" aria-hidden="true">
-            <a href="index.html" class="btn btn-1 btn-block">Plan Your Visit</a>
-            <a href="index.html" class="btn btn-7 btn-block">Become a Member</a>
-            <a href="index.html" class="btn btn-donate btn-block">Donate</a>
+            <a href="https://elachee.org/visit/" class="btn btn-1 btn-block">Plan Your Visit</a>
+            <a href="https://elachee.org/memberships/" class="btn btn-7 btn-block">Become a Member</a>
+            <a href="https://elachee.org/donate/" class="btn btn-donate btn-block">Donate</a>
           </div>
 
           <ul id="primary-menu" role="menubar" aria-label="Primary">
-            <li class="mobile-only"><a href="index.html">Home</a></li>
+            <li class="mobile-only"><a href="https://elachee.org/">Home</a></li>
 
             <!-- ## VISIT -->
             <li class="menu-item-has-children" role="none">
-              <a href="index.html" role="menuitem" aria-haspopup="true" aria-expanded="false">Visit</a>
+              <a href="https://elachee.org/visit/" role="menuitem" aria-haspopup="true" aria-expanded="false">Visit</a>
               <div class="megamenu" role="menu" aria-label="Visit">
                 <div class="megamenu__group">
                   <h6 class="megamenu__heading">Plan Your Visit</h6>
                   <ul>
-                    <li><a href="index.html">Hours &amp; Admission</a></li>
-                    <li><a href="index.html">Directions &amp; Parking</a></li>
-                    <li><a href="index.html">What to Bring</a></li>
-                    <li><a href="index.html">Group Visits</a></li>
+                    <li><a href="https://elachee.org/">Hours &amp; Admission</a></li>
+                    <li><a href="https://elachee.org/">Directions &amp; Parking</a></li>
+                    <li><a href="https://elachee.org/">What to Bring</a></li>
+                    <li><a href="https://elachee.org/">Group Visits</a></li>
                   </ul>
                 </div>
                 <div class="megamenu__group">
                   <h6 class="megamenu__heading">On Campus</h6>
                   <ul>
-                    <li><a href="index.html">Indoor Exhibits &amp; Animals</a></li>
-                    <li><a href="index.html">Hiking Trails &amp; Trail Map</a></li>
-                    <li><a href="index.html">Chicopee Woods Preserve</a></li>
-                    <li><a href="index.html">Adult Programs</a></li>
+                    <li><a href="https://elachee.org/">Indoor Exhibits &amp; Animals</a></li>
+                    <li><a href="https://elachee.org/">Hiking Trails &amp; Trail Map</a></li>
+                    <li><a href="https://elachee.org/">Chicopee Woods Preserve</a></li>
+                    <li><a href="https://elachee.org/">Adult Programs</a></li>
                   </ul>
                 </div>
                 <div class="megamenu__feature" data-feature="visit">
                   <div class="megamenu__feature-img"><img src="media/jpg-d80ffff189.jpg" alt="Family on the trail at Elachee"></div>
                   <h6 class="megamenu__feature-eyebrow">First time?</h6>
                   <p class="megamenu__feature-title">Start with the Plan Your Visit guide.</p>
-                  <a href="index.html" class="megamenu__feature-link">Plan your visit →</a>
+                  <a href="https://elachee.org/" class="megamenu__feature-link">Plan your visit →</a>
                 </div>
               </div>
             </li>
 
             <!-- ## CAMPS & PROGRAMS -->
             <li class="menu-item-has-children" role="none">
-              <a href="index.html" role="menuitem" aria-haspopup="true" aria-expanded="false">Camps &amp; Programs</a>
+              <a href="https://elachee.org/camps-programs/" role="menuitem" aria-haspopup="true" aria-expanded="false">Camps &amp; Programs</a>
               <div class="megamenu" role="menu" aria-label="Camps and Programs">
                 <div class="megamenu__group">
                   <h6 class="megamenu__heading">Year-Round School</h6>
                   <ul>
-                    <li><a href="index.html"><strong>Nature Academy</strong> — Pre-K to 1st</a></li>
-                    <li><a href="index.html"><strong>Homeschool Program</strong> — Monthly</a></li>
+                    <li><a href="nature-academy.html"><strong>Nature Academy</strong> — Ages 3–2nd</a></li>
+                    <li><a href="https://elachee.org/camps-programs/homeschool-programs/"><strong>Homeschool Program</strong> — Monthly</a></li>
                   </ul>
                 </div>
                 <div class="megamenu__group">
                   <h6 class="megamenu__heading">Camps &amp; Drop-In</h6>
                   <ul>
                     <li><a href="camp-elachee.html"><strong>Camp Elachee</strong> — Summer K–8</a></li>
-                    <li><a href="index.html"><strong>Sprouts</strong> — Ages 3–5</a></li>
-                    <li><a href="index.html"><strong>Scouts Program</strong> — Badge work</a></li>
+                    <li><a href="https://elachee.org/camps-programs/sprouts/"><strong>Sprouts</strong> — Ages 3–5</a></li>
+                    <li><a href="https://elachee.org/"><strong>Scouts Program</strong> — Badge work</a></li>
                   </ul>
                 </div>
                 <div class="megamenu__feature" data-feature="programs">
@@ -11910,86 +11936,86 @@ body[data-current-view="article"] .article-mobile-bar { display: block; }
 
             <!-- ## EVENTS & RENTALS -->
             <li class="menu-item-has-children" role="none">
-              <a href="index.html" role="menuitem" aria-haspopup="true" aria-expanded="false">Events &amp; Rentals</a>
+              <a href="https://elachee.org/events-parties/" role="menuitem" aria-haspopup="true" aria-expanded="false">Events &amp; Rentals</a>
               <div class="megamenu" role="menu" aria-label="Events &amp; Rentals">
                 <div class="megamenu__group">
                   <h6 class="megamenu__heading">Signature Events</h6>
                   <ul>
-                    <li><a href="index.html">Calendar of Events</a></li>
-                    <li><a href="index.html">Wildlife Festival (Sept)</a></li>
-                    <li><a href="index.html">Camp Elachee for Adults (Oct)</a></li>
-                    <li><a href="index.html">Trillium Trek (April)</a></li>
+                    <li><a href="https://elachee.org/">Calendar of Events</a></li>
+                    <li><a href="https://elachee.org/">Wildlife Festival (Sept)</a></li>
+                    <li><a href="https://elachee.org/">Camp Elachee for Adults (Oct)</a></li>
+                    <li><a href="https://elachee.org/">Trillium Trek (April)</a></li>
                   </ul>
                 </div>
                 <div class="megamenu__group">
                   <h6 class="megamenu__heading">Private Rentals</h6>
                   <ul>
-                    <li><a href="index.html">Birthday Parties</a></li>
-                    <li><a href="index.html">Corporate Retreats</a></li>
-                    <li><a href="index.html">Wedding &amp; Private Events</a></li>
-                    <li><a href="index.html">Adventure Add-Ons</a></li>
+                    <li><a href="https://elachee.org/">Birthday Parties</a></li>
+                    <li><a href="https://elachee.org/">Corporate Retreats</a></li>
+                    <li><a href="https://elachee.org/">Wedding &amp; Private Events</a></li>
+                    <li><a href="https://elachee.org/">Adventure Add-Ons</a></li>
                   </ul>
                 </div>
                 <div class="megamenu__feature" data-feature="events">
                   <div class="megamenu__feature-img"><img src="media/jpg-3a84e3f4fd.jpg" alt="Special event at Elachee"></div>
                   <h6 class="megamenu__feature-eyebrow">What's coming up?</h6>
                   <p class="megamenu__feature-title">See what's on the calendar this month.</p>
-                  <a href="index.html" class="megamenu__feature-link">View all events →</a>
+                  <a href="https://elachee.org/" class="megamenu__feature-link">View all events →</a>
                 </div>
               </div>
             </li>
 
             <!-- ## CORPORATE WELLNESS -->
             <li class="menu-item-has-children" role="none">
-              <a href="index.html" role="menuitem" aria-haspopup="true" aria-expanded="false">Corporate Wellness</a>
+              <a href="https://elachee.org/corporate-partnerships/" role="menuitem" aria-haspopup="true" aria-expanded="false">Corporate Wellness</a>
               <div class="megamenu" role="menu" aria-label="Corporate Wellness">
                 <div class="megamenu__group">
                   <h6 class="megamenu__heading">Wellness Partnerships</h6>
                   <ul>
-                    <li><a href="index.html"><strong>Corporate Wellness Membership</strong> — Year-round trail &amp; preserve access</a></li>
-                    <li><a href="index.html"><strong>Team Building &amp; Retreats</strong> — Half-day or full-day</a></li>
-                    <li><a href="index.html">Wellness Challenges</a></li>
-                    <li><a href="index.html">Group Volunteer Days</a></li>
+                    <li><a href="https://elachee.org/"><strong>Corporate Wellness Membership</strong> — Year-round trail &amp; preserve access</a></li>
+                    <li><a href="https://elachee.org/"><strong>Team Building &amp; Retreats</strong> — Half-day or full-day</a></li>
+                    <li><a href="https://elachee.org/">Wellness Challenges</a></li>
+                    <li><a href="https://elachee.org/">Group Volunteer Days</a></li>
                   </ul>
                 </div>
                 <div class="megamenu__group">
                   <h6 class="megamenu__heading">Sponsorship</h6>
                   <ul>
-                    <li><a href="index.html"><strong>Annual Sponsorships</strong> — Year-long visibility</a></li>
-                    <li><a href="index.html">Event Sponsorships</a></li>
-                    <li><a href="index.html">In-Kind Partnerships</a></li>
-                    <li><a href="index.html">Become a Member</a></li>
+                    <li><a href="https://elachee.org/"><strong>Annual Sponsorships</strong> — Year-long visibility</a></li>
+                    <li><a href="https://elachee.org/">Event Sponsorships</a></li>
+                    <li><a href="https://elachee.org/">In-Kind Partnerships</a></li>
+                    <li><a href="https://elachee.org/">Become a Member</a></li>
                   </ul>
                 </div>
                 <div class="megamenu__feature" data-feature="support">
                   <div class="megamenu__feature-img"><img src="media/jpg-a2f5600826.jpg" alt="Team retreat at Elachee"></div>
                   <h6 class="megamenu__feature-eyebrow">Corporate wellness</h6>
                   <p class="megamenu__feature-title">A 1,440-acre forest is one of the best wellness benefits you can offer.</p>
-                  <a href="index.html" class="megamenu__feature-link">Compare partnerships →</a>
+                  <a href="https://elachee.org/" class="megamenu__feature-link">Compare partnerships →</a>
                 </div>
               </div>
             </li>
 
             <!-- ## ABOUT -->
             <li class="menu-item-has-children" role="none">
-              <a href="index.html" role="menuitem" aria-haspopup="true" aria-expanded="false">About</a>
+              <a href="https://elachee.org/about-us/" role="menuitem" aria-haspopup="true" aria-expanded="false">About</a>
               <div class="megamenu" role="menu" aria-label="About">
                 <div class="megamenu__group">
                   <h6 class="megamenu__heading">Our Story</h6>
                   <ul>
-                    <li><a href="index.html">Mission &amp; Vision</a></li>
-                    <li><a href="index.html">40 Years of Impact</a></li>
-                    <li><a href="index.html">Conservation &amp; Stewardship</a></li>
-                    <li><a href="index.html">Team &amp; Educators</a></li>
+                    <li><a href="https://elachee.org/">Mission &amp; Vision</a></li>
+                    <li><a href="https://elachee.org/">40 Years of Impact</a></li>
+                    <li><a href="https://elachee.org/">Conservation &amp; Stewardship</a></li>
+                    <li><a href="https://elachee.org/">Team &amp; Educators</a></li>
                   </ul>
                 </div>
                 <div class="megamenu__group">
                   <h6 class="megamenu__heading">Read &amp; Connect</h6>
                   <ul>
                     <li><a href="blog-list.html">Blog</a></li>
-                    <li><a href="index.html">Press &amp; News</a></li>
-                    <li><a href="index.html">FAQs</a></li>
-                    <li><a href="index.html">Contact Us</a></li>
+                    <li><a href="https://elachee.org/">Press &amp; News</a></li>
+                    <li><a href="https://elachee.org/">FAQs</a></li>
+                    <li><a href="https://elachee.org/resources/contact-us/">Contact Us</a></li>
                   </ul>
                 </div>
                 <div class="megamenu__feature" data-feature="about">
@@ -12005,8 +12031,8 @@ body[data-current-view="article"] .article-mobile-bar { display: block; }
 
         <!-- Desktop CTAs — Plan Your Visit (primary) + Donate (secondary, brand-distinct yellow) -->
         <div class="header-cta">
-          <a href="index.html" class="btn btn-1 header-cta__primary">Plan Your Visit</a>
-          <a href="index.html" class="btn btn-donate header-cta__donate">Donate</a>
+          <a href="https://elachee.org/visit/" class="btn btn-1 header-cta__primary">Plan Your Visit</a>
+          <a href="https://elachee.org/donate/" class="btn btn-donate header-cta__donate">Donate</a>
         </div>
 
         <div class="nav-btn">
@@ -12035,13 +12061,15 @@ body[data-current-view="article"] .article-mobile-bar { display: block; }
         <div class="camp-hero">
           <div class="camp-hero__body">
             <p class="camp-hero__eyebrow">
-              Hands-on outdoor science · Gainesville, GA
+              Field Trips for Pre-K through 12th Grade
+              <span>Hands-on outdoor science · Gainesville, GA</span>
             </p>
             <h1>
-              <span>Your students</span>
-              <span>belong outside.</span>
+              <span>Bring Science</span>
+              <span>to Life Outside</span>
+              <span>the Classroom</span>
             </h1>
-            <p class="camp-hero__lede">Elachee field trips take place inside Chicopee Woods Nature Preserve. Students wade into creek ecosystems, examine rock formations, and come face to face with the habitats they&rsquo;ve only read about. Preschool through 12th grade, guided by Elachee naturalists.</p>
+            <p class="camp-hero__lede">Give your students a hands-on science field trip in Gainesville, Georgia, inside the 1,440-acre Chicopee Woods Nature Preserve. Elachee helps Pre-K&ndash;12 students connect classroom concepts to real forests, streams, habitats, wildlife, and aquatic systems through guided outdoor education.</p>
             <div class="btn-holder">
               <a href="#book" class="btn btn-1">Request a Field Trip</a>
               <a href="#planning-guide" class="btn btn-7">Download the Teacher Planning Guide</a>
@@ -12059,7 +12087,7 @@ body[data-current-view="article"] .article-mobile-bar { display: block; }
 
             <!-- Age range stamp (rounded-rectangle vintage badge) -->
             <div class="hero-badge hero-badge--age" aria-hidden="true">
-              <span class="hero-badge__label">Preschool</span>
+              <span class="hero-badge__label">Pre-K</span>
               <span class="hero-badge__divider"><span>Through</span></span>
               <span class="hero-badge__value">12th Grade</span>
               <span class="hero-badge__illo" aria-hidden="true">
@@ -12114,7 +12142,7 @@ body[data-current-view="article"] .article-mobile-bar { display: block; }
         <ul>
           <li>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-            Preschool through 12th Grade
+            Pre-K through 12th Grade
           </li>
           <li>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
@@ -12148,7 +12176,7 @@ body[data-current-view="article"] .article-mobile-bar { display: block; }
           <div class="whatis-card__inner">
             <span class="eyebrow">Quick Answer</span>
             <h2 id="whatis-title">What Is an <strong>Elachee Field Trip?</strong></h2>
-            <p class="whatis-card__answer">An Elachee field trip is a naturalist-led outdoor science experience for preschool through 12th grade. Depending on the program, students get hands-on with real habitats and ecosystems through activities connected to classroom learning goals.</p>
+            <p class="whatis-card__answer">An Elachee field trip is a naturalist-led outdoor science experience for Pre-K&ndash;12 students. Depending on the program, students get hands-on with real habitats and ecosystems through activities connected to classroom learning goals.</p>
             <ul class="whatis-chips" aria-label="Topics students may explore">
               <li>
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -12214,9 +12242,9 @@ body[data-current-view="article"] .article-mobile-bar { display: block; }
       <div class="container">
         <div class="section-block">
           <div class="section-head">
-            <span class="eyebrow">Built for teachers</span>
-            <h2 id="problem-title">Your class. Your calendar. <strong>Your curriculum.</strong></h2>
-            <h6>Every field trip comes with guided instruction, clear logistics, and program options built around your grade level, season, and schedule. You pick the program. We handle the rest.</h6>
+            <span class="eyebrow">The Teacher Reality</span>
+            <h2 id="problem-title">Planning a meaningful field trip shouldn't feel like <strong>one more lesson plan to write</strong></h2>
+            <h6>Teachers already have enough to manage: standards, testing schedules, transportation, permission slips, budgets, and keeping students engaged. A field trip should support your curriculum, not add confusion to your plate.</h6>
           </div>
           <div class="section-body">
             <div class="camp-problem__grid">
@@ -12224,25 +12252,25 @@ body[data-current-view="article"] .article-mobile-bar { display: block; }
                 <span class="box-1__icon" aria-hidden="true">
                   <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="5" width="22" height="22" rx="3"/><polyline points="11,16 14,19 21,12"/></svg>
                 </span>
-                <h5>Standards-aligned by design</h5>
-                <p>Every program is mapped to Georgia Standards of Excellence, so the day in the woods connects directly back to what you're teaching in the classroom.</p>
+                <h5>Hard to Justify the Day Away</h5>
+                <p>You need more than "a fun day outside." You need a trip that connects clearly to learning goals and classroom standards.</p>
               </div>
               <div class="box-1">
                 <span class="box-1__icon" aria-hidden="true">
                   <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="16" cy="16" r="13"/><polyline points="16,7 16,16 22,19"/></svg>
                 </span>
-                <h5>Logistics you don't have to figure out</h5>
-                <p>Program timing, guided instruction, and age-appropriate activities are all built in. You bring the students — Elachee handles the structure.</p>
+                <h5>Hard to Coordinate the Logistics</h5>
+                <p>Transportation, timing, chaperones, weather, and student needs can make planning feel overwhelming before the day even arrives.</p>
               </div>
               <div class="box-1">
                 <span class="box-1__icon" aria-hidden="true">
                   <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="14" cy="14" r="9"/><line x1="21" y1="21" x2="28" y2="28"/><line x1="14" y1="10" x2="14" y2="18"/><line x1="10" y1="14" x2="18" y2="14"/></svg>
                 </span>
-                <h5>Programs that fit your class</h5>
-                <p>Preschool through 12th grade, with onsite, in-classroom, aquatic, and seasonal options. Easy to find the format that works for your grade level, calendar, and curriculum.</p>
+                <h5>Hard to Know Which Program Fits</h5>
+                <p>With different grade levels, topics, and seasonal options, it's tough to figure out which experience is right for your students.</p>
               </div>
             </div>
-            <p class="lede" style="max-width: 760px; margin: 28px auto 0; text-align: center;">Elachee field trips are set inside the 1,440-acre Chicopee Woods Nature Preserve — with the guided labs, hikes, and hands-on science to match.</p>
+            <p class="lede" style="max-width: 760px; margin: 28px auto 0; text-align: center;">Elachee helps you turn the field trip from one more thing to coordinate into a learning experience that supports your standards, your students, and your school calendar.</p>
           </div>
         </div>
       </div>
@@ -12259,14 +12287,14 @@ body[data-current-view="article"] .article-mobile-bar { display: block; }
         <div class="section-block">
           <div class="section-head">
             <span class="eyebrow">Your Outdoor Education Partner</span>
-            <h2 id="guide-title">Built for the classroom, <strong>set in the woods.</strong></h2>
+            <h2 id="guide-title">Elachee makes outdoor science <strong>simple, standards-minded, and hands-on.</strong></h2>
           </div>
           <div class="section-body">
 
             <div class="guide-split">
               <div class="guide-split__copy">
-                <p>Elachee field trips are designed to fit how teachers actually plan — with Georgia Standards of Excellence alignment, age-appropriate instruction from preschool through 12th grade, and program formats that work around your calendar and curriculum.</p>
-                <p>Choose from onsite programs in the 1,440-acre Chicopee Woods Nature Preserve, in-classroom visits, seasonal options, or Lake Lanier aquatic experiences. Every program is guided, hands-on, and built to reinforce what you're already teaching.</p>
+                <p>We know teachers have to think about more than whether a field trip sounds fun. You need standards alignment, clear logistics, age-appropriate instruction, safety-minded planning, and a program your administrators can support.</p>
+                <p>Elachee field trips are built to reinforce what you're already teaching &mdash; with guided labs, hikes, and hands-on science set inside the 1,440-acre Chicopee Woods Nature Preserve. Pre-K through 12th-grade programs are designed to support Georgia Standards of Excellence, and we offer onsite, in-classroom, seasonal, and Lake Lanier aquatic options so you can pick the format that fits your class, calendar, and curriculum goals.</p>
                 <!-- PROOF PLACEHOLDERS · confirm with client before launch -->
                 <!-- [Confirm accreditation language] -->
                 <!-- [Add number of students served annually if available] -->
@@ -12288,7 +12316,7 @@ body[data-current-view="article"] .article-mobile-bar { display: block; }
 
             <div class="camp-stats-grid">
               <div class="stat-tile" data-tone="green">
-                <span class="stat-tile__num">PS&ndash;12</span>
+                <span class="stat-tile__num">Pre-K&ndash;12</span>
                 <span class="stat-tile__label">Grades Served</span>
               </div>
               <div class="stat-tile" data-tone="blue">
@@ -12324,11 +12352,14 @@ body[data-current-view="article"] .article-mobile-bar { display: block; }
         <div class="section-block">
           <div class="section-head">
             <span class="eyebrow">How It Works</span>
-            <h2 id="plan-title">Planning your field trip is <strong>straightforward.</strong></h2>
-            <h6>Four steps from first look to field trip day.</h6>
+            <h2 id="plan-title">Here's How It Works, <strong>Step by Step</strong></h2>
+            <h6>From the moment you reach out to the moment your students step onto the trail &mdash; here's exactly what to expect.</h6>
           </div>
           <div class="section-body">
 
+            <!-- Field-trip plan steps · custom HTML cards (orange/blue/green
+                 with script number + white icon disc) so content is field-
+                 trip specific instead of inheriting the Camp Elachee SVGs. -->
             <ul class="ft-plan-steps" aria-label="How planning a field trip works">
               <li class="ft-plan-step ft-plan-step--orange">
                 <span class="ft-plan-step__num" aria-hidden="true">1</span>
@@ -12342,8 +12373,8 @@ body[data-current-view="article"] .article-mobile-bar { display: block; }
                   </svg>
                 </div>
                 <div class="ft-plan-step__body">
-                  <h3>Explore our programs</h3>
-                  <p>Browse field trip options by grade level, topic, and format — forest hikes, creek labs, aquatic learning, and more.</p>
+                  <h3>Tell Us About Your Class</h3>
+                  <p>Share your grade level, group size, preferred dates, curriculum goals, and program interests.</p>
                 </div>
               </li>
               <li class="ft-plan-step ft-plan-step--blue ft-plan-step--reverse">
@@ -12354,8 +12385,8 @@ body[data-current-view="article"] .article-mobile-bar { display: block; }
                   </svg>
                 </div>
                 <div class="ft-plan-step__body">
-                  <h3>Tell us about your class</h3>
-                  <p>Share your grade level, group size, preferred dates, and any curriculum goals. That's all we need to get started.</p>
+                  <h3>Choose the Best Program Fit</h3>
+                  <p>Our team helps match your class with an onsite, classroom-based, seasonal, or aquatic learning experience.</p>
                 </div>
               </li>
               <li class="ft-plan-step ft-plan-step--green">
@@ -12369,22 +12400,8 @@ body[data-current-view="article"] .article-mobile-bar { display: block; }
                   </svg>
                 </div>
                 <div class="ft-plan-step__body">
-                  <h3>Review pricing</h3>
-                  <p>Rates vary by program type and group size. Submit a request and we'll confirm current pricing for your group.</p>
-                </div>
-              </li>
-              <li class="ft-plan-step ft-plan-step--orange">
-                <span class="ft-plan-step__num" aria-hidden="true">4</span>
-                <div class="ft-plan-step__icon" aria-hidden="true">
-                  <svg viewBox="0 0 64 64" fill="none" stroke="#F4A93C" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M20 32 C20 24 28 18 32 18 C36 18 44 24 44 32 C44 40 36 46 32 46 C28 46 20 40 20 32Z"/>
-                    <line x1="32" y1="46" x2="32" y2="54"/>
-                    <line x1="24" y1="54" x2="40" y2="54"/>
-                  </svg>
-                </div>
-                <div class="ft-plan-step__body">
-                  <h3>Reserve your spot</h3>
-                  <p>Reach out and an Elachee team member will confirm availability and get you set up. Call 770-535-1976 or submit a request online.</p>
+                  <h3>Bring Science to Life</h3>
+                  <p>Your students participate in hands-on science, guided exploration, and real-world discovery connected to what they are learning in class.</p>
                 </div>
               </li>
             </ul>
@@ -12419,7 +12436,7 @@ body[data-current-view="article"] .article-mobile-bar { display: block; }
             <p class="body">Bring your class to Elachee for an immersive outdoor learning experience on our campus and trails. Students explore natural systems through guided hikes, labs, and hands-on science activities.</p>
             <ul class="program-card__meta">
               <li><strong>Best for</strong> A full outdoor learning day connected to the Chicopee Woods Nature Preserve</li>
-              <li><strong>Grades</strong> Preschool through 12th grade</li>
+              <li><strong>Grades</strong> Pre-K through 12th grade</li>
               <li><strong>Format</strong> Elachee campus and trails</li>
               <li><strong>Curriculum fit</strong> Ecology, habitats, geology, wildlife, forest systems, and hands-on science</li>
             </ul>
@@ -12436,7 +12453,7 @@ body[data-current-view="article"] .article-mobile-bar { display: block; }
             <p class="body">Can't travel to Elachee? We can bring environmental education to your school with engaging, hands-on instruction designed to support classroom learning.</p>
             <ul class="program-card__meta">
               <li><strong>Best for</strong> Schools with transportation limitations or tight schedules</li>
-              <li><strong>Grades</strong> Preschool through 12th grade</li>
+              <li><strong>Grades</strong> Pre-K through 12th grade</li>
               <li><strong>Format</strong> Traveling classroom program</li>
               <li><strong>Service area</strong> [Confirm travel radius with Elachee]</li>
             </ul>
@@ -12453,7 +12470,7 @@ body[data-current-view="article"] .article-mobile-bar { display: block; }
             <p class="body">Some programs are offered during specific times of year, giving students a deeper look at science topics connected to real-world timing and natural cycles.</p>
             <ul class="program-card__meta">
               <li><strong>Best for</strong> Teachers planning around specific units, seasons, or science standards</li>
-              <li><strong>Grades</strong> Preschool through 12th grade</li>
+              <li><strong>Grades</strong> Pre-K through 12th grade</li>
               <li><strong>Availability</strong> Varies by program and season</li>
               <li><strong>Focus areas</strong> [Confirm seasonal offerings, e.g. astronomy/Starlab, with Elachee]</li>
             </ul>
@@ -12494,8 +12511,8 @@ body[data-current-view="article"] .article-mobile-bar { display: block; }
       <div class="container">
         <div class="section-head">
           <span class="eyebrow">Built for the Classroom</span>
-          <h2 id="standards-title">Where Georgia Standards meet <strong>1,440 acres of the real thing.</strong></h2>
-          <p class="lede" style="margin: 0 auto;">Elachee field trips are built around Georgia Standards of Excellence — giving students a real-world context for the science they're already learning. They don't just read about ecosystems, geology, or aquatic science. They wade into them.</p>
+          <h2 id="standards-title">Built to support classroom standards, <strong>not compete with them.</strong></h2>
+          <p class="lede" style="margin: 0 auto;">Elachee field trips are designed to support Georgia Standards of Excellence by giving students a real-world context for science concepts they are already learning in the classroom. Students do not just hear about ecosystems, geology, astronomy, or aquatic science &mdash; they observe and investigate them firsthand.</p>
         </div>
 
         <!-- The "Elachee equation" · Standards + Nature = Experience -->
@@ -12510,7 +12527,7 @@ body[data-current-view="article"] .article-mobile-bar { display: block; }
             </span>
             <span class="formula-card__tag">Part 1</span>
             <h3>Standards</h3>
-            <p>Aligned to Georgia Standards of Excellence and your grade-level learning goals.</p>
+            <p>Designed to support Georgia Standards of Excellence and your grade-level learning goals.</p>
           </div>
 
           <span class="formula__op" aria-hidden="true">+</span>
@@ -12539,7 +12556,7 @@ body[data-current-view="article"] .article-mobile-bar { display: block; }
             </span>
             <span class="formula-card__tag">The result</span>
             <h3>Experience</h3>
-            <p>Students investigate real habitats, handle specimens, and come back to class with science that stuck.</p>
+            <p>Hands-on investigation that turns abstract concepts into observable, memorable science.</p>
           </div>
         </div>
 
@@ -12559,12 +12576,11 @@ body[data-current-view="article"] .article-mobile-bar { display: block; }
             <span class="standards-benefits__check" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
                 <circle cx="12" cy="12" r="9"/>
-                <line x1="3" y1="12" x2="21" y2="12"/>
-                <path d="M12 3 C 8.5 7 8.5 17 12 21"/>
-                <path d="M12 3 C 15.5 7 15.5 17 12 21"/>
+                <circle cx="12" cy="12" r="5.5"/>
+                <circle cx="12" cy="12" r="2"/>
               </svg>
             </span>
-            <span>Connects classroom concepts to real environments</span>
+            <span>Supports science curriculum goals</span>
           </li>
           <li>
             <span class="standards-benefits__check" aria-hidden="true">
@@ -12579,11 +12595,22 @@ body[data-current-view="article"] .article-mobile-bar { display: block; }
           <li>
             <span class="standards-benefits__check" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="9"/>
+                <line x1="3" y1="12" x2="21" y2="12"/>
+                <path d="M12 3 C 8.5 7 8.5 17 12 21"/>
+                <path d="M12 3 C 15.5 7 15.5 17 12 21"/>
+              </svg>
+            </span>
+            <span>Connects classroom concepts to real environments</span>
+          </li>
+          <li>
+            <span class="standards-benefits__check" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M3 20 L8 20 L8 15 L13 15 L13 10 L18 10 L18 5 L22 5"/>
                 <line x1="3" y1="20.5" x2="22" y2="20.5"/>
               </svg>
             </span>
-            <span>Grade-appropriate experiences from preschool through 12th grade</span>
+            <span>Grade-appropriate experiences from Pre-K through 12th grade</span>
           </li>
           <li>
             <span class="standards-benefits__check" aria-hidden="true">
@@ -12595,16 +12622,6 @@ body[data-current-view="article"] .article-mobile-bar { display: block; }
               </svg>
             </span>
             <span>Reinforces inquiry, evidence, and scientific reasoning</span>
-          </li>
-          <li>
-            <span class="standards-benefits__check" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="9"/>
-                <circle cx="12" cy="12" r="5.5"/>
-                <circle cx="12" cy="12" r="2"/>
-              </svg>
-            </span>
-            <span>Builds scientific curiosity that lasts beyond the field trip day</span>
           </li>
         </ul>
 
@@ -12627,7 +12644,7 @@ body[data-current-view="article"] .article-mobile-bar { display: block; }
         <div class="section-block">
           <div class="section-head">
             <span class="eyebrow">Educator Benefits</span>
-            <h2 id="benefits-title"><strong>Why Teachers Come Back Year After Year.</strong></h2>
+            <h2 id="benefits-title">Built for the classroom. <strong>Why Teachers Come Back Year After Year.</strong></h2>
             <h6>Six things educators tell us they value most about an Elachee field trip &mdash; the reasons they keep planning a return visit.</h6>
           </div>
           <div class="section-body">
@@ -12763,7 +12780,7 @@ body[data-current-view="article"] .article-mobile-bar { display: block; }
             </span>
             <div class="logistics-card__body">
               <h4>Grade Levels</h4>
-              <p>Preschool through 12th grade, with programs tailored to each developmental level.</p>
+              <p>Pre-K through 12th grade, with programs tailored to each developmental level.</p>
             </div>
           </div>
           <div class="logistics-card" data-tone="blue">
@@ -12903,7 +12920,7 @@ body[data-current-view="article"] .article-mobile-bar { display: block; }
             <span class="lead-card__badge">Free Guide</span>
             <p class="preview-eyebrow">Elachee · 2026</p>
             <h3>The Field Trip<br>Planning Guide</h3>
-            <p class="preview-sub">Everything you need to plan, prepare, and make the most of your Elachee field trip.</p>
+            <p class="preview-sub">A teacher- and administrator-friendly toolkit for planning, justifying, and running a great Elachee field trip.</p>
             <ul>
               <li><span class="preview-check" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Program options &amp; pricing</li>
               <li><span class="preview-check" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Standards alignment overview</li>
@@ -13226,16 +13243,16 @@ body[data-current-view="article"] .article-mobile-bar { display: block; }
 
         <!-- Brand block: logo + mission + Donate CTA -->
         <div class="footer-sitemap__brand">
-          <a href="index.html" aria-label="Elachee Nature Science Center home">
+          <a href="https://elachee.org/" aria-label="Elachee Nature Science Center home">
             <img src="media/png-49caffae3e.png" alt="Elachee Nature Science Center" class="footer-logo">
           </a>
           <p class="footer-sitemap__tagline">A 1,440-acre nature preserve and environmental education nonprofit in Gainesville, Georgia. Promoting environmental understanding through education and conservation since 1981.</p>
-          <a href="index.html" class="btn btn-donate footer-donate-cta">Donate</a>
+          <a href="https://elachee.org/donate/" class="btn btn-donate footer-donate-cta">Donate</a>
           <div class="socials" aria-label="Follow Elachee">
-            <a href="index.html" aria-label="Elachee on Facebook"><svg width="20" height="20" viewBox="0 0 24 24" fill="#fff" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"/></svg></a>
-            <a href="index.html" aria-label="Elachee on Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
-            <a href="index.html" aria-label="Elachee on X"><svg width="20" height="20" viewBox="0 0 24 24" fill="#fff" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path d="M18.244 2H21l-6.52 7.45L22 22h-6.5l-5.1-6.66L4.5 22H2l7.04-8.05L2 2h6.66l4.6 6.06L18.244 2z"/></svg></a>
-            <a href="index.html" aria-label="Elachee on LinkedIn"><svg width="20" height="20" viewBox="0 0 24 24" fill="#fff" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14zM8.5 18V10h-2v8h2zm-1-9.2a1.2 1.2 0 1 0 0-2.4 1.2 1.2 0 0 0 0 2.4zM18 18v-4.8c0-1.9-1.04-2.8-2.43-2.8-1.12 0-1.62.62-1.9 1.05V10h-2v8h2v-4.5c0-.97.18-1.91 1.39-1.91 1.18 0 1.2.97 1.2 1.97V18H18z"/></svg></a>
+            <a href="https://elachee.org/" aria-label="Elachee on Facebook"><svg width="20" height="20" viewBox="0 0 24 24" fill="#fff" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"/></svg></a>
+            <a href="https://elachee.org/" aria-label="Elachee on Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+            <a href="https://elachee.org/" aria-label="Elachee on X"><svg width="20" height="20" viewBox="0 0 24 24" fill="#fff" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path d="M18.244 2H21l-6.52 7.45L22 22h-6.5l-5.1-6.66L4.5 22H2l7.04-8.05L2 2h6.66l4.6 6.06L18.244 2z"/></svg></a>
+            <a href="https://elachee.org/" aria-label="Elachee on LinkedIn"><svg width="20" height="20" viewBox="0 0 24 24" fill="#fff" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14zM8.5 18V10h-2v8h2zm-1-9.2a1.2 1.2 0 1 0 0-2.4 1.2 1.2 0 0 0 0 2.4zM18 18v-4.8c0-1.9-1.04-2.8-2.43-2.8-1.12 0-1.62.62-1.9 1.05V10h-2v8h2v-4.5c0-.97.18-1.91 1.39-1.91 1.18 0 1.2.97 1.2 1.97V18H18z"/></svg></a>
           </div>
         </div>
 
@@ -13243,13 +13260,13 @@ body[data-current-view="article"] .article-mobile-bar { display: block; }
         <nav class="footer-sitemap__col" aria-label="Visit">
           <h6 class="footer-sitemap__heading">Visit</h6>
           <ul>
-            <li><a href="index.html">Plan Your Visit</a></li>
-            <li><a href="index.html">Hours &amp; Admission</a></li>
-            <li><a href="index.html">Directions &amp; Parking</a></li>
-            <li><a href="index.html">Indoor Exhibits</a></li>
-            <li><a href="index.html">Hiking Trails</a></li>
-            <li><a href="index.html">Trail Map</a></li>
-            <li><a href="index.html">Calendar of Events</a></li>
+            <li><a href="https://elachee.org/">Plan Your Visit</a></li>
+            <li><a href="https://elachee.org/">Hours &amp; Admission</a></li>
+            <li><a href="https://elachee.org/">Directions &amp; Parking</a></li>
+            <li><a href="https://elachee.org/">Indoor Exhibits</a></li>
+            <li><a href="https://elachee.org/">Hiking Trails</a></li>
+            <li><a href="https://elachee.org/">Trail Map</a></li>
+            <li><a href="https://elachee.org/">Calendar of Events</a></li>
           </ul>
         </nav>
 
@@ -13258,11 +13275,11 @@ body[data-current-view="article"] .article-mobile-bar { display: block; }
           <h6 class="footer-sitemap__heading">Programs</h6>
           <ul>
             <li><a href="camp-elachee.html">Camp Elachee</a></li>
-            <li><a href="index.html">Nature Academy</a></li>
-            <li><a href="index.html">Sprouts</a></li>
-            <li><a href="index.html">Homeschool Program</a></li>
-            <li><a href="index.html">Scouts Program</a></li>
-            <li><a href="index.html">Adult Programs</a></li>
+            <li><a href="https://elachee.org/">Nature Academy</a></li>
+            <li><a href="https://elachee.org/">Sprouts</a></li>
+            <li><a href="https://elachee.org/">Homeschool Program</a></li>
+            <li><a href="https://elachee.org/">Scouts Program</a></li>
+            <li><a href="https://elachee.org/">Adult Programs</a></li>
           </ul>
         </nav>
 
@@ -13283,12 +13300,12 @@ body[data-current-view="article"] .article-mobile-bar { display: block; }
         <nav class="footer-sitemap__col" aria-label="Events and Rentals">
           <h6 class="footer-sitemap__heading">Events &amp; Rentals</h6>
           <ul>
-            <li><a href="index.html">Wildlife Festival</a></li>
-            <li><a href="index.html">Camp Elachee for Adults</a></li>
-            <li><a href="index.html">Trillium Trek</a></li>
-            <li><a href="index.html">Birthday Parties</a></li>
-            <li><a href="index.html">Corporate Retreats</a></li>
-            <li><a href="index.html">Wedding &amp; Private Events</a></li>
+            <li><a href="https://elachee.org/">Wildlife Festival</a></li>
+            <li><a href="https://elachee.org/">Camp Elachee for Adults</a></li>
+            <li><a href="https://elachee.org/">Trillium Trek</a></li>
+            <li><a href="https://elachee.org/">Birthday Parties</a></li>
+            <li><a href="https://elachee.org/">Corporate Retreats</a></li>
+            <li><a href="https://elachee.org/">Wedding &amp; Private Events</a></li>
           </ul>
         </nav>
 
@@ -13296,12 +13313,12 @@ body[data-current-view="article"] .article-mobile-bar { display: block; }
         <nav class="footer-sitemap__col" aria-label="Support Us">
           <h6 class="footer-sitemap__heading">Support Us</h6>
           <ul>
-            <li><a href="index.html">Become a Member</a></li>
-            <li><a href="index.html">Donate</a></li>
-            <li><a href="index.html">Volunteer</a></li>
-            <li><a href="index.html">Annual Sponsorships</a></li>
-            <li><a href="index.html">Corporate Wellness</a></li>
-            <li><a href="index.html">Planned Giving</a></li>
+            <li><a href="https://elachee.org/">Become a Member</a></li>
+            <li><a href="https://elachee.org/">Donate</a></li>
+            <li><a href="https://elachee.org/volunteer/">Volunteer</a></li>
+            <li><a href="https://elachee.org/">Annual Sponsorships</a></li>
+            <li><a href="https://elachee.org/">Corporate Wellness</a></li>
+            <li><a href="https://elachee.org/">Planned Giving</a></li>
           </ul>
         </nav>
 
@@ -13309,13 +13326,13 @@ body[data-current-view="article"] .article-mobile-bar { display: block; }
         <nav class="footer-sitemap__col" aria-label="About">
           <h6 class="footer-sitemap__heading">About</h6>
           <ul>
-            <li><a href="index.html">Our Story</a></li>
-            <li><a href="index.html">Mission &amp; Vision</a></li>
-            <li><a href="index.html">Team &amp; Educators</a></li>
-            <li><a href="index.html">Press &amp; News</a></li>
+            <li><a href="https://elachee.org/">Our Story</a></li>
+            <li><a href="https://elachee.org/">Mission &amp; Vision</a></li>
+            <li><a href="https://elachee.org/">Team &amp; Educators</a></li>
+            <li><a href="https://elachee.org/">Press &amp; News</a></li>
             <li><a href="blog-list.html">Blog</a></li>
-            <li><a href="index.html">FAQs</a></li>
-            <li><a href="index.html">Contact Us</a></li>
+            <li><a href="https://elachee.org/">FAQs</a></li>
+            <li><a href="https://elachee.org/resources/contact-us/">Contact Us</a></li>
           </ul>
         </nav>
       </div>
@@ -13325,7 +13342,7 @@ body[data-current-view="article"] .article-mobile-bar { display: block; }
         <div class="footer-nap__col">
           <h6 class="footer-sitemap__heading">Visit Us</h6>
           <address>
-            <a href="index.html">2125 Elachee Drive<br>Gainesville, GA 30504</a>
+            <a href="https://elachee.org/">2125 Elachee Drive<br>Gainesville, GA 30504</a>
           </address>
           <a class="footer-nap__phone" href="tel:7705351976"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/></svg> 770-535-1976</a>
         </div>
@@ -13354,10 +13371,10 @@ body[data-current-view="article"] .article-mobile-bar { display: block; }
       <div class="wrap-btm">
         <div class="copyright">© 2026 Elachee Nature Science Center. All rights reserved. <span>501(c)(3) nonprofit · EIN 58-1466486</span></div>
         <div class="foot-link">
-          <a href="index.html">Privacy Policy</a>
-          <a href="index.html">Terms</a>
-          <a href="index.html">Accessibility</a>
-          <a href="index.html">Sitemap</a>
+          <a href="https://elachee.org/">Privacy Policy</a>
+          <a href="https://elachee.org/">Terms</a>
+          <a href="https://elachee.org/">Accessibility</a>
+          <a href="https://elachee.org/">Sitemap</a>
           <span class="foot-credit">Website by <a href="https://splashomnimedia.com" target="_blank" rel="noopener">Splash Omnimedia</a></span>
         </div>
       </div>
