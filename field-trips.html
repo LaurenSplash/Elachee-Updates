@@ -12410,7 +12410,90 @@ body[data-current-view="article"] .article-mobile-bar { display: block; }
         </div>
       </div>
     </section>
+ <!-- ============================================================
+         CTA BAND
+         ============================================================ -->
+    <section id="book" class="cta-section" aria-labelledby="ctaband-title">
+      <div class="container">
+        <div class="cta-card">
+          <div class="cta-card__inner" style="max-width: 920px;">
+            <h2 id="ctaband-title">Request a Field Trip</h2>
+            <p>Tell us about your class and we'll help you find the right Elachee field trip experience. After you submit your request, an Elachee team member will follow up to confirm availability, recommend the best program fit, and answer logistics questions.</p>
 
+            <form class="request-form" onsubmit="event.preventDefault(); var b=this.querySelector('button[type=submit]'); b.textContent='Request sent — we\u2019ll be in touch soon.';" aria-label="Field trip request form" novalidate>
+              <div class="request-grid">
+                <div class="form-field">
+                  <label for="req-name">Name</label>
+                  <input id="req-name" name="name" type="text" autocomplete="name" required>
+                </div>
+                <div class="form-field">
+                  <label for="req-org">School / Organization</label>
+                  <input id="req-org" name="organization" type="text" autocomplete="organization" required>
+                </div>
+                <div class="form-field">
+                  <label for="req-email">Email</label>
+                  <input id="req-email" name="email" type="email" autocomplete="email" required>
+                </div>
+                <div class="form-field">
+                  <label for="req-phone">Phone</label>
+                  <input id="req-phone" name="phone" type="tel" autocomplete="tel">
+                </div>
+                <div class="form-field">
+                  <label for="req-grade">Grade Level</label>
+                  <select id="req-grade" name="grade">
+                    <option value="">Select…</option>
+                    <option>Pre-K</option>
+                    <option>K–2</option>
+                    <option>3–5</option>
+                    <option>6–8</option>
+                    <option>9–12</option>
+                    <option>Mixed Grades</option>
+                  </select>
+                </div>
+                <div class="form-field">
+                  <label for="req-count">Estimated Number of Students</label>
+                  <input id="req-count" name="studentCount" type="number" min="1" inputmode="numeric">
+                </div>
+                <div class="form-field">
+                  <label for="req-date">Preferred Date or Season</label>
+                  <input id="req-date" name="preferredDate" type="text" placeholder="e.g. Fall 2026 or Oct 14">
+                </div>
+                <div class="form-field">
+                  <label for="req-interest">Program Interest</label>
+                  <select id="req-interest" name="programInterest">
+                    <option value="">Select…</option>
+                    <option>Onsite Field Trip</option>
+                    <option>Elachee in Your Classroom</option>
+                    <option>Seasonal Science Program</option>
+                    <option>Lake Lanier Aquatic Learning</option>
+                    <option>Not Sure Yet</option>
+                  </select>
+                </div>
+                <div class="form-field">
+                  <label for="req-title1">Are You a Title I School?</label>
+                  <select id="req-title1" name="titleOne">
+                    <option value="">Select…</option>
+                    <option>Yes</option>
+                    <option>No</option>
+                    <option>Not Sure</option>
+                  </select>
+                </div>
+                <div class="form-field form-field--full">
+                  <label for="req-notes">Notes or Questions</label>
+                  <input id="req-notes" name="notes" type="text" placeholder="Curriculum goals, accessibility needs, timing, etc.">
+                </div>
+              </div>
+              <div class="request-submit">
+                <button type="submit" class="ft-btn ft-btn--white">Request a Field Trip
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </button>
+                <a href="#planning-guide" class="ft-btn ft-btn--ghost">Get the Planning Guide</a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
         <section id="programs" class="section section--cream" aria-labelledby="programs-title">
       <div class="container">
         <div class="section-head">
@@ -12839,91 +12922,6 @@ body[data-current-view="article"] .article-mobile-bar { display: block; }
             </button>
             <p class="lead-card__small">After you request the guide, you'll receive planning information by email. You can also request a field trip whenever you're ready.</p>
           </form>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============================================================
-         CTA BAND
-         ============================================================ -->
-    <section id="book" class="cta-section" aria-labelledby="ctaband-title">
-      <div class="container">
-        <div class="cta-card">
-          <div class="cta-card__inner" style="max-width: 920px;">
-            <h2 id="ctaband-title">Request a Field Trip</h2>
-            <p>Tell us about your class and we'll help you find the right Elachee field trip experience. After you submit your request, an Elachee team member will follow up to confirm availability, recommend the best program fit, and answer logistics questions.</p>
-
-            <form class="request-form" onsubmit="event.preventDefault(); var b=this.querySelector('button[type=submit]'); b.textContent='Request sent — we\u2019ll be in touch soon.';" aria-label="Field trip request form" novalidate>
-              <div class="request-grid">
-                <div class="form-field">
-                  <label for="req-name">Name</label>
-                  <input id="req-name" name="name" type="text" autocomplete="name" required>
-                </div>
-                <div class="form-field">
-                  <label for="req-org">School / Organization</label>
-                  <input id="req-org" name="organization" type="text" autocomplete="organization" required>
-                </div>
-                <div class="form-field">
-                  <label for="req-email">Email</label>
-                  <input id="req-email" name="email" type="email" autocomplete="email" required>
-                </div>
-                <div class="form-field">
-                  <label for="req-phone">Phone</label>
-                  <input id="req-phone" name="phone" type="tel" autocomplete="tel">
-                </div>
-                <div class="form-field">
-                  <label for="req-grade">Grade Level</label>
-                  <select id="req-grade" name="grade">
-                    <option value="">Select…</option>
-                    <option>Pre-K</option>
-                    <option>K–2</option>
-                    <option>3–5</option>
-                    <option>6–8</option>
-                    <option>9–12</option>
-                    <option>Mixed Grades</option>
-                  </select>
-                </div>
-                <div class="form-field">
-                  <label for="req-count">Estimated Number of Students</label>
-                  <input id="req-count" name="studentCount" type="number" min="1" inputmode="numeric">
-                </div>
-                <div class="form-field">
-                  <label for="req-date">Preferred Date or Season</label>
-                  <input id="req-date" name="preferredDate" type="text" placeholder="e.g. Fall 2026 or Oct 14">
-                </div>
-                <div class="form-field">
-                  <label for="req-interest">Program Interest</label>
-                  <select id="req-interest" name="programInterest">
-                    <option value="">Select…</option>
-                    <option>Onsite Field Trip</option>
-                    <option>Elachee in Your Classroom</option>
-                    <option>Seasonal Science Program</option>
-                    <option>Lake Lanier Aquatic Learning</option>
-                    <option>Not Sure Yet</option>
-                  </select>
-                </div>
-                <div class="form-field">
-                  <label for="req-title1">Are You a Title I School?</label>
-                  <select id="req-title1" name="titleOne">
-                    <option value="">Select…</option>
-                    <option>Yes</option>
-                    <option>No</option>
-                    <option>Not Sure</option>
-                  </select>
-                </div>
-                <div class="form-field form-field--full">
-                  <label for="req-notes">Notes or Questions</label>
-                  <input id="req-notes" name="notes" type="text" placeholder="Curriculum goals, accessibility needs, timing, etc.">
-                </div>
-              </div>
-              <div class="request-submit">
-                <button type="submit" class="ft-btn ft-btn--white">Request a Field Trip
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-                </button>
-                <a href="#planning-guide" class="ft-btn ft-btn--ghost">Get the Planning Guide</a>
-              </div>
-            </form>
-          </div>
         </div>
       </div>
     </section>
