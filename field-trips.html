@@ -7823,7 +7823,7 @@ body[data-current-view="article"] .article-mobile-bar { display: block; }
 
 
 .section-camp-final {
-  padding-block-end: clamp(60px, 6vw, 80px);
+  padding-block-end: clamp(120px, 13vw, 180px);
 }
 .section-camp-final::after { display: none; }
 
@@ -11409,6 +11409,30 @@ body[data-current-view="article"] .article-mobile-bar { display: block; }
     .faqs-sidebar__btn.is-active .faqs-sidebar__count {
       background: rgba(255, 255, 255, 0.22);
       color: #ffffff;
+    }
+    .faqs-content {
+      min-width: 0;
+      overflow: hidden;
+      width: 100%;
+      max-width: 100%;
+    }
+    .faqs-content details,
+    .faqs-content details[open] {
+      width: 100% !important;
+      max-width: 100% !important;
+      box-sizing: border-box !important;
+    }
+    .faqs-content .accord-body,
+    .faqs-content .accord-body .wrap {
+      width: 100% !important;
+      max-width: 100% !important;
+      box-sizing: border-box !important;
+      overflow: hidden !important;
+    }
+    .faqs-content details summary {
+      width: 100%;
+      box-sizing: border-box;
+      display: block;
     }
     .faqs-content .accord-item {
       transition: opacity 160ms ease;
