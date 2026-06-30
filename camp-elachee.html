@@ -9324,6 +9324,29 @@ body[data-current-view="article"] .article-mobile-bar { display: block; }
 .section-camp-faq .faqs-content {
   max-width: 860px;
   margin-inline: auto;
+  min-width: 0;
+  overflow: hidden;
+  width: 100%;
+}
+.section-camp-faq .faqs-content details,
+.section-camp-faq .faqs-content details[open] {
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}
+.section-camp-faq .faqs-content .accord-body,
+.section-camp-faq .faqs-content .accord-body .wrap {
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+  overflow-x: hidden !important;
+  overflow-y: visible !important;
+  height: auto !important;
+}
+.section-camp-faq .faqs-content details summary {
+  width: 100%;
+  box-sizing: border-box;
+  display: block;
 }
 .section-camp-faq .accord-item {
   background: #fff;
