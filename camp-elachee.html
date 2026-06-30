@@ -11348,7 +11348,7 @@ body[data-current-view="article"] .article-mobile-bar { display: block; }
       padding: 0 !important;
       max-width: 1080px;
       display: grid !important;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       gap: 14px;
     }
     .section-camp-plan .plan-features > li {
@@ -11395,18 +11395,15 @@ body[data-current-view="article"] .article-mobile-bar { display: block; }
       background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' fill='none' stroke='%23c47e10' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'><circle cx='16' cy='16' r='5'/><line x1='16' y1='4' x2='16' y2='8'/><line x1='16' y1='24' x2='16' y2='28'/><line x1='4' y1='16' x2='8' y2='16'/><line x1='24' y1='16' x2='28' y2='16'/><line x1='8' y1='8' x2='10.5' y2='10.5'/><line x1='21.5' y1='21.5' x2='24' y2='24'/><line x1='8' y1='24' x2='10.5' y2='21.5'/><line x1='21.5' y1='10.5' x2='24' y2='8'/></svg>");
       background-color: rgba(255, 182, 68, 0.16);
     }
-    .section-camp-plan .plan-features > li:nth-child(4)::before { /* Small group sizes */
-      background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' fill='none' stroke='%232080b8' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'><circle cx='12' cy='13' r='4'/><circle cx='22' cy='13' r='3'/><path d='M5 25c0-4 3-7 7-7s7 3 7 7'/><path d='M19 25c0-3 2-6 5-6s4 3 4 6'/></svg>");
+    .section-camp-plan .plan-features > li:nth-child(4)::before { /* Rain or shine */
+      background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' fill='none' stroke='%232080b8' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'><path d='M23 20a6 6 0 0 0-9.33-7A4 4 0 1 0 11 21'/><line x1='13' y1='25' x2='13' y2='27'/><line x1='17' y1='25' x2='17' y2='27'/><line x1='21' y1='25' x2='21' y2='27'/></svg>");
       background-color: rgba(79, 168, 224, 0.14);
     }
-    .section-camp-plan .plan-features > li:nth-child(5)::before { /* Trained naturalist staff */
-      background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' fill='none' stroke='%237ab02b' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'><path d='M16 4 L 8 12 L 8 20 L 16 28 L 24 20 L 24 12 Z'/><circle cx='16' cy='15' r='3'/></svg>");
-    }
-    .section-camp-plan .plan-features > li:nth-child(6)::before { /* Creek activities */
+    .section-camp-plan .plan-features > li:nth-child(5)::before { /* Creek activities */
       background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' fill='none' stroke='%232080b8' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'><path d='M3 12c4-3 8 3 12 0s8-3 12 0'/><path d='M3 18c4-3 8 3 12 0s8-3 12 0'/><path d='M3 24c4-3 8 3 12 0s8-3 12 0'/></svg>");
       background-color: rgba(79, 168, 224, 0.14);
     }
-    .section-camp-plan .plan-features > li:nth-child(7)::before { /* Weekly newsletter */
+    .section-camp-plan .plan-features > li:nth-child(6)::before { /* Weekly newsletter */
       background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' fill='none' stroke='%237a4cb0' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'><rect x='5' y='8' width='22' height='17' rx='2'/><polyline points='5 9 16 19 27 9'/></svg>");
       background-color: rgba(177, 101, 212, 0.14);
     }
@@ -13356,12 +13353,17 @@ body[data-current-view="article"] .article-mobile-bar { display: block; }
       position: relative;
       background: #ffffff;
       border-radius: 20px;
-      padding: 40px 26px 28px;
-      text-align: center;
+      padding: 24px 24px 28px;
       box-shadow: 0 10px 28px rgba(40, 60, 10, 0.10);
       border-top: 6px solid var(--accent, #93CC36);
       list-style: none !important;
       margin: 0 !important;
+      display: grid;
+      grid-template-columns: 52px 1fr;
+      grid-template-rows: auto auto;
+      column-gap: 14px;
+      row-gap: 0;
+      align-items: start;
     }
     .section-camp-plan .plan-steps--text .plan-step[data-step-color="green"]  { --accent: #93CC36; }
     .section-camp-plan .plan-steps--text .plan-step[data-step-color="blue"]   { --accent: #44A7EA; }
@@ -13369,32 +13371,42 @@ body[data-current-view="article"] .article-mobile-bar { display: block; }
     .section-camp-plan .plan-steps--text .plan-step::before,
     .section-camp-plan .plan-steps--text .plan-step::after { content: none !important; }
     .section-camp-plan .plan-steps--text .plan-step__num {
-      display: inline-flex;
+      grid-column: 1;
+      grid-row: 1 / 3;
+      display: flex;
       align-items: center;
       justify-content: center;
-      width: 56px;
-      height: 56px;
+      width: 52px;
+      height: 52px;
       border-radius: 50%;
       background: var(--accent, #93CC36);
       color: #ffffff;
       font-family: "Outfit", "Helvetica Neue", Arial, sans-serif;
       font-weight: 800;
-      font-size: 22px;
-      margin: 0 auto 16px;
+      font-size: 20px;
+      flex-shrink: 0;
+      align-self: start;
+      margin-top: 2px;
     }
     .section-camp-plan .plan-steps--text .plan-step h5 {
+      grid-column: 2;
+      grid-row: 1;
       font-family: "Outfit", "Helvetica Neue", Arial, sans-serif;
       font-weight: 700;
-      font-size: 19px;
+      font-size: 17px;
       color: #1c3a1c;
-      margin: 0 0 8px;
+      margin: 0 0 6px;
       line-height: 1.25;
+      text-align: left;
     }
     .section-camp-plan .plan-steps--text .plan-step p {
-      font-size: 15px;
+      grid-column: 2;
+      grid-row: 2;
+      font-size: 14px;
       line-height: 1.55;
       color: #4d5b4d;
       margin: 0;
+      text-align: left;
     }
     @media (max-width: 760px) {
       .section-camp-plan .plan-steps--text {
@@ -14259,59 +14271,6 @@ body[data-current-view="article"] .article-mobile-bar { display: block; }
       </section>
 
 
-      <!-- ============================================================
-           S7 · SPECIALTY CAMPS — Grades 4–8
-           ============================================================ -->
-      <section id="specialty" class="section section-camp-specialty" aria-labelledby="camp-specialty-title">
-        <div class="container">
-          <div class="section-block">
-            <div class="section-head">
-              <span class="eyebrow">Specialty Programs</span>
-              <h2 id="camp-specialty-title">For Older Adventurers <strong>Ready for More</strong></h2>
-              <h6>Grades 4–8 can go deeper. Our specialty camps are designed for older campers who are ready for a more immersive, more challenging experience in the wild.</h6>
-            </div>
-            <div class="section-body">
-              <div class="camp-specialty-grid">
-
-                <article class="specialty-card">
-                  <p class="specialty-card__meta">Girls Only · Specialty Camp</p>
-                  <h3>Rooted in Nature</h3>
-                  <p>A week designed to help girls in grades 4–8 find their footing. In the forest and in themselves. We'll practice mindfulness, get creative and learn about ourselves and nature all week.</p>
-                  <dl class="specialty-card__facts">
-                    <dt>Who</dt><dd>Girls entering grades 4–8</dd>
-                    <dt>When</dt><dd>July 6–10, 2026</dd>
-                    <dt>Price</dt><dd>$350 per week</dd>
-                  </dl>
-                  <ul class="theme-card__tags">
-                    <li>Forest mindfulness</li><li>Nature journaling</li><li>Creative workshops</li><li>Community building</li>
-                  </ul>
-                  <div class="btn-holder">
-                    <a href="https://campelachee.campmanagement.com/p/request_for_info_m.php?action=enroll" class="btn btn-1">Register for Camp</a>
-                  </div>
-                </article>
-
-                <article class="specialty-card">
-                  <p class="specialty-card__meta">All Genders · Specialty Camp</p>
-                  <h3>Expedition Elachee</h3>
-                  <p>Put on those thinking caps! Campers in grades 4–8 learn real wilderness survival: how to build a fire, make a shelter, tell which plants are safe and much more.</p>
-                  <dl class="specialty-card__facts">
-                    <dt>Who</dt><dd>Students entering grades 4–8</dd>
-                    <dt>When</dt><dd>July 20–24, 2026</dd>
-                    <dt>Price</dt><dd>$350 per week</dd>
-                  </dl>
-                  <ul class="theme-card__tags">
-                    <li>Shelter building</li><li>Fire safety</li><li>Navigation skills</li><li>Plant identification</li>
-                  </ul>
-                  <div class="btn-holder">
-                    <a href="https://campelachee.campmanagement.com/p/request_for_info_m.php?action=enroll" class="btn btn-1">Register for Camp</a>
-                  </div>
-                </article>
-
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
 
       <!-- ============================================================
@@ -14330,30 +14289,28 @@ body[data-current-view="article"] .article-mobile-bar { display: block; }
               <ul class="plan-steps plan-steps--text">
                 <li class="plan-step" data-step-color="green">
                   <span class="plan-step__num">01</span>
-                  <h5>You Register Online</h5>
-                  <p>Choose your week online. You will get immediate confirmation of your completed registration.</p>
+                  <h5>Choose Your Week Online</h5>
+                  <p>Browse available themes and dates, then register online. You'll get a confirmation email right away.</p>
                 </li>
                 <li class="plan-step" data-step-color="blue">
                   <span class="plan-step__num">02</span>
-                  <h5>We Send a Welcome Guide</h5>
-                  <p>We send a welcome email the Monday before camp week.</p>
+                  <h5>We'll Email You a Guide</h5>
+                  <p>The Monday before your session starts, we'll send your packing list, drop-off time, and schedule.</p>
                 </li>
                 <li class="plan-step" data-step-color="orange">
                   <span class="plan-step__num">03</span>
-                  <h5>Drop Off Curious. Pick Up Confident.</h5>
-                  <p>Drop off a curious kid. Pick up a confident one. We handle everything in between.</p>
+                  <h5>Get Your Camper Ready</h5>
+                  <p>Wear closed-toe shoes, pack a lunch, and bring sunscreen. Drop off starts at 8:15 each morning.</p>
                 </li>
               </ul>
-
               <ul class="plan-features">
                 <li>No outdoor experience needed</li>
                 <li>Nut-free environment</li>
                 <li>Sunscreen &amp; bug spray provided</li>
-                <li>Small group sizes</li>
+                <li>Rain or shine, every day</li>
                 <li>Creek activities every week</li>
                 <li>Weekly parent newsletter</li>
               </ul>
-
               <div class="btn-holder">
                 <a href="https://campelachee.campmanagement.com/p/request_for_info_m.php?action=enroll" class="btn btn-1">Register for Camp</a>
               </div>
