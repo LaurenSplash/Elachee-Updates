@@ -13413,6 +13413,110 @@ body[data-current-view="article"] .article-mobile-bar { display: block; }
       }
     }
   </style>
+	<style>
+    /* ── A Typical Day · Polaroid redesign ──────────────────────────── */
+    .section-camp-day {
+      background: var(--camp-cream, #F7F5EE) !important;
+      color: var(--camp-bark, #3a3328) !important;
+      padding-block: clamp(70px, 8vw, 110px) !important;
+    }
+    .section-camp-day::before,
+    .section-camp-day::after { display: none !important; }
+    .section-camp-day .section-head h2,
+    .section-camp-day .section-head h6,
+    .section-camp-day .section-head .eyebrow { color: inherit !important; }
+
+    .day-timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+      max-width: 780px;
+      margin: 0 auto 3.5rem;
+      position: relative;
+    }
+    .day-timeline::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 2rem; bottom: 2rem;
+      transform: translateX(-50%);
+      border-left: 2px dashed rgba(0,0,0,0.10);
+      pointer-events: none;
+    }
+    .day-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+    .day-row:nth-child(even) .day-polaroid { order: 2; justify-self: start; }
+    .day-row:nth-child(even) .day-row__copy { order: 1; text-align: right; }
+    .day-row:nth-child(odd)  .day-polaroid { justify-self: end; }
+
+    .day-polaroid {
+      background: #fff;
+      padding: 8px 8px 28px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.13);
+      width: 150px;
+      display: block;
+      transition: transform 0.25s ease;
+    }
+    .day-polaroid:hover { transform: rotate(0deg) scale(1.05) !important; }
+    .day-polaroid img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      display: block;
+    }
+    .day-row:nth-child(1) .day-polaroid { transform: rotate(2.5deg); }
+    .day-row:nth-child(2) .day-polaroid { transform: rotate(-2deg); }
+    .day-row:nth-child(3) .day-polaroid { transform: rotate(1.8deg); }
+    .day-row:nth-child(4) .day-polaroid { transform: rotate(-3deg); }
+    .day-row:nth-child(5) .day-polaroid { transform: rotate(2.2deg); }
+    .day-row:nth-child(6) .day-polaroid { transform: rotate(-1.5deg); }
+
+    .day-row__copy { padding: 0.25rem 0; }
+    .day-badge {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #fff;
+      padding: 4px 13px;
+      border-radius: 20px;
+      margin-bottom: 0.6rem;
+    }
+    [data-tone="orange"] .day-badge { background: var(--ce-orange, #F4A229); }
+    [data-tone="green"]  .day-badge { background: #6aab2e; }
+    [data-tone="yellow"] .day-badge { background: #c89a10; }
+    [data-tone="blue"]   .day-badge { background: #3b82c4; }
+    [data-tone="purple"] .day-badge { background: #8b5cf6; }
+
+    .day-row__copy h3 {
+      font-size: 1.1rem;
+      font-weight: 800;
+      margin: 0 0 0.35rem;
+      color: var(--camp-bark, #3a3328);
+      line-height: 1.25;
+    }
+    .day-row__copy p {
+      font-size: 0.875rem;
+      line-height: 1.6;
+      color: #5a5248;
+      margin: 0;
+    }
+    .section-camp-day .day-story__close h3 { color: var(--camp-bark, #3a3328) !important; }
+
+    @media (max-width: 600px) {
+      .day-timeline::before { display: none; }
+      .day-row { grid-template-columns: 1fr; gap: 1rem; }
+      .day-row:nth-child(even) .day-polaroid,
+      .day-row:nth-child(odd)  .day-polaroid { order: unset; justify-self: center; }
+      .day-row:nth-child(even) .day-row__copy { order: unset; text-align: left; }
+      .day-polaroid { width: 120px; }
+    }
+  </style>
 </head>
 <body data-current-view="page">
 
@@ -14043,7 +14147,7 @@ body[data-current-view="article"] .article-mobile-bar { display: block; }
       </section>
 
 
-      <!-- ============================================================
+       <!-- ============================================================
            S6 · A DAY AT CAMP  ·  Dark bark + bg-curvy-bark.svg background
            Alternating image/text scenes; green Creek Day spotlight tile
            ============================================================ -->
@@ -14056,75 +14160,75 @@ body[data-current-view="article"] .article-mobile-bar { display: block; }
               <h6>No mystery. No anxiety. We want you to know exactly what's happening while your child is with us. Every day has a shape to it. Here's what that looks like.</h6>
             </div>
 
-            <ul class="day-story">
+                        <div class="day-timeline">
 
-              <li class="day-story__scene" data-tone="orange">
-                <figure class="day-story__photo">
+              <div class="day-row" data-tone="orange">
+                <figure class="day-polaroid">
                   <img src="media/jpg-fd50e74b34.jpg" alt="Two Camp Elachee campers arriving with backpacks at morning drop-off." loading="lazy">
                 </figure>
-                <div class="day-story__copy">
-                  <span class="day-story__time">8:15 AM</span>
+                <div class="day-row__copy">
+                  <span class="day-badge">8:15 AM</span>
                   <h3>Drop-Off &amp; Morning Arrival</h3>
                   <p>Drop-off begins at 8:15. Campers check in with their group leader and settle into the morning with a light activity.</p>
                 </div>
-              </li>
+              </div>
 
-              <li class="day-story__scene" data-tone="green">
-                <figure class="day-story__photo">
+              <div class="day-row" data-tone="green">
+                <figure class="day-polaroid">
                   <img src="media/jpg-a3d38e0ee0.jpg" alt="A Camp Elachee camper crouching to look closely at a wildflower on the trail." loading="lazy">
                 </figure>
-                <div class="day-story__copy">
-                  <span class="day-story__time">9:00 AM</span>
+                <div class="day-row__copy">
+                  <span class="day-badge">9:00 AM</span>
                   <h3>Morning Adventure Block</h3>
                   <p>The heart of the day. Trail hikes, habitat exploration, hands-on science, and theme-driven activities led by our naturalist staff.</p>
                 </div>
-              </li>
+              </div>
 
-              <li class="day-story__scene" data-tone="yellow">
-                <figure class="day-story__photo">
+              <div class="day-row" data-tone="yellow">
+                <figure class="day-polaroid">
                   <img src="media/jpg-b9e2318e55.jpg" alt="Camp Elachee campers playing on the grass during the lunch and free-play break." loading="lazy">
                 </figure>
-                <div class="day-story__copy">
-                  <span class="day-story__time">11:30 AM</span>
+                <div class="day-row__copy">
+                  <span class="day-badge">11:30 AM</span>
                   <h3>Lunch &amp; Free Play</h3>
                   <p>Campers eat the lunch they brought from home and enjoy some unstructured outdoor time. Real rest. Real fun.</p>
                 </div>
-              </li>
+              </div>
 
-              <li class="day-story__scene" data-tone="blue">
-                <figure class="day-story__photo">
+              <div class="day-row" data-tone="blue">
+                <figure class="day-polaroid">
                   <img src="media/jpg-80870dd2cd.jpg" alt="A Camp Elachee camper holding a small crayfish in a dip net at the creek." loading="lazy">
                 </figure>
-                <div class="day-story__copy">
-                  <span class="day-story__time">12:30 PM</span>
+                <div class="day-row__copy">
+                  <span class="day-badge">12:30 PM</span>
                   <h3>Afternoon Adventure Block</h3>
-                  <p>Archery, nature crafts, group games, wildlife encounters — or creek exploration on Tuesdays and Fridays. Every afternoon ties back to the week's theme.</p>
+                  <p>Archery, nature crafts, group games, wildlife encounters — or creek exploration on Tuesdays and Fridays. Every afternoon ties back to the week’s theme.</p>
                 </div>
-              </li>
+              </div>
 
-              <li class="day-story__scene" data-tone="purple">
-                <figure class="day-story__photo">
+              <div class="day-row" data-tone="purple">
+                <figure class="day-polaroid">
                   <img src="media/jpg-27c5e1a7b6.jpg" alt="Two Camp Elachee campers comparing notes on a small creature one is holding in their hand." loading="lazy">
                 </figure>
-                <div class="day-story__copy">
-                  <span class="day-story__time">2:15 PM</span>
+                <div class="day-row__copy">
+                  <span class="day-badge">2:15 PM</span>
                   <h3>Wrap-Up &amp; Debrief</h3>
                   <p>Groups come together to share what they found. Campers gather their gear — usually already talking about tomorrow.</p>
                 </div>
-              </li>
+              </div>
 
-              <li class="day-story__scene" data-tone="orange">
-                <figure class="day-story__photo">
+              <div class="day-row" data-tone="orange">
+                <figure class="day-polaroid">
                   <img src="media/jpg-180d7d2420.jpg" alt="A group of Camp Elachee campers smiling at the end of the day with the nature crafts they made." loading="lazy">
                 </figure>
-                <div class="day-story__copy">
-                  <span class="day-story__time">2:45 PM</span>
+                <div class="day-row__copy">
+                  <span class="day-badge">2:45 PM</span>
                   <h3>Pick-Up</h3>
                   <p>Pick-up begins at 2:45. Please plan to arrive on time so every camper gets a smooth, happy send-off.</p>
                 </div>
-              </li>
+              </div>
 
-            </ul>
+            </div>
 
             <!-- Creek Day spotlight · postscript callout (not on the timeline) -->
             <aside class="day-story__creek day-story__creek--standalone" aria-label="Creek days note">
@@ -14137,6 +14241,10 @@ body[data-current-view="article"] .article-mobile-bar { display: block; }
                   <li>Wear creek outfit under clothes.</li>
                   <li>No swimming ability required. All creek time is supervised. Most areas are ankle-deep.</li>
                 </ul>
+                <blockquote class="camp-pullquote" style="margin-top:1.5rem;">
+                  <p>“I like finding crawfish, minnows, and getting all muddy in the creek.”</p>
+                  <footer>— Camp Elachee Camper</footer>
+                </blockquote>
               </div>
             </aside>
 
@@ -14340,7 +14448,7 @@ body[data-current-view="article"] .article-mobile-bar { display: block; }
                   <span class="pricing-card__flag">Most Popular</span>
                   <h3>Elementary Camp</h3>
                   <p class="pricing-card__sub">Kindergarten through 6th Grade · Ages 5–12</p>
-                  <p class="pricing-card__price"><strong>$255</strong><span>/week</span></p>
+                  <p class="pricing-card__price"><strong>$265</strong><span>/week</span></p>
                   <p class="pricing-card__per">Per camper, per week</p>
                   <ul>
                     <li>All 5 days of weekly theme-based outdoor programming</li>
