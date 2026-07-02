@@ -12195,12 +12195,12 @@ body[data-current-view="article"] .article-mobile-bar { display: block; }
       gap: 14px;
     }
     .theme-card--specialty .theme-card__meta {
-      font-size: 11px !important;
+      font-size: 12.5px !important;
       letter-spacing: 0.14em !important;
       margin: 0 !important;
       color: #ffffff !important;
       background: rgba(255, 255, 255, 0.18);
-      padding: 5px 12px !important;
+      padding: 7px 16px !important;
       border-radius: 999px;
       align-self: flex-start;
       white-space: nowrap;
@@ -13337,6 +13337,26 @@ body[data-current-view="article"] .article-mobile-bar { display: block; }
       }
     }
 
+    /* ============================================================
+       FIX · Registration section ::before wave after removing section-head
+       The original ::before has aspect-ratio + max-height that create a
+       ~55vh tall transparent zone. Force-kill it so the green background
+       shows cleanly and the cards aren't sliced by the transition.
+       ============================================================ */
+    .section-camp-registration::before {
+      background-image: linear-gradient(to bottom, rgba(248,246,236,0.7) 0%, rgba(248,246,236,0) 100%) !important;
+      background-color: transparent !important;
+      height: 100px !important;
+      max-height: 100px !important;
+      aspect-ratio: unset !important;
+    }
+    .section-camp-registration {
+      padding-top: 80px !important;
+    }
+    .section-camp-registration .reg-howto-title {
+      margin-top: 0 !important;
+    }
+
   </style>
   <style>
     /* Text-based How It Works steps (replaces SVG step images) */
@@ -13527,6 +13547,91 @@ body[data-current-view="article"] .article-mobile-bar { display: block; }
       .day-row:nth-child(odd)  .day-polaroid { order: unset; justify-self: center; }
       .day-row:nth-child(even) .day-row__copy { order: unset; text-align: left; }
       .day-polaroid { width: 190px; }
+    }
+
+    /* Benefits grid: 4 cards in 2×2 */
+    .camp-benefits-grid {
+      grid-template-columns: repeat(2, 1fr) !important;
+    }
+    @media (max-width: 991px) {
+      .camp-benefits-grid { grid-template-columns: repeat(2, 1fr) !important; }
+    }
+
+    /* Specialty card: two programs matching other card body sizing */
+    .theme-card.theme-card--specialty { gap: 2px !important; }
+    .theme-card--specialty .theme-card__meta { margin-bottom: 10px !important; flex: none !important; }
+    .theme-card--specialty .theme-card__dates {
+      font-size: 22px !important;
+      font-weight: 700 !important;
+      font-family: var(--FF-Nexa) !important;
+      color: #ffffff !important;
+      margin: 0 !important;
+      line-height: 1.15 !important;
+      letter-spacing: 0 !important;
+      flex: none !important;
+    }
+    .theme-card--specialty .specialty-audience {
+      font-family: var(--FF-Nexa) !important;
+      font-size: 11px !important;
+      font-weight: 800 !important;
+      letter-spacing: 0.14em !important;
+      text-transform: uppercase !important;
+      color: rgba(255,255,255,0.75) !important;
+      margin: 2px 0 0 !important;
+      line-height: 1.4 !important;
+      flex: none !important;
+    }
+    .theme-card--specialty .specialty-sub {
+      font-family: var(--FF-Nexa) !important;
+      font-size: 14px !important;
+      font-weight: 700 !important;
+      letter-spacing: 0 !important;
+      text-transform: none !important;
+      color: rgba(255,255,255,0.9) !important;
+      margin: 1px 0 8px !important;
+      line-height: 1.3 !important;
+      flex: none !important;
+    }
+    .theme-card--specialty .specialty-desc {
+      font-size: 13.5px !important;
+      line-height: 1.55 !important;
+      color: rgba(255,255,255,0.88) !important;
+      margin: 0 !important;
+      flex: none !important;
+    }
+    .specialty-program__divider {
+      height: 1px;
+      background: rgba(255,255,255,0.2);
+      margin: 10px 0 !important;
+      flex: none !important;
+    }
+    .theme-card--specialty .theme-card__tags {
+      border-top: none !important;
+      padding-top: 0 !important;
+      margin-top: 8px !important;
+      flex: none !important;
+    }
+    .theme-card--specialty .theme-card__tags > li {
+      background: rgba(255,255,255,0.18) !important;
+      color: #ffffff !important;
+      border: 0 !important;
+    }
+
+    /* Benefit card: icon + heading inline, left green accent */
+    .benefit-card {
+      border-left: 4px solid var(--ce-green, #93CC36) !important;
+    }
+    .benefit-card__header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 10px;
+    }
+    .benefit-card__header .benefit-card__icon {
+      flex-shrink: 0;
+    }
+    .benefit-card__header h5 {
+      margin: 0 !important;
     }
   </style>
 </head>
@@ -13909,46 +14014,40 @@ body[data-current-view="article"] .article-mobile-bar { display: block; }
             <div class="section-body">
               <div class="camp-benefits-grid">
                 <div class="benefit-card">
-                  <span class="benefit-card__icon" aria-hidden="true">
-                    <svg class="svg-icon" viewBox="0 0 32 32"><path d="M16 28 C 8 24, 6 16, 8 8 C 16 10, 22 14, 24 24 Z"/><path d="M8 8 C 12 18, 18 24, 24 24"/></svg>
-                  </span>
-                  <h5>Real Confidence</h5>
+                  <div class="benefit-card__header">
+                    <span class="benefit-card__icon" aria-hidden="true">
+                      <svg class="svg-icon" viewBox="0 0 32 32"><path d="M16 28 C 8 24, 6 16, 8 8 C 16 10, 22 14, 24 24 Z"/><path d="M8 8 C 12 18, 18 24, 24 24"/></svg>
+                    </span>
+                    <h5>Real Confidence</h5>
+                  </div>
                   <p>When a child navigates a trail or figures out which plants are edible, they learn something no classroom can teach. They are capable.</p>
                 </div>
                 <div class="benefit-card">
-                  <span class="benefit-card__icon" aria-hidden="true">
-                    <svg class="svg-icon" viewBox="0 0 32 32"><circle cx="13" cy="13" r="8"/><line x1="19" y1="19" x2="27" y2="27"/><line x1="10" y1="13" x2="16" y2="13"/><line x1="13" y1="10" x2="13" y2="16"/></svg>
-                  </span>
-                  <h5>Scientific Curiosity</h5>
+                  <div class="benefit-card__header">
+                    <span class="benefit-card__icon" aria-hidden="true">
+                      <svg class="svg-icon" viewBox="0 0 32 32"><circle cx="13" cy="13" r="8"/><line x1="19" y1="19" x2="27" y2="27"/><line x1="10" y1="13" x2="16" y2="13"/><line x1="13" y1="10" x2="13" y2="16"/></svg>
+                    </span>
+                    <h5>Scientific Curiosity</h5>
+                  </div>
                   <p>We turn every rock, every stream, every bird into a question worth asking. Kids leave genuinely curious about the world around them.</p>
                 </div>
                 <div class="benefit-card">
-                  <span class="benefit-card__icon" aria-hidden="true">
-                    <svg class="svg-icon" viewBox="0 0 32 32"><path d="M8 18 C 6 16, 6 12, 10 12 L 14 16 L 18 12 L 22 16 C 26 12, 26 16, 24 18 L 18 24 L 14 24 Z"/></svg>
-                  </span>
-                  <h5>Genuine Friendships</h5>
+                  <div class="benefit-card__header">
+                    <span class="benefit-card__icon" aria-hidden="true">
+                      <svg class="svg-icon" viewBox="0 0 32 32"><path d="M8 18 C 6 16, 6 12, 10 12 L 14 16 L 18 12 L 22 16 C 26 12, 26 16, 24 18 L 18 24 L 14 24 Z"/></svg>
+                    </span>
+                    <h5>Genuine Friendships</h5>
+                  </div>
                   <p>Something about exploring the woods together forms bonds fast. Many Camp Elachee friendships last well beyond a single summer.</p>
                 </div>
                 <div class="benefit-card">
-                  <span class="benefit-card__icon" aria-hidden="true">
-                    <svg class="svg-icon" viewBox="0 0 32 32"><circle cx="16" cy="16" r="11"/><polygon points="16,8 12,18 16,16 20,18" fill="currentColor" stroke="none"/></svg>
-                  </span>
-                  <h5>Independence &amp; Resilience</h5>
-                  <p>Away from screens and in the middle of something real, children discover they can handle more than anyone expected. Including themselves.</p>
-                </div>
-                <div class="benefit-card">
-                  <span class="benefit-card__icon" aria-hidden="true">
-                    <svg class="svg-icon" viewBox="0 0 32 32"><circle cx="16" cy="16" r="11"/><ellipse cx="16" cy="16" rx="5" ry="11"/><line x1="5" y1="16" x2="27" y2="16"/></svg>
-                  </span>
-                  <h5>Environmental Stewardship</h5>
-                  <p>When children truly understand the natural world, they want to protect it. We plant those seeds early.</p>
-                </div>
-                <div class="benefit-card">
-                  <span class="benefit-card__icon" aria-hidden="true">
-                    <svg class="svg-icon" viewBox="0 0 32 32"><circle cx="16" cy="16" r="11"/><circle cx="12" cy="13" r="1.2" fill="currentColor" stroke="none"/><circle cx="20" cy="13" r="1.2" fill="currentColor" stroke="none"/><path d="M 10 18 Q 16 24 22 18"/></svg>
-                  </span>
-                  <h5>Joy of Being Bored (the Best Way)</h5>
-                  <p>No algorithm feeding them the next thing. Just open land, open time, and the discovery that outside is more interesting than any screen.</p>
+                  <div class="benefit-card__header">
+                    <span class="benefit-card__icon" aria-hidden="true">
+                      <svg class="svg-icon" viewBox="0 0 32 32"><circle cx="16" cy="16" r="11"/><ellipse cx="16" cy="16" rx="5" ry="11"/><line x1="5" y1="16" x2="27" y2="16"/></svg>
+                    </span>
+                    <h5>Environmental Stewardship</h5>
+                  </div>
+                  <p>When children truly understand the natural world, they want to protect it. Every creek day, every trail, every creature they meet plants seeds of care that last long after summer ends.</p>
                 </div>
               </div>
 
@@ -14096,12 +14195,17 @@ body[data-current-view="article"] .article-mobile-bar { display: block; }
 
                 <article class="theme-card theme-card--specialty">
                   <p class="theme-card__meta">Specialty · Grades 4–8</p>
-                  <p class="theme-card__dates">July 6–10 &amp; July 20–24</p>
-                  <h5>Ready for Something More?</h5>
-                  <p>Students entering grades 4–8 can go deeper with our Specialty Camps. Rooted in Nature and Expedition Elachee offer a more immersive, more challenging experience designed for older campers.</p>
-                  <div class="btn-holder">
-                    <a href="#specialty" class="theme-card__cta-link">See Specialty Camps <span aria-hidden="true">→</span></a>
-                  </div>
+                  <p class="theme-card__dates">Rooted in Nature</p>
+                  <p class="specialty-audience">Girls Only</p>
+                  <p class="specialty-sub">July 6–10 · $350/wk</p>
+                  <p class="specialty-desc">A week for girls to slow down, look closer, and build a real relationship with the natural world.</p>
+                  <ul class="theme-card__tags"><li>Nature journaling</li><li>Plant ID</li><li>Mindfulness</li></ul>
+                  <div class="specialty-program__divider" aria-hidden="true"></div>
+                  <p class="theme-card__dates">Expedition Elachee</p>
+                  <p class="specialty-audience">All Genders</p>
+                  <p class="specialty-sub">July 20–24 · $350/wk</p>
+                  <p class="specialty-desc">Real wilderness skills for campers ready for a challenge — navigation, survival, and backcountry exploration.</p>
+                  <ul class="theme-card__tags"><li>Navigation</li><li>Survival skills</li><li>Backcountry</li></ul>
                 </article>
 
               </div>
@@ -14231,53 +14335,6 @@ body[data-current-view="article"] .article-mobile-bar { display: block; }
 
 
       <!-- ============================================================
-           S8 · PLAN — How It Works
-           Real step1/2/3 SVG illustrations from /assets/img/
-           ============================================================ -->
-      <section class="section section-camp-plan" aria-labelledby="camp-plan-title">
-        <div class="container">
-          <div class="section-block">
-            <div class="section-head">
-              <span class="eyebrow">How It Works</span>
-              <h2 id="camp-plan-title">Here's How It Works, <strong>Step by Step</strong></h2>
-              <h6>We make it simple. Here is exactly what happens from the moment you register to the moment your child walks through our gates.</h6>
-            </div>
-            <div class="section-body">
-              <ul class="plan-steps plan-steps--text">
-                <li class="plan-step" data-step-color="green">
-                  <span class="plan-step__num">01</span>
-                  <h5>Choose Your Week Online</h5>
-                  <p>Browse available themes and dates, then register online. You'll get a confirmation email right away.</p>
-                </li>
-                <li class="plan-step" data-step-color="blue">
-                  <span class="plan-step__num">02</span>
-                  <h5>We'll Email You a Guide</h5>
-                  <p>The Monday before your session starts, we'll send your packing list, drop-off time, and schedule.</p>
-                </li>
-                <li class="plan-step" data-step-color="orange">
-                  <span class="plan-step__num">03</span>
-                  <h5>Get Your Camper Ready</h5>
-                  <p>Wear closed-toe shoes, pack a lunch, and bring sunscreen. Drop off starts at 8:15 each morning.</p>
-                </li>
-              </ul>
-              <ul class="plan-features">
-                <li>No outdoor experience needed</li>
-                <li>Nut-free environment</li>
-                <li>Sunscreen &amp; bug spray provided</li>
-                <li>Rain or shine, every day</li>
-                <li>Creek activities every week</li>
-                <li>Weekly parent newsletter</li>
-              </ul>
-              <div class="btn-holder">
-                <a href="https://campelachee.campmanagement.com/p/request_for_info_m.php?action=enroll" class="btn btn-1">Register for Camp</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-
-      <!-- ============================================================
            S9 · PRACTICAL INFO
            ============================================================ -->
       <section class="section section-camp-info" aria-labelledby="camp-info-title">
@@ -14342,6 +14399,120 @@ body[data-current-view="article"] .article-mobile-bar { display: block; }
           </div>
         </div>
       </section>
+      <!-- ============================================================
+           S8 · PLAN — How It Works
+           Real step1/2/3 SVG illustrations from /assets/img/
+           ============================================================ -->
+      <section class="section section-camp-plan" aria-labelledby="camp-plan-title">
+        <div class="container">
+          <div class="section-block">
+            <div class="section-head">
+              <span class="eyebrow">How It Works</span>
+              <h2 id="camp-plan-title">Here's How It Works, <strong>Step by Step</strong></h2>
+              <h6>We make it simple. Here is exactly what happens from the moment you register to the moment your child walks through our gates.</h6>
+            </div>
+            <div class="section-body">
+              <ul class="plan-steps plan-steps--text">
+                <li class="plan-step" data-step-color="green">
+                  <span class="plan-step__num">01</span>
+                  <h5>Choose Your Week Online</h5>
+                  <p>Browse available themes and dates, then register online. You'll get a confirmation email right away.</p>
+                </li>
+                <li class="plan-step" data-step-color="blue">
+                  <span class="plan-step__num">02</span>
+                  <h5>We'll Email You a Guide</h5>
+                  <p>The Monday before your session starts, we'll send your packing list, drop-off time, and schedule.</p>
+                </li>
+                <li class="plan-step" data-step-color="orange">
+                  <span class="plan-step__num">03</span>
+                  <h5>Get Your Camper Ready</h5>
+                  <p>Wear closed-toe shoes, pack a lunch, and bring sunscreen. Drop off starts at 8:15 each morning.</p>
+                </li>
+              </ul>
+              <ul class="plan-features">
+                <li>No outdoor experience needed</li>
+                <li>Nut-free environment</li>
+                <li>Sunscreen &amp; bug spray provided</li>
+                <li>Rain or shine, every day</li>
+                <li>Creek activities every week</li>
+                <li>Weekly parent newsletter</li>
+              </ul>
+              <div class="btn-holder">
+                <a href="https://campelachee.campmanagement.com/p/request_for_info_m.php?action=enroll" class="btn btn-1">Register for Camp</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ============================================================
+           S14 · REGISTRATION  ·  Green section with bg-curvy-green.svg
+           ============================================================ -->
+      <section id="register" class="section section-camp-registration" aria-labelledby="camp-registration-title">
+        <div class="container">
+          <div class="section-block">
+            <div class="section-body">
+
+
+              <h4 class="reg-howto-title">What Happens After You Click Register</h4>
+              <p class="reg-howto-sub">Five quick steps. Most families finish in about five minutes — then you're booked and we take it from there.</p>
+              <ul class="reg-howto" role="list">
+                <li class="reg-howto__step" data-step-color="green">
+                  <span class="reg-howto__num">1</span>
+                  <span class="reg-howto__icon" aria-hidden="true">
+                    <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="13" cy="10" r="4.5"/><path d="M5 28 Q 5 18, 13 18 T 21 26"/><line x1="22" y1="9" x2="28" y2="9"/><line x1="25" y1="6" x2="25" y2="12"/></svg>
+                  </span>
+                  <h5>Create your account</h5>
+                  <p>Our registration lives on the Campsite platform. Create a simple family account on your first visit. It takes about two minutes.</p>
+                </li>
+                <li class="reg-howto__step" data-step-color="blue">
+                  <span class="reg-howto__num">2</span>
+                  <span class="reg-howto__icon" aria-hidden="true">
+                    <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="7" width="22" height="20" rx="2"/><line x1="11" y1="3" x2="11" y2="11"/><line x1="21" y1="3" x2="21" y2="11"/><line x1="5" y1="13" x2="27" y2="13"/><rect x="9" y="17" width="4" height="3" fill="currentColor"/><rect x="15" y="17" width="4" height="3"/><rect x="21" y="17" width="4" height="3"/></svg>
+                  </span>
+                  <h5>Select your week(s) and camper(s)</h5>
+                  <p>Browse available themes and dates. Love more than one theme? Add multiple weeks. If a session is full, join the waitlist. Spots open up regularly.</p>
+                </li>
+                <li class="reg-howto__step" data-step-color="yellow">
+                  <span class="reg-howto__num">3</span>
+                  <span class="reg-howto__icon" aria-hidden="true">
+                    <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="5" width="18" height="24" rx="2"/><rect x="11" y="3" width="10" height="5" rx="1"/><line x1="11" y1="14" x2="21" y2="14"/><line x1="11" y1="19" x2="21" y2="19"/><line x1="11" y1="24" x2="17" y2="24"/></svg>
+                  </span>
+                  <h5>Complete your camper profile</h5>
+                  <p>Enter your child's age, grade, any relevant medical information and emergency contacts.</p>
+                </li>
+                <li class="reg-howto__step" data-step-color="purple">
+                  <span class="reg-howto__num">4</span>
+                  <span class="reg-howto__icon" aria-hidden="true">
+                    <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="8" width="24" height="17" rx="2.5"/><line x1="4" y1="14" x2="28" y2="14"/><line x1="9" y1="20" x2="14" y2="20"/></svg>
+                  </span>
+                  <h5>Pay securely online</h5>
+                  <p>Processed through Campsite's secure checkout. You will receive an immediate confirmation email.</p>
+                </li>
+                <li class="reg-howto__step" data-step-color="red">
+                  <span class="reg-howto__num">5</span>
+                  <span class="reg-howto__icon" aria-hidden="true">
+                    <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="8" width="24" height="17" rx="2"/><polyline points="4,9 16,19 28,9"/><path d="M 4 24 L 13 16"/><path d="M 28 24 L 19 16"/></svg>
+                  </span>
+                  <h5>Watch for your welcome email</h5>
+                  <p>The Monday before each camp week, we send everything you need to prepare: packing list, schedule, Creek Day reminders and drop-off instructions.</p>
+                </li>
+              </ul>
+
+              <div class="reg-howto-end" role="note">
+                <span class="reg-howto-end__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                </span>
+                <span class="reg-howto-end__text">
+                  <strong>That's it.</strong> Stuck on a step? Call us at <a href="tel:7705351976">770-535-1976</a> or <a href="https://elachee.org/resources/contact-us/">send a quick note</a>.
+                </span>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+
 
 
       <!-- ============================================================
@@ -14723,73 +14894,6 @@ body[data-current-view="article"] .article-mobile-bar { display: block; }
       </section>
 
 
-      <!-- ============================================================
-           S14 · REGISTRATION  ·  Green section with bg-curvy-green.svg
-           ============================================================ -->
-      <section id="register" class="section section-camp-registration" aria-labelledby="camp-registration-title">
-        <div class="container">
-          <div class="section-block">
-            <div class="section-body">
-
-
-              <h4 class="reg-howto-title">What Happens After You Click Register</h4>
-              <p class="reg-howto-sub">Five quick steps. Most families finish in about five minutes — then you're booked and we take it from there.</p>
-              <ul class="reg-howto" role="list">
-                <li class="reg-howto__step" data-step-color="green">
-                  <span class="reg-howto__num">1</span>
-                  <span class="reg-howto__icon" aria-hidden="true">
-                    <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="13" cy="10" r="4.5"/><path d="M5 28 Q 5 18, 13 18 T 21 26"/><line x1="22" y1="9" x2="28" y2="9"/><line x1="25" y1="6" x2="25" y2="12"/></svg>
-                  </span>
-                  <h5>Create your account</h5>
-                  <p>Our registration lives on the Campsite platform. Create a simple family account on your first visit. It takes about two minutes.</p>
-                </li>
-                <li class="reg-howto__step" data-step-color="blue">
-                  <span class="reg-howto__num">2</span>
-                  <span class="reg-howto__icon" aria-hidden="true">
-                    <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="7" width="22" height="20" rx="2"/><line x1="11" y1="3" x2="11" y2="11"/><line x1="21" y1="3" x2="21" y2="11"/><line x1="5" y1="13" x2="27" y2="13"/><rect x="9" y="17" width="4" height="3" fill="currentColor"/><rect x="15" y="17" width="4" height="3"/><rect x="21" y="17" width="4" height="3"/></svg>
-                  </span>
-                  <h5>Select your week(s) and camper(s)</h5>
-                  <p>Browse available themes and dates. Love more than one theme? Add multiple weeks. If a session is full, join the waitlist. Spots open up regularly.</p>
-                </li>
-                <li class="reg-howto__step" data-step-color="yellow">
-                  <span class="reg-howto__num">3</span>
-                  <span class="reg-howto__icon" aria-hidden="true">
-                    <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="5" width="18" height="24" rx="2"/><rect x="11" y="3" width="10" height="5" rx="1"/><line x1="11" y1="14" x2="21" y2="14"/><line x1="11" y1="19" x2="21" y2="19"/><line x1="11" y1="24" x2="17" y2="24"/></svg>
-                  </span>
-                  <h5>Complete your camper profile</h5>
-                  <p>Enter your child's age, grade, any relevant medical information and emergency contacts.</p>
-                </li>
-                <li class="reg-howto__step" data-step-color="purple">
-                  <span class="reg-howto__num">4</span>
-                  <span class="reg-howto__icon" aria-hidden="true">
-                    <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="8" width="24" height="17" rx="2.5"/><line x1="4" y1="14" x2="28" y2="14"/><line x1="9" y1="20" x2="14" y2="20"/></svg>
-                  </span>
-                  <h5>Pay securely online</h5>
-                  <p>Processed through Campsite's secure checkout. You will receive an immediate confirmation email.</p>
-                </li>
-                <li class="reg-howto__step" data-step-color="red">
-                  <span class="reg-howto__num">5</span>
-                  <span class="reg-howto__icon" aria-hidden="true">
-                    <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="8" width="24" height="17" rx="2"/><polyline points="4,9 16,19 28,9"/><path d="M 4 24 L 13 16"/><path d="M 28 24 L 19 16"/></svg>
-                  </span>
-                  <h5>Watch for your welcome email</h5>
-                  <p>The Monday before each camp week, we send everything you need to prepare: packing list, schedule, Creek Day reminders and drop-off instructions.</p>
-                </li>
-              </ul>
-
-              <div class="reg-howto-end" role="note">
-                <span class="reg-howto-end__icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                </span>
-                <span class="reg-howto-end__text">
-                  <strong>That's it.</strong> Stuck on a step? Call us at <a href="tel:7705351976">770-535-1976</a> or <a href="https://elachee.org/resources/contact-us/">send a quick note</a>.
-                </span>
-              </div>
-
-            </div>
-          </div>
-        </div>
-      </section>
 
 
       <!-- ============================================================
