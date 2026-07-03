@@ -13301,6 +13301,20 @@ body[data-current-view="article"] .article-mobile-bar { display: block; }
       transform: none !important;
     }
 
+    /* Pullquote inside creek section: restore dark text (creek p rule makes everything white) */
+    .section-camp-day .day-story__creek .camp-pullquote {
+      color: var(--Bark) !important;
+    }
+    .section-camp-day .day-story__creek .camp-pullquote p {
+      color: var(--Bark) !important;
+      font-size: clamp(24px, 2.6vw, 30px) !important;
+      line-height: 1.35 !important;
+    }
+    .section-camp-day .day-story__creek .camp-pullquote footer {
+      color: var(--Bark) !important;
+      opacity: 0.65;
+    }
+
     /* Responsive · stack to single column with photo on top */
     @media (max-width: 760px) {
       .section-camp-day .day-story::before {
